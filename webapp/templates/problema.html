@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="mt-3 text-align">
+	<h1 style='text-align: center'> {{ _('The challenge') }} </h1>
+	<p class="mt-3" style='text-align: justify'>
+		{{ _("Testing resources for viral infections are often scarce due to several factors, including limited access to reagents, shortages in trained lab technicians, and challenging logistics. At the same time, testing is an essential tool for individuals reintegrating into normalcy during or after a wave of a pandemic. Indeed, a negative test can serve as proof of the individual's ability to resume work, return to studies, or participate in normal everyday activity. Ultimately, novel strategies are required to maximise the benefit from each available test, to allow maximum number of people to resume their normal lives, while also balancing the different needs of different individuals in the population.") }}
+	</p>
+</div>
+
+<div class="mt-3 text-center">
+	<a href="{{ url_for('solucion_page') }}" class="btn btn-primary">
+		{{ _('Our solution') }}
+	</a>
+</div>
+
+{% endblock %}

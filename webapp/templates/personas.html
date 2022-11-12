@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% from 'bootstrap5/utils.html' import render_icon %}
+
+  <h1 style="text-align: center">{{ _('Team') }}</h1>
+  <br/>
+  <div class="row text-center">
+    <div class="col-sm">
+      <img style="border-radius: 50%" src= {{ url_for('static', filename='edwin.jpeg') }} width="200" height="200" alt='Edwin Lock' class="" >
+      <h4><a href='https://www.edwinlock.com/'>Edwin Lock</a></h4>
+      <ul class="list-group list-group-horizontal justify-content-center" aria-hidden="true">
+        <li class="list-group-item">
+          <a href="mailto:edwin.lock@economics.ox.ac.uk">
+            {{ render_icon('envelope', size='1.3em') }}
+          </a>  
+        </li>
+        <li class="list-group-item"">
+          <a href="https://twitter.com/lock_edwin" target="_blank" rel="noopener">
+            {{ render_icon('twitter', size='1.3em') }}
+
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://github.com/edwinlock" target="_blank" rel="noopener">
+            {{ render_icon('github', size='1.3em') }}
+            
+          </a>
+        </li>
+      </ul>
+      
+      <font size="4.5">Research Fellow</font>
+      <br/>
+      <br/>
+      <img src= {{ url_for('static', filename='oxford.png') }} height="75"/>
+    </div>
+    <div class="col-sm">
+      <img style="border-radius: 50%" src= {{ url_for('static', filename='michelle.jpeg') }} width="200" height="200" alt='Michelle González Amador' class="img-fluid" >
+      <h4><a href='http://www.m-gonzalezamador.com/'>Michelle González Amador</a></h4>
+      <ul class="list-group list-group-horizontal justify-content-center" aria-hidden="true">
+        <li class="list-group-item">
+          <a href="mailto:mgonzalez@merit.unu.edu">
+            {{ render_icon('envelope', size='1.3em') }}
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://twitter.com/michg8" target="_blank" rel="noopener">
+           {{ render_icon('twitter', size='1.3em') }}
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://github.com/michelleg06" target="_blank" rel="noopener">
+            {{ render_icon('github', size='1.3em') }}
+          </a>
+        </li>
+      </ul>
+      <font size="4.5">PhD Fellow</font>
+      <br/>
+      <br/>
+      <img src= {{ url_for('static', filename='maastricht.png') }} height="75"/>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <div class="row" style="text-align: center">
+    <div class="col-sm">
+      <img style="border-radius: 50%" src= {{ url_for('static', filename='francisco.png') }} width="200" height="200" alt='Francisco J. Marmolejo Cossío' class="img-fluid" >
+      <h4><a href='https://www.fmarmolejo.com/'>Francisco J. Marmolejo Cossío</a></h4>
+      <ul class="list-group list-group-horizontal justify-content-center" aria-hidden="true">
+        <li class="list-group-item">
+          <a href="mailto:marmolejo.francisco@gmail.com">
+            {{ render_icon('envelope', size='1.3em') }}
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://twitter.com/fjmarmole" target="_blank" rel="noopener">
+            {{ render_icon('twitter', size='1.3em') }}
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://github.com/fjmarmol" target="_blank" rel="noopener">
+            {{ render_icon('github', size='1.3em') }}
+          </a>
+        </li>
+      </ul>
+      <font size="4.5">Postdoctoral Fellow</font>
+      <br/>
+      <br/>
+      <img src= {{ url_for('static', filename='harvard.png') }} height="70"/>
+    </div>
+    <div class="col-sm">
+      <img style="border-radius: 50%" src= {{ url_for('static', filename='simon.jpeg') }} width="200" height="200" alt='Simon Finster' class="img-fluid" >
+      <h4><a href='https://www.simonfinster.com/'>Simon Finster</a></h4>
+      <ul class="list-group list-group-horizontal justify-content-center" aria-hidden="true">
+        <li class="list-group-item">
+          <a href="mailto:simon.finster@nuffield.ox.ac.uk">
+            {{ render_icon('envelope', size='1.3em') }}
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://twitter.com/finster_simon" target="_blank" rel="noopener">
+            {{ render_icon('twitter', size='1.3em') }}
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a href="https://github.com/simonfinster" target="_blank" rel="noopener">
+           {{ render_icon('github', size='1.3em') }}
+          </a>
+        </li>
+      </ul>
+      <font size="4.5">DPhil Candidate</font>
+      <br/>
+      <br/>
+      <img src= {{ url_for('static', filename='oxford.png') }} height="75"/>
+    </div>
+  </div>
+  <br/>
+  <hr>
+  <h2 style="text-align: center">{{ _('Advisors') }}</h2>
+  <br>
+  <div class="row" style="text-align: center">
+    <div class="col-sm">
+      <h4>Prof. Rubén López Revilla</h4>
+      IPICYT
+    </div>
+    <div class="col-sm">
+      <h4>Dr. Luis Antonio Salazar Olivo </h4>
+      IPICYT
+    </div>
+    <div class="col-sm">
+      <h4>Prof. Salvador Ruíz Correa</h4>
+      IPICYT
+    </div>
+  </div>
+  <br/>
+  <div class="row" style="text-align: center">
+    <div class="col-sm">
+      <h4>Prof. Ángel Alpuche Solís</h4>
+      IPICYT
+    </div>
+    {#<div class="col-sm">
+      <h4>Jakob Jonnerby</h4>
+      Imperial College London
+    </div>#}
+    <div class="col-sm">
+      <h4>Dr. Divya Sridhar</h4>
+      University of Oxford
+    </div>
+  </div>
+  <br/>
+  <div class="row" style="text-align: center">
+    <div class="col-sm">
+      <h4>Prof. Ariel Procaccia</h4>
+      Harvard University
+    </div>
+    <div class="col-sm">
+      <h4>Evi Micha</h4>
+      University of Toronto
+    </div>
+    {#<div class="col-sm">
+      <h4>Luis Alejandro Benavides-Vázquez</h4>
+      {{ _('Monterrey Institute of Technology and Higher Education') }}
+    </div> #}
+  </div>
+  <hr>
+  <h2 style="text-align: center">{{ _('Collaborators') }}</h2>
+  <br>
+  <div class="row" style="text-align: center">
+    <div class="col-sm">
+      <img src= {{ url_for('static', filename='ipicytlogo2.png') }} alt='IPICYT2' class="img-fluid" >
+    </div>
+    <div class="col-sm">
+    <br>
+    <br>
+      <img src= {{ url_for('static', filename='slp2.png') }} alt='SLP2' class="img-fluid" >
+    </br>
+    </br>
+    </div>
+  </div>
+</br>
+</br>
+
+<center>
+	<a href="{{ url_for('contact_page') }}" class="btn btn-primary btn-md" tabindex="-1" role="button" aria-disabled="true">{{ _('Get in touch!') }}</a>
+</center>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% from 'bootstrap5/nav.html' import render_nav_item %}
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2f3b53;">
+    <div class="container-fluid">
+      <a class="navbar-brand m-2" href="{{ url_for('index_page') }}">C-SEF</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          {{ render_nav_item('index_page', _('Home')) }}
+          {{ render_nav_item('problema_page', _('Challenge')) }}
+          {{ render_nav_item('solucion_page', _('Solution')) }}
+          {{ render_nav_item('personas_page', _('About Us')) }}
+          {{ render_nav_item('contact_page', _('Contact')) }}
+          {{ render_nav_item('security.login', _fsdomain('Sign In')) }}
+        </div>
+      </div>
+    </div>
+</nav>

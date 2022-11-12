@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block content %}
+
+<div class="my-3">
+    <h1>{{ _('Survey') }}</h1>
+    <div class="p-3 bg-light">
+        <p>{{ _('Thank you for visiting this page. The deadline for the baseline survey has passed. Once the trial concludes, we will ask you to fill in the endline survey.') }}</p>
+    </div>    
+</div>
+{% endblock %}
+

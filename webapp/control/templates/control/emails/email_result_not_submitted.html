@@ -1,0 +1,15 @@
+
+{% extends 'emails/base_email.html' %}
+
+{% block content %}
+    <p style="margin-bottom: 30px">{{_('Dear Participant,') }}</p>
+    <p>
+      {{ _('You were invited to submit a sample for testing on') }} {{scheduled | format_date("long")}}, {{_('but we did not collect a sample from you.
+      You will be reconsidered for testing in the coming days.') }}
+    </p>
+    <p style="margin-bottom: 30px">
+      {{ _("You can check your test results and building access any time in the")}}
+      <a href='{{url_for('participant.landing_page', _external=True)}}'>{{_('information centre.') }}</a>    </p>
+    <p>{{_('Have a nice day!') }}</p>
+    <p><strong>{{_('The C-SEF team') }}</strong></p>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'security/base.html' %}
+{% from 'bootstrap5/form.html' import render_field, render_form_row, render_hidden_errors %}
+
+{% block security_form %}
+    <h1>{{ _fsdomain('Register') }}</h1>
+    <form action="{{ url_for_security('register') }}" method="POST" name="register_user_form">
+        {{ register_user_form.hidden_tag() }}
+        {{ render_hidden_errors(register_user_form) }}
+        {{ render_form_row([register_user_form.email]) }}
+        {% if security.username_enable %}
+            {{ render_form_row([register_user_form.username]) }}
+        {%  endif %}
+        {{ render_form_row([register_user_form.password]) }}
+        {% if register_user_form.password_confirm %}
+            {{ render_form_row([register_user_form.password_confirm]) }}
+        {% endif %}
+        {{ render_field(register_user_form.submit) }}
+    </form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block content %}
+
+<div class="my-3">
+    <h1>{{ surveytitle }}</h1>
+    <div class="p-3 bg-light">
+        <p>{{ _('In this survey, you are asked a variety of answers in multiple categories. Please answer as accurately as possible. <strong>All data will be treated confidentially.</strong></p>') }}
+    </div>
+</div>
+
+<div class="mt-4 row justify-content-center">
+    <div class="col-10">
+        <div class="mt-2">
+            <h3 class="">{{ _('Questions') }}</h3>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: {{ progress }}%" aria-valuenow="{{progress}}" laria-valuemin="0" aria-valuemax="100">{{progress}}%</div>
+            </div>
+            <div class="my-4">
+
+            </div>
+            {{ render_form(form, form_type='basic') }}
+        </div>
+    </div>
+</div>
+
+<script>
+    function outputUpdate(age) {
+        document.querySelector('#selected-age').value = age;
+    }
+</script>
+
+{% endblock %}
+

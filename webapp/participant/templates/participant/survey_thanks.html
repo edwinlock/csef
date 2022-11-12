@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block content %}
+
+<div class="my-3">
+    <h1>{{ surveytitle }}</h1>
+    <div class="p-3 bg-light">
+        <p>{{ _('Thank you for filling in the survey, your results have been saved. We very much appreciate your participation!') }}</p>
+    </div>
+    
+</div>
+
+<div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" laria-valuemin="0" aria-valuemax="100">100%</div>
+</div>
+
+{#
+<div class="mt-2">
+    <a class="btn btn-secondary" href="{{ url_for('participant.baseline_survey_page', page=prevpage) }}">back</a>
+</div>
+#}
+{% endblock %}
+

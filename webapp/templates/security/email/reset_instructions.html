@@ -1,0 +1,14 @@
+{% extends 'emails/base_email.html' %}
+
+{% block content %}
+    <p style="margin-bottom: 30px">{{_('Hi') }} {{user.fullname}},</p>
+    <p>{{_('Have you requested a password reset?') }}</p>
+    <div style="text-align: left">
+      <a href="{{ reset_link }}" style="text-decoration: none; color:white; padding: 6px 12px; border-radius: 6px; background-color: rgb(11, 94, 215); border-color: rgb(10, 88, 202); border-width: 1px; font-weight: 400">
+        {{_('Reset now!') }}
+      </a>
+    </div>
+    <p style="margin-bottom: 30px">{{_("If you haven't, please ignore this email.") }}</p>
+    <p>{{_('Have a nice day!') }}</p>
+    <p><strong>{{_('The C-SEF team') }}</strong></p>
+{% endblock %}

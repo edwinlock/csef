@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+{% from 'bootstrap5/utils.html' import render_icon %}
+{% from 'bootstrap5/utils.html' import render_messages %}
+
+{% block content%}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/compute.css') }}">
+
+
+<div class="mt-5 hidden-print">
+    <h1 class="mt-5">
+        {{ _('The pooling') }}
+    </h1>
+    <p>
+        {{ _('On this page you can compute and view the optimal test pooling, which takes into account the fact that some individuals may not have submitted samples.') }}
+    </p>
+    {% include("lab/select_allocation.html") %}
+</div>
+
+{% if allocation is not none and allocation.pooled is not none %}
+    <div class="mt-3">
+        <h3 class="border-bottom"> {{_('The pooling') }}</h3>
+        <p>
+             {{ _("This pooling is scheduled for <strong>{date}</strong> and was computed on <strong>{time}</strong>.").format(date=allocation.scheduled.date() | format_date('full'), time=allocation.pooled | format_datetime('medium')) }}
+        </p>
+        {% if samples is not none %}
+            {{
+                render_table(
+                    samples,
+                    titles=titles,
+                    responsive=True,
+                    table_classes="table-striped",
+                )
+            }}
+        {% endif %}
+    </div>
+{% endif %}
+
+{% if allocation is not none %}
+    <div class="mt-5">
+    {% if allocation.computation_in_progress %}
+        <h3 class="border-bottom">{{ _('Compute pooling') }}</h3>
+        <div class="alert alert-primary" role="alert">
+            {{ _('Computation ongoing! Refresh page to check whether computation has finished.') }}
+        </div>
+    {% elif allocation.pooled is none %}
+        <h3 class="border-bottom">{{ _('Compute pooling') }}</h3>
+        <p>{{ _("You have not yet computed a pooling for this allocation.") }}</p>
+        <p>{{ _('In order to compute a pooling for this allocation, click on the button below.') }}</p>
+        <a class="btn btn-primary" href="{{ url_for('lab.compute_pooling_page', id=allocation.id) }}">{{_('compute')}}</a>
+    {% else %}
+    <div class="hidden-print">
+        <h3 class="border-bottom">{{ _('Delete pooling') }}</h3>
+    {{ _('You have already computed a pooling for this allocation. To delete it, click on the button below.') }}
+    </div>
+    <div class="alert alert-danger mt-3 hidden-print" role="alert">
+        {{ _('<strong>Only do this if new participants have submitted samples and you have not yet run tests, or are willing to re-test all pools.</strong>') }}
+    </div>
+    <a class="btn btn-primary hidden-print" href="{{ url_for('lab.delete_pooling_page', id=allocation.id) }}">{{_('delete')}}</a>
+    {% endif %}
+{% endif %}        
+</div>
+{% endblock %}

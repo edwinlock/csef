@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/schedule.css') }}">
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<h1 class="">{{ _('Scheduling') }}</h1>
+<div class="mb-5">
+  <p>
+    {{ _('On this page you can tell us which days of the coming week you would prefer to access your workplace at IPICYT in person. For that purpose, you get') }} {{ total_token_count }} {{ _('tokens that you can distribute between') }} {{ testing_days|length }} {{ access_window - 1 }}{{ _('-day slots:') }} {{ slot_string }}.
+  </p>
+  <p>
+    {{ _("Increase or decrease the number of tokens for a given") }} {{ access_window - 1 }}{{ _("-day slot by clicking on the (+) and (-) buttons. If you've used up all the spare tokens, you'll need to remove tokens from one slot in order to add tokens to another slot.") }}
+  </p>
+  <p>
+    <strong>{{ _("Don't forget to save your preference by clicking the 'Save' button!</strong> Your saved preference will then appear at the bottom of the page.") }}
+  </p>
+  <!-- <li>{{ _('You can increase your tokens allocated to a given 2-day slot by clicking on the (+) button, and you can decrease your tokens by clicking on the (-) button. Once you have allocated all your tokens, you would have decrease your tokens on some slot before you can add more tokens to another slot. ') }}</li> -->
+
+  <h3 class="border-bottom">{{_('Tips') }}</h3>
+  <li>{{ _("If you're not interested in entering IPICYT on specific days, don't allocate any tokens to the corresponding slots.") }} </li>
+  <!-- <li>{{ _("If you don't allocate any tokens to some slot, our algorithm will not consider you for testing the previous day.") }}</li> -->
+
+  <li>{{ _("The more tokens you add to a slot, the stronger your preference to access IPICYT on those days.
+            Our scheduling alogrithm takes this into account when scheduling you for testing.
+            For example, if you place many tokens on Tuesday-Wednesday, you are more likely to get invited for testing on Monday.
+            (Note that many other factors also play a role, so we cannot guarantee that you're invited for testing on your preferred days.)") }}</li>
+
+  <li>{{_('You can come back and edit the tokens at any point during the trial if your schedule changes. Any changes take effect the following week.') }}</li>
+
+  <li>{{_('NB: If you do not submit a scheduling preference, we assume an even allocation of') }} {{ default_tokens_per_day }} {{_('tokens per slot.') }}</li>
+
+
+</div>
+
+  <div>
+    <input id="remaining_tokens" value="{{ total_token_count }}" type="hidden"></input>
+    <table id="schedule-widget" class="">
+        <tr>
+          <th>{{ _('Days') }}</th>
+          <th>{{ _('Allocated tokens') }}</th>
+          <th>{{ _('Change') }}</th>
+          <th></th>
+        </tr>
+        <tr style="{{ display[0] }}">
+          <td>{{ slot_names[0] }}</td>
+          <td class="token-td"><input class="token_icons" id="slot_0_token_icons" value="" style="width: {{2 + (total_token_count - 1)*(1.25)}}em" readonly="readonly"></input></td>
+          <td class="change_buttons">
+            <a class="mx-1" href="#" onclick="Decrement('slot_0_token', 'slot_0_token_icons');event.preventDefault();">
+              <i class="bi bi-dash-circle-dotted text-success" style="font-size: 1.6rem;"></i>
+            </a>
+            <a href="#" onclick="Increment('slot_0_token', 'slot_0_token_icons');event.preventDefault();">
+              <i class="bi bi-plus-circle-dotted text-primary" style="font-size: 1.6rem;"></i>
+            </a>
+          </td>
+      </tr>
+        <tr style="{{ display[1] }}">
+            <td>{{ slot_names[1] }}</td>
+            <td><input class="token_icons" id="slot_1_token_icons" value="" style="width: {{2 + (total_token_count - 1)*(1.25)}}em" readonly="readonly"></input></td>
+            <td class="change_buttons">
+              <a class="mx-1" href="#" onclick="Decrement('slot_1_token', 'slot_1_token_icons');event.preventDefault();">
+                <i class="bi bi-dash-circle-dotted text-success" style="font-size: 1.6rem;"></i>
+              </a>
+              <a href="#" onclick="Increment('slot_1_token', 'slot_1_token_icons');event.preventDefault();">
+                <i class="bi bi-plus-circle-dotted text-primary" style="font-size: 1.6rem;"></i>
+              </a>
+            </td>
+        </tr>
+        <tr style="{{ display[2] }}">
+            <td>{{ slot_names[2] }}</td>
+            <td><input class="token_icons" id="slot_2_token_icons" value="" style="width: {{2 + (total_token_count - 1)*(1.25)}}em" readonly="readonly"></input></td>
+            <td class="change_buttons">
+              <a class="mx-1" href="#" onclick="Decrement('slot_2_token', 'slot_2_token_icons');event.preventDefault();">
+                <i class="bi bi-dash-circle-dotted text-success" style="font-size: 1.6rem;"></i>
+              </a>
+              <a href="#" onclick="Increment('slot_2_token', 'slot_2_token_icons');event.preventDefault();">
+                <i class="bi bi-plus-circle-dotted text-primary" style="font-size: 1.6rem;"></i>
+              </a>
+            </td>
+        </tr>
+        <tr style="{{ display[3] }}">
+            <td>{{ slot_names[3] }}</td>
+            <td><input class="token_icons" id="slot_3_token_icons" value="" style="width: {{2 + (total_token_count - 1)*(1.25)}}em" readonly="readonly"></input></td>
+            <td class="change_buttons">
+              <a class="mx-1" href="#" onclick="Decrement('slot_3_token', 'slot_3_token_icons');event.preventDefault();">
+                <i class="bi bi-dash-circle-dotted text-success" style="font-size: 1.6rem;"></i>
+              </a>
+              <a href="#" onclick="Increment('slot_3_token', 'slot_3_token_icons');event.preventDefault();">
+                <i class="bi bi-plus-circle-dotted text-primary" style="font-size: 1.6rem;"></i>
+              </a>
+            </td>
+        </tr>
+        <tr style="{{ display[4] }}">
+          <td>{{ slot_names[4] }}</td>
+          <td><input class="token_icons" id="slot_4_token_icons" value="" style="width: {{2 + (total_token_count - 1)*(1.25)}}em" readonly="readonly"></input></td>
+          <td class="change_buttons">
+            <a class="mx-1" href="#" onclick="Decrement('slot_4_token', 'slot_4_token_icons');event.preventDefault();">
+              <i class="bi bi-dash-circle-dotted text-success" style="font-size: 1.6rem;"></i>
+            </a>
+            <a href="#" onclick="Increment('slot_4_token', 'slot_4_token_icons');event.preventDefault();">
+              <i class="bi bi-plus-circle-dotted text-primary" style="font-size: 1.6rem;"></i>
+            </a>
+          </td>
+      </tr>
+      <tr style="{{ display[5] }}">
+        <td>{{ slot_names[5] }}</td>
+        <td><input class="token_icons" id="slot_5_token_icons" value="" style="width: {{2 + (total_token_count - 1)*(1.25)}}em" readonly="readonly"></input></td>
+        <td class="change_buttons">
+          <a class="mx-1" href="#" onclick="Decrement('slot_5_token', 'slot_5_token_icons');event.preventDefault();">
+            <i class="bi bi-dash-circle-dotted text-success" style="font-size: 1.6rem;"></i>
+          </a>
+          <a href="#" onclick="Increment('slot_5_token', 'slot_5_token_icons');event.preventDefault();">
+            <i class="bi bi-plus-circle-dotted text-primary" style="font-size: 1.6rem;"></i>
+          </a>
+        </td>
+    </tr>
+    <tr style="{{ display[6] }}">
+      <td>{{ slot_names[6] }}</td>
+      <td><input class="token_icons" id="slot_6_token_icons" value="" style="width: {{2 + (total_token_count - 1)*(1.25)}}em" readonly="readonly"></input></td>
+      <td class="change_buttons">
+        <a class="mx-1" href="#" onclick="Decrement('slot_6_token', 'slot_6_token_icons');event.preventDefault();">
+          <i class="bi bi-dash-circle-dotted text-success" style="font-size: 1.6rem;"></i>
+        </a>
+        <a href="#" onclick="Increment('slot_6_token', 'slot_6_token_icons');event.preventDefault();">
+          <i class="bi bi-plus-circle-dotted text-primary" style="font-size: 1.6rem;"></i>
+        </a>
+      </td>
+  </tr>
+        <tr>
+            <td>{{ _('Unallocated') }}</td>
+            <td><input class="token_icons spare_tokens" id="remaining_tokens_icons" value="{{ ' ☆' * total_token_count}}" style="width: {{2 + (total_token_count - 1)*(1.25)}}em" readonly="readonly"></input></td>
+            <td></td>
+        </tr>
+      </table>
+
+      <div class="mt-3">
+        <form method="post">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <input id="slot_0_token" name="slot_0_token" value=0 type="hidden">
+          <input id="slot_1_token" name="slot_1_token" value=0 type="hidden">
+          <input id="slot_2_token" name="slot_2_token" value=0 type="hidden">
+          <input id="slot_3_token" name="slot_3_token" value=0 type="hidden">
+          <input id="slot_4_token" name="slot_4_token" value=0 type="hidden">
+          <input id="slot_5_token" name="slot_5_token" value=0 type="hidden">
+          <input id="slot_6_token" name="slot_6_token" value=0 type="hidden">
+          <button class="btn btn-primary" style = "width: 5.3em" type="submit" name="save" value="save">{{ _('Save') }}</button>
+          <button class="btn btn-primary" style = "width: 5.3em" type="submit" name="cancel" value="cancel">{{ _('Cancel') }}</button>
+        </form>
+      </div>
+    </div>
+
+<div class="mt-3">
+  <h3 class="mt-5 border-bottom">{{ _('Current saved token selection') }}</h3>
+  <p>{{_('Here you can see how you have allocated tokens in the past.') }}</p>
+    {{
+        render_table(
+            saved_token_data,
+            titles=saved_titles,
+            model=ScheduleData,
+            responsive=True,
+            table_classes="table-sm"
+        )
+    }}
+</div>
+
+<script>
+  function Increment(elmt, icons) {
+      if (document.getElementById('remaining_tokens').value > 0) 
+      {
+          document.getElementById(elmt).value = +document.getElementById(elmt).value + 1
+          document.getElementById(icons).value = document.getElementById(icons).value + ' ☆'
+          document.getElementById('remaining_tokens').value = +document.getElementById('remaining_tokens').value - 1
+          document.getElementById('remaining_tokens_icons').value = document.getElementById('remaining_tokens_icons').value.substring(2)
+      }
+  }
+
+  function Decrement(elmt, icons) {
+      if (document.getElementById(elmt).value > 0) 
+      {
+          document.getElementById(elmt).value = +document.getElementById(elmt).value - 1
+          document.getElementById(icons).value = document.getElementById(icons).value.substring(2)
+          document.getElementById('remaining_tokens').value = +document.getElementById('remaining_tokens').value + 1
+          document.getElementById('remaining_tokens_icons').value = document.getElementById('remaining_tokens_icons').value + (' ☆').toString()
+      }
+  }
+</script>
+
+{% endblock %}

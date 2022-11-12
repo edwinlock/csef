@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block content %}
+<div class="mt-3">
+    <h1>{{ _("Communication with participants") }}</h1>
+    <p>{{ _("On this page you can send emails to participants.") }}</p>
+    <div class="mt-3 mb-5 p-3 border-top border-bottom">
+      <p>
+        {{ _("Select a scheduled testing week from the list.") }}
+      </p>
+      {{ render_form(select_alloc_form, form_type="inline") }}
+      {% if allocation is none %}
+      <div class="alert alert-primary mt-3" role="alert">
+          {{ _("You have not selected a scheduled testing date.") }}
+      </div>
+      {% endif %}
+  </div>
+</div>
+
+{% if allocation is not none %}
+<div class="mt-5">
+  <h3 class="border-bottom">{{ _("Allocations in selected week") }}</h3>
+  <p>{{ _("Information about the daily allocations in the week you've selected.") }}</p>
+  {{ render_table(allocation_data, titles=allocation_titles) }}
+</div> 
+<div>
+    <h4 class="mt-5 border-bottom">{{ _("Invite participants to submit samples") }}</h4>
+    <p>
+      {{ render_form(request_samples_form, form_type="basic") }}
+    </p>
+</div>
+<div>
+  <h4 class="mt-5 border-bottom"> {{ _("Send test results to participants") }}</h4>
+  <p>
+    {{ render_form(send_results_form, form_type="basic") }}
+  </p>
+</div>
+{% endif %}
+
+<div class="my-5">
+  <h2 class="border-bottom"> {{ _("Past communications") }}</h2>
+  <p> {{ _("This list shows all communications that have been sent out for the current week.")}}</p>
+  {{ render_table(table, titles=titles) }}
+</div>
+
+{% endblock %}

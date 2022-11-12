@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/utils.html' import render_icon %}
+{% from 'bootstrap5/form.html' import render_form, render_form_row %}
+
+{% block messages %}{% endblock %}
+
+{% block content %}
+<!--Section: Contact v.2-->
+<section class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">{{ _('Get in touch') }}</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">
+        {{ _('Do you have any questions? We would love to hear from you and answer any questions you may have.') }}
+        <!-- ¿Tienes alguna pregunta? Nos encantaría escucharte y responder cualquier duda que puedas tener. -->
+    </p>
+    <div class="m-2 col-sm-8 mx-auto">
+        {{ render_messages() }}
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-8">
+            <form method="post">
+                {{ form.csrf_token() }}
+                {{ render_form_row([form.fullname, form.email], col_map = {'fullname': 'col-sm-6', 'email': 'col-sm-6'}) }}
+                {{ render_form_row([form.subject]) }}
+                {{ render_form_row([form.body]) }}
+                {{ render_form_row([form.submit]) }}
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <ul class="list-group list-group-horizontal-md justify-content-center" aria-hidden="true">
+            <li class="list-group-item">{{ render_icon('envelope', size='2em') }} <a href="mailto:csef@ipicyt.edu.mx"> csef@ipicyt.edu.mx</a> </li>
+            <li class="list-group-item">{{ render_icon('telephone-fill', size='2em') }} <a href="tel:+31642690414">+31 642 690 414</a> </li>
+            <li class="list-group-item">{{ render_icon('geo-alt-fill', size='2em') }} San Luis Potosí, México. </li>
+        </ul>
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block content %}
+<div class="mt-3">
+    <h1>{{ _('Your status') }}</h1>
+    {{ _("This page shows your current status, and any test results that you've been part of. Any issues or questions? <a href='{url}'>Contact us!</a> ").format(url=url_for('contact_page')) }}
+</div>
+
+<div class="row justify-content-center my-5" style="height: 400px">
+    <div class="col-3 col-md-3 text-end h-100">
+        <img src="{{ url_for('static', filename=imgfile) }}" class="h-100 p-1" alt="traffic light denoting {{ status }} status}">
+    </div>
+
+    <div class="col-9 col-md-6 mt-2">
+        <div class="row align-items-center" style="height: 115px">
+            <div class="col">
+                {% if status == "positive" %}
+                {{ _("Your pooled test on <strong>{scheduled}</strong> was <strong>positive</strong>. You're currently not permitted to enter the building.").format(scheduled=scheduled) }}
+                {% elif status == "inconclusive" %}
+                    {{ _("Your pooled test on <strong>{scheduled}</strong> was <strong>inconclusive</strong>. We're sorry that you're currently not permitted to enter the building.").format(scheduled=scheduled) }}
+                {% elif status == "unsubmitted" %}
+                    {{ _("You were asked to submit a sample on <strong>{scheduled}</strong> but failed to do so. You're currently not permitted to enter the building.").format(scheduled=scheduled) }}
+                {% endif %}
+            </div>
+        </div>
+        <div class="row align-items-center" style="height: 115px">
+            <div class="col">
+                {% if status == "limbo" %}
+                    {{ _("We're still waiting for your test result that was scheduled on {scheduled}. Thanks for being patient!").format(scheduled=scheduled) }}
+                {% elif status == "untested" %}
+                    {{ _("In the last {window_size} days you have not been included in any tests. Watch out for an email that invites you to submit a saliva sample for testing!").format(window_size=window_size) }}
+                {% endif %}
+            </div>
+        </div>
+        <div class="row align-items-center" style="height: 115px">
+            <div class="col">
+                {% if status == "negative" %}
+                {{
+                    _("Your pooled test on <strong>{scheduled}</strong> was negative! <br>"
+                    "You may enter the building immediately, from <strong>{window_start}</strong> until <strong>{window_end}</strong>.").format(
+                         scheduled=scheduled,
+                         window_start=window_start,
+                         window_end=window_end)
+                        }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>   
+
+<div class="mt-5">
+    <h3>{{ _('Your (past) scheduled tests') }}</h3>
+    {{
+        render_table(
+            all_tests,
+            titles=all_tests_titles,
+        )
+    }}
+</div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html style='text-align:center; font-size: 16px; background-color: white'>
+<body style="margin: 10px; font-size: 16px;">
+  {% if frame_colour %}
+    <table align='center' style="background-color: {{ frame_colour }};">
+  {% else %}
+    <table align='center' style="background-color: rgb(40, 167, 69);">
+  {% endif %}
+    <tr>
+      <td align='center' style='text-align: left; max-width: 500px;'>
+        <div style="background-color: white">
+          <div style="padding: 10px;">
+            {% block header %}
+            <div style="text-align: center; background-color: white">
+              <img src="https://www.c-sef.com/static/mes.png" alt="Project logo" width="200" height="94" border="0" style="border:0; outline:none; text-decoration:none; display:block; margin: auto">
+              <hr>
+            </div>
+            {% endblock %}
+            <div>
+              <br>
+              {% block content %}
+              {% endblock %}
+              {% block footer %}
+              <br>
+              <hr>          
+              <p style="font-size:14px">
+                {{_('Any questions or comments? Contact us at') }} <a href="mailto:csef@ipicyt.edu.mx">csef@ipicyt.edu.mx</a>.
+              </p>
+              {% endblock %}
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

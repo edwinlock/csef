@@ -1,0 +1,19 @@
+{% from 'bootstrap5/nav.html' import render_nav_item %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand m-2" href="{{ url_for('index_page') }}">C-SEF | {{ _('Laboratory') }}</a>
+      <span class="text-light">({{ _('Logged in as') }} {{ current_user.forenames }} {{ current_user.surnames }})</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          {{ render_nav_item('lab.collect_page', _('Sample collection')) }}
+          {{ render_nav_item('lab.compute_page', _('Pooling')) }}
+          {{ render_nav_item('lab.results_page', _('Results')) }}
+          {{ render_nav_item('security.logout', _('Logout')) }}
+        </div>
+      </div>
+    </div>
+</nav>

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="my-3 text-center">
+	<h1> {{ _('Our solution') }} </h1>
+</div>
+
+<h3 class="border-bottom">{{ _('Group testing') }} </h3>
+
+<p class="mb-5" style='text-align: justify'>{{ _('Our methodology is based on the principle of group testing. In group testing, multiple samples are pooled into a single test. The result indicates whether any given person in the pool is infected, or conversely – and more informatively – if none are infected.') }}</p>
+
+<center>
+	<figure class="px-5">
+		<img src= {{ url_for('static', filename='pruebasgrupales2.png') }} height="300px" class="img-fluid">
+		<figcaption style="color:gray">{{ _("Illustration of group tests of size 6. Red dots represent infected individuals. In the above scenario, a single group test on Group A will return negative, since no individual is infected. The test for Group B will return positive, since some individuals are infected.") }}</figcaption>
+	</figure>
+</center>
+
+<p class="mt-5" style='text-align: justify'>{{ _("Under the supervision of Prof. Ángel Alpuche Solís, The National Laboratory of Agricultural, Medical and Environmental Biotechnology (LANBAMA) has led efforts to implement the group testing solution via a key concentration step, as per <a href='https://academic.oup.com/clinchem/article/67/5/797/6211384?login=true' target='_blank'>research</a> from the Oxford University Pharmacology Department.") }}</p>
+
+
+<h3  class="border-bottom">{{ _('Proven benefits') }}</h3>
+
+<p style='text-align: justify'>{{ _('Not only is there a substantial literature regarding group testing in the Computational Learning Theory community, but the underlying method has been successfully used in practice to fight HIV. The most compelling benefit of group testing is its ability to amplify the reach of a limited number of tests to larger population segments by allocating tests to disjoint groups of individuals.') }}</p>
+
+
+<h3  class="border-bottom">{{ _('The proposed solution') }}</h3>
+
+<p style='text-align: justify'>{{ _('Instead of determining the number of tests required for a given testing regime, we turn the problem on its head and formulate the problem of maximising the use of limited testing resources as a resource allocation problem. Our approach is designed for settings with severely limited testing capacities.') }}</p>
+
+<div class="row mt-5" style='text-align: justify'>
+	<div class="col"> 
+ 		<figure> <img src= {{ url_for('static', filename='step1.png') }} height="400"/ class="img-fluid" >
+  			<center>
+  				<figcaption style="font-weight: bold">{{ _("Compute individuals' utility and infection risk") }}</figcaption>
+			</center>
+			<figcaption style="color:gray">{{ _("Our testing strategy requires computing each individual's utility of normal activity over lockdown as well as their probability of infection.") }}</figcaption>
+		</figure>
+	</div>
+  	<div class="col"> 
+  		<figure> <img src= {{ url_for('static', filename='step2.png') }} height="400"/ class="img-fluid" >
+  			<center>
+  				<figcaption style="font-weight: bold">{{ _("Compute Optimal Testing Strategy") }}</figcaption>
+			</center>
+			<figcaption style="color:gray">{{ _("Based on these population characteristics, we provide an optimal allocation of group tests to the population, under the containment assumption that only those in negative tests will return to in-person activities.") }}</figcaption>
+  		</figure>
+  	</div>
+  	<div class="col">
+  		<figure> <img src= {{ url_for('static', filename='step3.png') }} height="400"/ class="img-fluid" >
+		  	<center>
+		  		<figcaption style="font-weight: bold">{{ _("Implement Tests and Communicate Results") }}</figcaption>
+			</center>
+			<figcaption style="color:gray">{{ _("We help the LANBAMA coordinate the group tests required, and communicate the results to relevant individuals.") }}</figcaption>
+		</figure>
+	</div>	
+</div>
+</br>
+
+<h3  class="border-bottom">{{ _('Practical Implementation') }}</h3>
+
+<p style='text-align: justify'>{{ _("In order to efficiently implement our proposed solution, the C-SEF team has spent months mobilising labour and economic resources to bring the algorithmic, experimental design to IPICYT, in San Luis Potosí, Mexico. The final product is the web application which hosts this text, wherein users submit data and preferences, and in return receive an invitation to get tested in a way that optimises their needs and the institute's use of resources. At the same time, labortory technicians use the platform to indicate which unique ID (i.e. user) has shown up for a test, and subsequently pool the group of users who submited a saliva sample for testing on a given day using our novel optimisation algorithm.") }}</p>
+
+<br>
+<center>
+	<a href="{{ url_for('personas_page') }}" class="btn btn-primary btn-md" tabindex="-1" role="button" aria-disabled="true">{{ _('Meet the team') }}</a>
+</center>
+
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'security/base.html' %}
+{% from 'bootstrap5/form.html' import render_field, render_form_row, render_hidden_errors %}
+
+{% block security_form %}
+    <h1>{{ _fsdomain('Sign In') }}</h1>
+    <form action="{{ url_for_security('login') }}" method="POST" name="login_user_form">
+    {{ login_user_form.hidden_tag() }}
+    {{ render_hidden_errors(login_user_form) }}
+    {{ render_form_row([login_user_form.email]) }}
+    {{ render_form_row([login_user_form.password]) }}
+    {{ render_form_row([login_user_form.remember]) }}
+    {{ render_form_row([login_user_form.submit]) }}
+    </form>
+{% endblock %}

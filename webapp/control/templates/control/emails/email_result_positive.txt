@@ -1,0 +1,16 @@
+{% extends 'emails/base_email.txt' %}
+
+{% block content %}
+    {{ _('Dear Participant,') }},
+
+    {{ _('You submitted a sample for a pooled test scheduled on') }} {{scheduled | format_date("long")}}.
+
+    {{ _('Your test result was positive. For the time being, you do not have access to the institute.') }}
+    {{_('The LANBAMA will notify you about your individual result within 24 hours.') }}
+
+
+ {{ _("You can check your test results and building access any time in the")}}
+    <a href='{{url_for('participant.landing_page', _external=True)}}'>{{_('information centre.') }}</a>
+    {{ _('Have a nice day!') }}
+    {{ _('The C-SEF team') }}
+{% endblock %}

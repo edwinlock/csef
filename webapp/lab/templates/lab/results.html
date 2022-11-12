@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form, render_field, render_form_row, render_hidden_errors %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% from 'bootstrap5/utils.html' import render_icon %}
+
+{% block content%}
+<div class="mt-5">
+    <h1 class="mt-5">
+        {{ _('Results') }}
+    </h1>
+    
+</div>
+
+{% include 'lab/select_allocation.html'%}
+{% if allocation is not none and allocation.pooled is none %}
+    <h3 class="border-bottom">{{ _('Enter test results') }}</h3>
+    <p> {{ _('You have not yet computed a pooling for this testing date.') }}</p>
+{% elif allocation is not none and allocation.pooled is not none %}
+<div>
+    <h3>{{ _('Enter test results') }}</h3>
+    <p>
+        <strong>{{ _('Important note:') }}</strong>
+        {{ _('If a result is non-determined, please enter a Ct value of 40.') }}
+    </p>
+    <form method="post">
+        {{ form.csrf_token() }}
+        <div class="row">
+            {% for name in poolnames %}
+                {{ render_field(result_fields[name], form_type='horizontal', horizontal_columns=('sm',5,7), form_group_classes='col-md-3') }}
+                {{ render_field(ct_E_fields[name], form_group_classes='col-md-2') }}
+                {{ render_field(ct_N_fields[name], form_group_classes='col-md-2') }}
+                {{ render_field(ct_RdRP_fields[name], form_group_classes='col-md-2') }}
+                {{ render_field(ct_IC_fields[name], form_group_classes='col-md-2') }}
+                <hr class="mt-2">
+            {% endfor %}
+        </div>
+        {{ render_field(form.submit) }}
+    </form>
+
+{#
+    <form method="post">
+        {{ form.hidden_tag() }}
+        {{ render_hidden_errors(form) }}
+        <hr>
+        {% for name in poolnames %}
+        {{
+            render_form_row(
+                [
+                    name_fields[name],
+                    result_fields[name],
+                    ct_E_fields[name],
+                    ct_N_fields[name],
+                    ct_RdRP_fields[name],
+                    ct_IC_fields[name]
+                ],
+                form_type='inline',
+            )
+        }}
+        <hr>
+        {% endfor %}
+        {{ render_field(form.submit) }}
+    </form>
+#}
+
+</div>
+{% endif %}
+
+
+
+{% endblock %}
+

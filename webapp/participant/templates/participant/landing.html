@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block content %}
+<div class="mt-3", style='text-align: justify'>
+    <h1>{{ _('Welcome to the IPICYT/C-SEF trial!') }}</h1>
+
+    {% if user.treatment %}
+        <p>{{ _("On this page you'll find all information about your informed participation in the C-SEF trial. Please read the following paragraphs carefully.") }}</p>
+
+        <p>{{ _(
+                "You are part of the treatment group in the trial. "
+                "Every day, the algorithm underlying C-SEF selects participants in the treatment group for pooled testing (<a href='{url}''>more information</a>). "
+                "Participants in negative pooled tests are given access to IPICYT buildings for two full days. "
+                "You will receive an email invitation to submit a saliva sample at <a href='https://www.ipicyt.edu.mx/Lanbama/lanbama.php'>LANBAMA</a> if you're selected for testing. "
+                "On this page, you can also check your building access status at any time, and see the results of any pooled tests of which you have been part. "
+                ).format(url=url_for('solucion_page')) }}</p>
+
+        <p>{{ _(
+                "In order to be considered for testing, you are required to <strong>provide consent</strong> and fill in the <strong>baseline survey</strong> by {baseline_deadline}. "
+                "In addition, you are encouraged to share your <strong>scheduling preferences</strong>. "
+                "Telling us on which days you would prefer to access the building increases your chance of getting into IPICYT when you want it most. "
+                "Moreover, letting us know any days on which you <i>don't</i> want to come can help LANBAMA not waste any tests. "
+                "You can update your schedule throughout the trial, as often as you want."
+                ).format(baseline_deadline=baseline_deadline) }}</p>
+
+        <p>{{ _("At the end of the trial, we also ask you to fill in the <strong>endline survey</strong>. This will allow us to assess the impact of the trial on the members of IPICYT.") }}</p>
+
+        <p>{{ _("If you have any questions or issues with this website, please <a href='{url}'>get in touch</a>!").format(url=url_for('contact_page')) }}</p>
+
+    {% else %}
+        <p>{{ _("On this page you'll find all information about your informed participation in the C-SEF trial. Please read the following paragraph carefully.") }}</p>
+
+        <p>{{ _("In order to take part in this trial, we first ask you to provide consent. As a member of the control group, you will continue to follow the established IPICYT protocols for accessing buildings. We kindly ask you to fill in the baseline survey by {baseline_deadline}. At the end of the trial we also ask you to complete the endline survey. This will allow us to assess the impact of the trial on the members of IPICYT.").format(baseline_deadline=baseline_deadline) }}</p>
+
+        <p>{{ _("If you have any questions or issues with this website, please <a href='{url}'>get in touch</a>!").format(url=url_for('contact_page')) }}</p>
+    {% endif %}
+</div>
+
+
+<div class="my-3 row justify-content-center">
+    <div class="col-12 mb-2">
+        <h3 class="border-bottom">{{ _('Your action items') }}</h3>
+        <p>
+            {{ _('As a participant, we will ask you to complete a few action items as the trial progresses. <strong>Click on each item to complete it.</strong>') }}
+        </p>
+    </div>
+    <div class="col-sm-9 col-md-6">
+        <div class="card">
+            
+            <div class="card-header">
+                {{ _('Participant action items <i class="bi bi-card-checklist"></i>') }}
+            </div>
+            <ul class="list-group list-group-flush">
+
+                {# Consent item #}
+                <a href="{{ url_for('participant.consent_info_page') }}" class="list-group-item list-group-item-action">
+                    {% if user.consent %}
+                        <i class="bi-check-square-fill text-success" style="font-size:1.5rem"></i>
+                        {{ _("You've given consent!") }}
+                    {% else %}
+                        <i class="bi-exclamation-square-fill text-warning" style="font-size:1.5rem"></i>
+                        {{ _('Give consent') }}
+                    {% endif %}
+                </a>
+
+                {# Baseline survey item #}
+                {% if baseline_closed %}
+                    <a href="#" class="list-group-item list-group-item-action disabled">
+                        <i class="bi bi-slash-circle-fill text-success" style="font-size:1.5rem"></i>
+                        {{ _("The baseline survey has closed.") }}
+                    </a>
+                {% elif user.baseline_data %}
+                    <a href="{{ url_for('participant.baseline_survey_page') }}" class="list-group-item list-group-item-action">
+                        <i class="bi bi-check-square-fill text-success" style="font-size:1.5rem"></i>
+                        {{ _("You've completed the baseline survey! (edit until {baseline_deadline})").format(baseline_deadline=baseline_deadline) }}
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('participant.baseline_survey_page') }}" class="list-group-item list-group-item-action">
+                        <i class="bi bi-exclamation-square-fill text-warning" style="font-size:1.5rem"></i>
+                        {{ _('Fill in baseline survey by ') }} {{ baseline_deadline }}
+                    </a>
+                {% endif %}
+
+                {% if user.treatment %}
+                    <a href="{{ url_for('participant.schedule_page') }}" class="list-group-item list-group-item-action">
+                        {% if user.schedule_data %}
+                            <i class="bi bi-check-square-fill text-success" style="font-size:1.5rem"></i>
+                            {{ _("You've submitted your schedule! (<strong>click to update</strong>)") }}    
+                        {% else %}
+                            <i class="bi bi-question-square-fill text-info" style="font-size:1.5rem"></i>
+                            {{ _('Provide personal scheduling preferences (recommended)') }}
+                        {% endif %}
+                    </a>
+                {% endif %}
+
+                {% if not endline_open %}
+                    <a href="#" class="list-group-item list-group-item-action disabled">
+                        <i class="bi bi-hourglass-split" style="font-size:1.5rem"></i>
+                        {{ _(" Endline survey opens on ") }} {{ endline_start | format_date('short') }}
+                    </a>
+                {% elif user.endline_data %}
+                    <a href="{{ url_for('participant.endline_survey_page') }}" class="list-group-item list-group-item-action">
+                        <i class="bi bi-check-square-fill text-success" style="font-size:1.5rem"></i>
+                        {{ _('You have completed the endline survey! (click to edit)') }}
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('participant.endline_survey_page') }}" class="list-group-item list-group-item-action">
+                        <i class="bi bi-exclamation-square-fill text-warning" style="font-size:1.5rem"></i>
+                        {{ _('Fill in endline survey') }}
+                    </a>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% if user.treatment %}
+    {% if testing_started is false %}
+        <div class="mt-3">
+            <h3 class="border-bottom">{{ _('Your access status') }}</h3>
+            {{ _("Testing will begin on {testing_start}!").format(testing_start=testing_start) }}
+            {{ _('You will receive an email as soon as you are invited for testing.') }}
+        </div>
+        <div class="row justify-content-center my-1">
+            <div class="col">
+                <img src="{{ url_for('static', filename='hourglass.gif') }}" class="h-25" alt="hour glass">
+            </div>
+        </div>
+    {% else %}  {# testing has started #}
+        <div class="mt-3">
+            <h3 class="border-bottom">{{ _('Your access status') }}</h3>
+            {{ _('Here we show your current building access status. You are only allowed to enter the building if you have recently been in a negative pooled test. A negative pooled test gives you access for {window_size} from providing the sample.').format(window_size=window_size) }}
+        </div>
+
+        <div class="row justify-content-center my-5" style="height: 200px">
+
+            <div class="col-2 col-md-2 col-lg-1 text-end h-100">
+                <img src="{{ url_for('static', filename=trafficlight) }}" class="h-100 p-1" alt="traffic light denoting {{ status }} status}">
+            </div>
+
+            <div class="col-10 col-sm-8 col-md-5 mt-2">
+                <div class="row align-items-center" style="height: 56px">
+                    <div class="col">
+                        {% if status == "positive" %}
+                        {{ _("Your pooled test on <strong>{scheduled}</strong> was <strong>positive</strong>. You're currently not permitted to enter the building.").format(scheduled=scheduled) }}
+                        {% elif status == "inconclusive" %}
+                            {{ _("Your pooled test on <strong>{scheduled}</strong> was <strong>inconclusive</strong>. We're sorry that you're currently not permitted to enter the building.").format(scheduled=scheduled) }}
+                        {% elif status == "unsubmitted" %}
+                            {{ _("You were asked to submit a sample on <strong>{scheduled}</strong> but failed to do so. You're currently not permitted to enter the building.").format(scheduled=scheduled) }}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="row align-items-center" style="height: 56px">
+                    <div class="col">
+                        {% if status == "limbo" %}
+                            {{ _("We're still waiting for your test result that was scheduled on {scheduled}. Thanks for being patient!").format(scheduled=scheduled) }}
+                        {% elif status == "untested" %}
+                            {{ _("In the last {window_size} you have not been included in any tests.").format(window_size=window_size) }}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="row align-items-center" style="height: 56px">
+                    <div class="col">
+                        {% if status == "negative" %}
+                        {{
+                            _("Your pooled test on <strong>{scheduled}</strong> was negative! <br>"
+                            "You may enter the building immediately, from <strong>{window_start}</strong> until <strong>{window_end}</strong>.").format(
+                                scheduled=scheduled,
+                                window_start=window_start,
+                                window_end=window_end)
+                                }}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>   
+
+        <div class="mt-5">
+            <h3 class="border-bottom">{{ _('Your testing history') }}</h3>
+            <p>
+                {{ _("Here we list the results of all tests for which you were invited. "
+                     "This includes tests for which you did not submit a sample.") }}
+            </p>
+            {{
+                render_table(
+                    all_tests,
+                    titles=all_tests_titles,
+                )
+            }}
+        </div>
+    {% endif %}
+
+{% else %}  {# participant is in control group #}
+    <div class="my-5">
+        <h3 class="border-bottom">{{ _('Your access') }}</h3>
+        <p>{{ _("You are in the control group. This allows you to follow the standard IPICYT access protocols.") }}</p>
+    </div>
+{% endif %}
+    
+
+{% endblock %}

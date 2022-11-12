@@ -1,0 +1,74 @@
+{% from 'bootstrap5/utils.html' import render_messages %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+            {# {{ bootstrap.load_css() }} #}
+        {% endblock %}
+
+        {% if title %}
+            <title>{{ title.capitalize() }}</title>
+        {% else %}
+            <title>C-SEF</title>
+        {% endif %}
+
+        {% endblock %}
+    </head>
+    <body>
+        <!-- Your page content -->
+        {% block navigation %}
+        {% if current_user.has_role("admin") %}
+            {% include('control/navbar.html') %}
+        {% elif current_user.has_role("participant") %}
+            {% include('participant/navbar.html') %}
+        {% elif current_user.has_role("lab") %}
+            {% include('lab/navbar.html') %}
+        {% else %}
+            {% include('navbar.html') %}
+        {% endif %}
+        {% endblock %}
+
+        {% block messages %}
+        <div class="m-2">
+            {{ render_messages() }}
+        </div>
+        {% endblock %}
+        
+        <div class="container my-3">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+            
+        </div>
+        {% block scripts %}
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+        <!-- Optional JavaScript -->
+        {{ bootstrap.load_js() }}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#searchfield").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("tbody tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+                });
+            });
+        </script>
+        {% endblock %}
+    </body>
+</html>

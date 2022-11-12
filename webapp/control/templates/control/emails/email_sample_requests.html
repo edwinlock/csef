@@ -1,0 +1,47 @@
+{% extends 'emails/base_email.html' %}
+
+{% block content %}
+    <p style="margin-bottom: 30px">{{_('Dear Participant,') }}</p>
+    <p>{{_('You are invited to submit a saliva sample on') }}</p>
+      <center>
+        <strong>
+          {{ scheduled | format_date("long") }},
+          {{_("between 8am and 9am") }},
+        </strong>
+      </center>
+    <p>
+      {{ _("at LANBAMA (at La Palapa, in IPICYT) with laboratory technician Édgar Daniel Páez. Dr. Páez will email you a preferred time slot for your arrival. A negative qPCR pooled test will grant you access to IPICYT for the two days following the test.") }}
+      {{ _("If you are experiencing clear symptons, we ask that you do <strong> not </strong> come to the appointment to avoid infecting others.") }}
+      {{ _("If you are experiencing clear symptons, you can still pay for an individual test at LANBAMA at a different time.") }}
+
+      
+    </p>
+    <p>
+      {{ _("LANBAMA has requested that you fill in the following information before your test:")}} <a href='https://docs.google.com/forms/d/18myZ_HsNg0rsBxkVRdx-Aoma1m90xOJvMqEitUh_wTo/edit'>LANBAMA Google Form</a>
+
+    </p>
+    <p>  
+      {{ _("Please note that for the saliva sample to be processed correctly, you must adhere to the following rules:")}}
+      <ul>
+        {{
+        _("
+        <li>No mouthwash or spray medication the evening before.</li>
+        <li>Hydrate yourself well the evening before. </li>
+        <li>Do not brush your teeth, use mouthwash, or floss before submitting the sample. </li>
+        <li>3 hours before submitting the sample, please avoid eating or drinking, chewing gum, smoking, and using an atomizer.</li>
+        <li>Remove lipstick or lipcream, and avoid touching your lips before submitting the sample.</li>
+        <li>Bring a mask to the appointment and your ID!</li>
+        ")
+        }}
+      </ul>
+    </p>
+    <p>
+      {{ _("Please note that if you skip the test you cannot enter the building until your next test results.")}}
+    </p>
+    <p style="margin-bottom: 30px">
+      {{ _("For more information, please visit") }} <a href='https://www.c-sef.com'>https://c-sef.com</a>.
+    </p>
+
+    <p>{{_('Have a nice day!') }}</p>
+    <p><strong>{{_('The C-SEF team') }}</strong></p>
+{% endblock %}

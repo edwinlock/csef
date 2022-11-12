@@ -1,0 +1,15 @@
+{% extends 'emails/base_email.txt' %}
+
+{% block content %}
+    {{ _('Hi') }} {{ user.fullname }},
+    
+    {{ _('Your password has been succesfully reset.') }}
+    
+    {% if security.recoverable %}
+        {{ _('If you did not change your password, click the link below to reset it.') }}
+        {{ url_for_security('forgot_password', _external=True) }}
+    {% endif %}
+
+    {{_('Have a nice day!') }}
+    {{_('The C-SEF team') }}
+{% endblock %}

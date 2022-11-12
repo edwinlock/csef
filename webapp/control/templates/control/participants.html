@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form, render_field %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block content%}
+
+<div class="mt-3">
+    <h1>
+        {{ _('Manage users') }}
+    </h1>
+    <p>
+        {{ _('On this page you can manage all the users in the system. This includes experiment participants, lab staff and administrators.') }}
+    </p>
+</div>
+
+<div class="mt-3">
+    <h3> {{ _('Statistics') }} </h3>
+    <p>
+        {{ _('Some statistics on the number of participants who have given consent, filled in the baseline survey and specified a schedule.') }}
+    </p>
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>{{ _('Group size') }}</th>
+            <th>{{ _('Consent') }}</th>
+            <th>{{ _('Baseline') }}</th>
+            <th>{{ _('Schedule') }}</th>
+            <th>{{ _('Endline') }}</th>
+        </tr>
+        <tr>
+            <td>{{ _('Treatment') }}</td>
+            <td>{{ no_treatment }}</td>
+            <td>{{ no_treatment_consent }}</td>
+            <td>{{ no_treatment_baseline }}</td>
+            <td>{{ no_treatment_schedule }}</td>
+            <td>{{ no_treatment_endline }}</td>
+        </tr>
+        <tr>
+            <td>{{ _('Control') }}</td>
+            <td>{{ no_control }}</td>
+            <td>{{ no_control_consent }}</td>
+            <td>{{ no_control_baseline }}</td>
+            <td>{{ no_control_schedule }}</td>
+            <td>{{ no_control_endline }}</td>
+        </tr>
+        <tr>
+            <td>{{ _('Combined') }}</td>
+            <td>{{ no_combined }}</td>
+            <td>{{ no_combined_consent }}</td>
+            <td>{{ no_combined_baseline }}</td>
+            <td>{{ no_combined_schedule }}</td>
+            <td>{{ no_combined_endline }}</td>
+        </tr>
+    </table>
+</div>
+
+{#<div>
+    <h3> {{ _('Download email lists') }}</h3>
+    <p>({{ _('Downloads will only commence if list is not empty.') }})</p>
+    <ul>
+        <li><a href="{{ url_for('control.download_emails', treatment=True, opt_out=False) }}">{{ _('Treatment group, opted in') }}</a></li>
+        <li><a href="{{ url_for('control.download_emails', treatment=True, opt_out=True) }}">{{ _('Treatment group, opted out') }}</a></li>
+        <li><a href="{{ url_for('control.download_emails', treatment=False, opt_out=False) }}">{{ _('Control group, opted in') }}</a></li>
+        <li><a href="{{ url_for('control.download_emails', treatment=False, opt_out=True) }}">{{ _('Control group, opted out') }}</a></li>
+    </ul>
+</div> #}
+
+{# We now compute the table of participants. #}
+<div class="mt-5">
+    <h3>{{ _('List of current participants') }}</h3>
+    {{ render_field(searchform.searchfield, form_type='horizontal', horizontal_columns=('md', 0, 6)) }}
+    {{
+        render_table(participants,
+            titles=participants_titles,
+            model=User,
+            show_actions=True,
+            actions_title=_('Actions'),
+            delete_url=('control.delete_user_page', [('id', ':id')]),
+            edit_url=('control.edit_user_page', [('id', ':id')]),
+            new_url='control.add_user_page',
+        )
+    }}
+
+    <h3>{{ _('List of remaining users') }}</h3>
+
+    {{
+        render_table(remainder,
+            titles=remainder_titles,
+            model=User,
+            show_actions=True,
+            actions_title=_('Actions'),
+            delete_url=('control.delete_user_page', [('id', ':id')]),
+            edit_url=('control.edit_user_page', [('id', ':id')]),
+            new_url='control.add_user_page',
+        )
+    }}
+</div>
+
+<div class="mt-5">
+    <h3>
+        {{ _('Bulk add participants') }}
+    </h3>
+    <p>{{ _('This allows you to upload a CSV file to add participants in bulk. Note that participants already in the system are ignored. This is verified using the email address.') }}</p>
+
+    {{ render_form(form) }}
+</div>
+
+{% endblock %}

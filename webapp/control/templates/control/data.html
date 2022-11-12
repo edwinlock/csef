@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block content %}
+<div class="mt-3">
+    <h1>{{ _("Data management") }}</h1>
+    {{ _("On this page you can see existing data and upload new data as CSV.") }}
+</div>
+<div class="mt-5">
+    <h3>
+        {{ _("Bulk add data") }}
+    </h3>
+    <p>
+        {{ _("This allows you to upload a CSV file to add data in bulk. Note that data points already in the system are ignored. In particular, if there exists a datum with the same user ID and timestamp, the new datum is not added.") }}
+    </p>
+
+    {{ render_form(form) }}
+</div>
+<div class="mt-3">
+    <h3>{{ _("Current data") }}</h3>
+    {{
+        render_table(
+            data,
+            titles=titles,
+            model=Data,
+            show_actions=True,
+            delete_url=('control.delete_datum_page', [('id', ':id')]),
+            edit_url=('control.edit_datum_page', [('id', ':id')]),
+            new_url=('control.add_datum_page'),
+            responsive=True,
+            table_classes="table-sm"
+        )
+    }}
+</div>
+{% endblock %}

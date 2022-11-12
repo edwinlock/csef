@@ -1,0 +1,6 @@
+forenames,surnames,email,password,role,treatment,opt_out
+Cody,Robinson,Cody@Robinson.com,21258483,participant,False,False
+Trent,Gonzalez,Trent@Gonzalez.com,78722326,participant,True,False
+Anthony,Hays,Anthony@Hays.com,25200649,participant,False,False
+Seth,Knight,Seth@Knight.com,69612586,participant,True,False
+Phillip,Torres,Phillip@Torres.com,20266937,participant,False,False

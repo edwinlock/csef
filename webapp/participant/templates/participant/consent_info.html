@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form, render_field, render_hidden_errors %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block content %}
+
+<div class="my-3">
+    <h1>{{ _('Consent') }}</h1>
+    <div class="p-3 bg-light">
+        <p>
+            {{ _("Before you can participate in the C-SEF trial, you must give informed consent.") }}
+            {{ _("We ask that you read this page carefully. If you decide you <strong> do not want to participate</strong>, you may leave at any time <strong>without providing a reason and without penalty.</strong>") }}
+        </p>
+    </div>
+</div>
+
+<div class="my-3 row text-center justify-content-center">
+    {% if consent is true %}
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header text-bg-success">
+                    {{ _('Consent given') }}
+                </div>
+                <div class="row g-0">
+                    <div class="col-sm-2 align-self-center">
+                        <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem"></i>
+                    </div>
+                    <div class="col-sm-10 align-self-center">
+                        <div class="card-body text-start">
+                            <p class="card-text">{{ _("Thank you for giving consent. Consent can be withdrawn at any time by <a href='{url}' class='link-success'>contacting us.</a>").format(url=url_for('contact_page')) }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif consent is none %}
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header text-bg-warning">
+                    {{ _('Consent missing') }}
+                </div>
+                <div class="row g-0">
+                    <div class="col-sm-2 align-self-center">
+                        <i class="bi bi-question-circle-fill text-warning" style="font-size: 3rem"></i>
+                    </div>
+                    <div class="col-sm-10 align-self-center">
+                        <div class="card-body text-start">
+                            <p class="card-text">{{ _("Please provide consent by reading the instructions below and completing the ") }} <a href="{{ url_for('participant.consent_form_page') }}">{{_('consent form.') }}</a> {{_('Consent can be withdrawn at any time.') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif consent is false %}
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header text-bg-danger">
+                    {{ _('Consent withheld') }}
+                </div>
+                <div class="row g-0">
+                    <div class="col-sm-2 align-self-center">
+                        <i class="bi bi-exclamation-circle-fill text-danger" style="font-size: 3rem"></i>
+                    </div>
+                    <div class="col-sm-10 align-self-center">
+                        <div class="card-body text-start">
+                            <p class="card-text">{{ _("You have denied consent. This decision cannot be reverted. Consent is required to interact with this website. If you believe this is incorrect, please <a href='{url}' class='link-success'>contact us.</a>").format(url=url_for('contact_page')) }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+<div class="mt-3", style='text-align: justify'>
+    <h3 class="border-bottom">{{ _('Background') }}</h3>
+    <p>
+        {{ _(" You have been invited to take part in a research project conducted by researchers from the University of Oxford, Harvard University, and the United Nations University in Maastricht in conjunction with IPICYT. This project is funded by IPICYT team members' research budget and overseas team members' research budget. In accordance with international standards in the practice of randomised studies, this project has received ethical approval from the Research Ethics Committee at IPICYT and The Central University Research Ethics Committee at Oxford University, ethics reference R81719/RE001.
+        Please visit the <a href='https://ipicyt.edu.mx/avisos_privacidad/' class='link-success'>IPICYT Privacy Notice website</a> for more information regarding your rights as a participant according to them.") }}
+    </p>
+    <p>
+        {{ _("If anything is unclear, or you want to know more, feel free to  <a href='{url}' class='link-success'>contact us.</a>").format(url=url_for('contact_page')) }}
+    </p>
+    {% if consent is none %}
+        <a class="mt-3 btn btn-primary" href="{{ url_for('participant.consent_form_page') }}">{{ _('Proceed to consent form') }}</a>
+    {% endif %}
+</div>
+
+<div class="my-4" style='text-align: justify'>
+    <h3 class="border-bottom">{{ _('Important Information') }}</h3>
+    <ul>
+        <br>
+        <li>{{ _(' <strong> Purpose: </strong> The purpose of this study is to understand how the implementation of an algorithmic-base safe education protocol influences students and staff well-being and productivity during a pandemic. ') }}</li>
+        <br>
+        <li>{{ _(" <strong> What happens during the study: </strong>  This study requires you to follow one of two protocols. If you are selected to be part of the <i style='color:MediumSeaGreen;'>treatment group</i>, you will participate in COVID-19 pooled testing. Throughout the course of the study, you may receive emails inviting you to submit a saliva sample, which will be pooled with other samples and tested at the LANBAMA laboratory at IPICYT. If your test is negative, then everyone in your pool is healthy and permitted to enter the institute for 48 hours. If your test is positive, then at least one person in your pool is infected, and you (as well as all other individuals in your pool) are not permitted to enter the institute until you are selected for re-testing and the next test result is negative. At no point are you obliged to submit a saliva sample, or to enter the building. If you are selected to be part of the <i style='color:MediumSeaGreen;'>control group</i>, you will be asked to follow the same remote working policy that is currently in place at IPICYT. If you would like to access the institute, you must contact the head of your department for permission. 
+            We also ask all participants to respond to a short survey at the beginning and at the end of the trial - within a month's time - where you will be asked sociodemographic questions, alongside a set of psychological questions. You are not required to answer any questions that you may find uncomfortable. Furthermore, for the purpose of COVID-19 testing, you may be asked to give a saliva sample to the technicians at LANBAMA if you are selected for pooled testing. 
+            The sample will be used directly on the day of reception and will be destroyed after being processed for a qPCR test. The sample(s) will not be stored. You will be informed about the result of all pooled tests that contain your sample. ") }}</li>
+        <br>
+        <li>{{ _(' <strong> Participation: </strong> The trial is expected to run for a month, throughout August 2022, during which participants in the treatment group will receive free COVID-19 testing. Throughout the course of the month, the principal investigators will link health data (i.e. COVID-19 test results) to survey data (collected at the beginning and end of the trial). However, at the end of the trial all gathered data will be anonymised. If you wish to withdraw consent on the use of your data at any point during the study, please contact <a href="mailto:csef@ipicyt.edu.mx" class="link-success">csef@ipicyt.edu.mx</a>.
+
+            You always have the option of stopping your participation in the study and you may leave at any time during the study (4 weeks from the start of the trial) without providing a reason and without penalty. If you decide to leave, the data you have provided up to this point will be anonymised immediately and deleted after attrition analysis. ') }}</li>
+        <br>    
+        <li>{{ _(" <strong style='color:tomato;'> Potential Risks: </strong> If you choose not to participate in the study, or you participate and are selected into the control group, you will not be exposed to any additional risk. If you choose to participate and are selected into the treatment group, there is a risk that you will be infected if you are permitted to enter the institute and decide to do so. This risk is small, as all individuals must test negative in order to enter the institute. In particular, the C-SEF protocols are much safer than reopening without monitoring for infections. While the probability of infection can be minimised and contained, it is not guaranteed to be zero. There is always a very small chance to get infected when participating in social activities, and COVID-19 comes with small and major consequences; among which, fever, cough, loss of taste and smell, respiratory problems and, in some cases, death.
+            Your survey responses are strictly confidential and will only be accessible to the researchers. Below, we describe the steps we are taking to protect your privacy. In addition, your decision on whether to participate will not adversely affect your relationship with IPICYT or any other institution to which the researchers are affiliated.") }}</li>
+        <br> 
+        <li>{{ _(' <strong> Benefits: </strong> Participating in this study means that you are aiding further development of science. Additionally, a successful trial would allow IPICYT to reformulate the institutional policy regarding work and study during the current and future waves of the pandemic into one that gives you more social interactions and flexibility with a minimised risk of contagion. ') }}</li>
+        <br>
+        <li>{{ _(' <strong> Data protection and privacy: </strong> The information collected during the study will be kept private. In concordance with the UK General Data Protection Regulation and Data Protection Act of 2018, the University of Oxford is the data controller with respect to your personal data, and as such will determine how your personal data is used in the research. The University will process your personal data for the purpose of the research outlined above. Research is a task that is performed in the public interest. Further information about your rights with respect to your personal data is available at <a href="https://compliance.admin.ox.ac.uk/individual-rights" class="link-success">https://compliance.admin.ox.ac.uk/individual-rights</a>. 
+            Responsible members of the University of Oxford and IPICYT may be given access to data for monitoring and or audit of the study to ensure we are complying with the guidelines or as otherwise required by law. Moreover, in concordance with the signed Memorandum of Understanding, the Potosinian Institute of Scientific Research and Technology (IPICYT) will store and anonymise the original data in a secure server. During the trial, no one other than the head of the IPICYT Supercomputing Centre and responsible members of the University of Oxford and the United Nations University (Maastricht) will have access to any records of this trial. The data will be stored in electronic form, encrypted and password protected. At the conclusion of the trial, all data will be anonymised, and none of the records will identify you. A copy of the anonymised data will be provided to the primary investigators of the trial. The data that we collect from you may be transferred to, and stored or processed at a destination outside Mexico. <strong>The data will be used primarily for the publication of a scientific article </strong>. Archived/stored data, once anonymised, is available for research purposes upon request (primarily for peer-review replication processes). By submitting your personal data, you agree to this transfer, storing, or processing. After completion of the study, you cannot withdraw your personal information. Your individual privacy will be maintained in all publications or presentations resulting from this study. No information about you provided by you during this research will be disclosed to others without your written permission, except:') }}
+                <br>
+                <ul class="">
+                    <li class=""> {{ _('if necessary to protect your rights or welfare (for example, if you are injured and need emergency care); or ') }}</li>
+                    <li class=""> {{ _('if required by law.') }}</li>
+                </ul>
+                </li>
+        <br>
+        <li>{{ _(' <strong> Additional information: </strong> If you are interested in receiving additional information about the results of the study, please contact the study authors. ') }}</li>
+        <br>
+        <li>{{ _(' <strong> Concerns: </strong>  If you have any questions or concerns about any aspect of this project, you can contact the study authors at csef@ipicyt.edu.mx, who will do their best to answer your query. The researcher(s) should acknowledge reception of your concern within 10 working days and give you an indication of how they intend to address it. If you fail to receive a response, are dissatisfied with the response you receive, or desire to report an aspect of how the study is being conducted, please contact the relevant Chair of Research Ethics Committee at the University of Oxford:') }}
+            <br>
+            <ul>
+                <li> <span style="color:MediumSeaGreen;">{{ _('Chair') }}</span>{{ _(', Social Sciences & Humanities Inter-Divisional Research Ethics Committee;') }} </li>
+                <li> <span style="color:MediumSeaGreen;">{{ _('Email:') }}</span> <a href="mailto:ethics@socsci.ox.ac.uk" class="link-secondary">ethics@socsci.ox.ac.uk</a> </li>
+                <li> <span style="color:MediumSeaGreen;">{{ _('Address:') }}</span> {{ _('Research Services, University of Oxford, Wellington Square, Oxford OX1 2JD') }}</li>
+            </ul>
+            <br>
+            {{ _('The Chair will seek to resolve the matter in a reasonably expeditious manner.
+            ') }}</li>
+    </ul>
+
+    {% if consent is none %}
+        <a class="mt-3 btn btn-primary" href="{{ url_for('participant.consent_form_page') }}">{{ _('Proceed to consent form') }}</a>
+    {% endif %}
+</div>
+{% endblock %}
+

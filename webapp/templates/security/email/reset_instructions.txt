@@ -1,0 +1,14 @@
+{% extends 'emails/base_email.txt' %}
+
+{% block content %}
+{{ _('Hi') }} {{ user.fullname }},
+
+{{ _('Have you forgotten your password? Click the link below to reset your password:') }}
+
+{{ reset_link }}
+
+{{_('If you have not requested a password change, then please ignore this email.') }}
+
+{{_('Have a nice day!') }}
+{{_('The C-SEF team') }}
+{% endblock %}

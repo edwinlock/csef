@@ -1,0 +1,3271 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-09-12 22:17+0200\n"
+"PO-Revision-Date: 2022-04-23 11:24+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: forms.py:16
+msgid "Search"
+msgstr "Buscar"
+
+#: forms.py:16
+msgid "enter search term"
+msgstr "ingrese el término de búsqueda"
+
+#: control/routes.py:201 control/routes.py:208 forms.py:19
+msgid "Email"
+msgstr "Email"
+
+#: forms.py:20
+msgid "Name"
+msgstr "Nombre"
+
+#: forms.py:21
+msgid "Subject"
+msgstr "Asunto"
+
+#: forms.py:22
+msgid "Message"
+msgstr "Mensaje"
+
+#: forms.py:23
+msgid "send"
+msgstr "enviar"
+
+#: routes.py:31
+msgid "Thank you, your message has been sent!"
+msgstr "¡Gracias! Tu mensaje ha sido enviado"
+
+#: control/emails.py:11
+msgid "Emails aborted: Allocation ID is none."
+msgstr "Emails anulados: No hay ID de asignación."
+
+#: control/emails.py:22
+msgid "[C-SEF IPICYT] You are invited to submit a test sample"
+msgstr "[C-SEF IPICYT] Te invitamos a que entregues una muestra"
+
+#: control/emails.py:34
+msgid "Emails aborted: No test results have been submitted for this day."
+msgstr "Emails anulados: No se han entregado resultados de pruebas para este día."
+
+#: control/emails.py:51
+msgid "[C-SEF IPICYT] Sample not submitted"
+msgstr "[C-SEF IPICYT] Muestra no entregada"
+
+#: control/emails.py:60 control/emails.py:69 control/emails.py:78
+msgid "[C-SEF IPICYT] Test result"
+msgstr "[C-SEF IPICYT] Resultado de tu prueba"
+
+#: control/forms.py:19 control/routes.py:199 control/routes.py:206
+#: control/routes.py:580 lab/routes.py:74
+msgid "Forenames"
+msgstr "Nombres"
+
+#: control/forms.py:20 control/routes.py:200 control/routes.py:207
+#: control/routes.py:581 lab/routes.py:75
+msgid "Surnames"
+msgstr "Apellidos"
+
+#: control/forms.py:21
+msgid "Role"
+msgstr "Rol"
+
+#: control/forms.py:22 control/routes.py:203
+#: control/templates/control/participants.html:30
+msgid "Treatment"
+msgstr "Tratamiento"
+
+#: control/forms.py:27 control/forms.py:45 control/forms.py:66
+#: control/forms.py:75
+msgid "add"
+msgstr "agregar"
+
+#: control/forms.py:32
+msgid "password"
+msgstr "contraseña"
+
+#: control/forms.py:34
+msgid "confirm password"
+msgstr "confirmar contraseña"
+
+#: control/forms.py:40 control/forms.py:71
+msgid "save"
+msgstr "guardar"
+
+#: control/forms.py:44
+msgid "User data (as csv)"
+msgstr "Datos de usuario (formato CSV)"
+
+#: control/forms.py:52
+msgid "No participant with this User ID!"
+msgstr "No hay un participante con este ID"
+
+#: control/forms.py:56
+msgid "User ID"
+msgstr "ID de usuario"
+
+#: control/forms.py:57
+msgid "Health probability"
+msgstr "Probabilidad de Salud"
+
+#: control/forms.py:61 control/routes.py:125
+msgid "Timestamp"
+msgstr "Fecha"
+
+#: control/forms.py:80
+msgid "Scheduled date"
+msgstr "Fecha agendada"
+
+#: control/forms.py:81
+msgid "Compute weekly allocation"
+msgstr "Calcular asignación semanal"
+
+#: control/forms.py:84
+msgid ""
+"Select the day for which you would like to invite the participants to "
+"submit a sample."
+msgstr ""
+"Seleccione el día en el que le gustaría invitar a los participantes a "
+"enviar una muestra."
+
+#: control/forms.py:85 control/forms.py:89
+msgid "(Re)send"
+msgstr "(Re)enviar"
+
+#: control/forms.py:88
+msgid ""
+"Below is the list of dates for which the results for at least one test "
+"have been entered. Select a date to send the test results to the "
+"participants."
+msgstr ""
+"A continuación se muestra la lista de fechas para las que se han "
+"ingresado los resultados de al menos una prueba. Seleccione una fecha "
+"para enviar los resultados de la prueba a los participantes."
+
+#: control/forms.py:92
+msgid "Select date"
+msgstr "Seleccionar fecha"
+
+#: control/forms.py:93 participant/forms.py:99
+msgid "Submit"
+msgstr "Enviar"
+
+#: control/routes.py:54 control/routes.py:71
+msgid "{date}{sent}"
+msgstr "{date}{sent}"
+
+#: control/routes.py:58
+msgid "Select all"
+msgstr "Seleccionar todas las opciones"
+
+#: control/routes.py:95
+msgid "{samples_received} out of {samples_requested}"
+msgstr "{samples_received} de {samples_requested}"
+
+#: control/routes.py:97
+msgid "{results_recorded} out of {number_of_results}"
+msgstr "{results_recorded} de {number_of_results}"
+
+#: control/routes.py:98
+msgid "True"
+msgstr "Cierto"
+
+#: control/routes.py:98
+msgid "False"
+msgstr "Falso"
+
+#: control/routes.py:102
+msgid "Allocation ID"
+msgstr "ID de asignación"
+
+#: control/routes.py:103
+msgid "Scheduled testing date"
+msgstr "Fecha de prueba agendada"
+
+#: control/routes.py:104
+msgid "Samples requested"
+msgstr "Muestras solicitadas"
+
+#: control/routes.py:105
+msgid "Samples collected"
+msgstr "Muestras recolectadas"
+
+#: control/routes.py:106 control/routes.py:543
+msgid "Time pooled"
+msgstr "Tiempo de la agrupación"
+
+#: control/routes.py:107
+msgid "Test results recorded"
+msgstr "Resultados de pruebas archivados"
+
+#: control/routes.py:108
+msgid "Test results sent"
+msgstr "Resultados de pruebas enviados"
+
+#: control/routes.py:116
+msgid "test results"
+msgstr "resultados de pruebas"
+
+#: control/routes.py:116
+msgid "sample requests"
+msgstr "solicitudes de muestras"
+
+#: control/routes.py:122
+msgid "Allocations ID"
+msgstr "ID de asignaciones"
+
+#: control/routes.py:123
+msgid "Allocation scheduled"
+msgstr "Asignación agendada"
+
+#: control/routes.py:124
+msgid "Type"
+msgstr "Tipo"
+
+#: control/routes.py:144
+msgid "Sample requests have been sent out for the day of {date}."
+msgstr "Se han enviado solicitudes de muestra para el día de {date}."
+
+#: control/routes.py:157
+msgid "Sample requests have been sent out for the week of {date}."
+msgstr "Se han enviado solicitudes de muestra para la semana de {date}."
+
+#: control/routes.py:169
+msgid "Test results have been sent out."
+msgstr "Los resultados de las pruebas conjuntas se han enviando."
+
+#: control/routes.py:189
+msgid "Successfully created"
+msgstr "Creado con éxito"
+
+#: control/routes.py:190
+msgid "users"
+msgstr "usuarios"
+
+#: control/routes.py:191
+msgid "entries skipped"
+msgstr "entradas saltadas"
+
+#: control/routes.py:198 control/routes.py:205
+msgid "user ID"
+msgstr "ID de usuario"
+
+#: control/routes.py:202 control/routes.py:209
+msgid "Roles"
+msgstr "Roles"
+
+#: control/routes.py:204 control/templates/control/participants.html:25
+#: participant/templates/participant/consent_form.html:8
+#: participant/templates/participant/consent_info.html:8
+#: participant/templates/participant/navbar.html:12
+msgid "Consent"
+msgstr "Consentimiento"
+
+#: control/routes.py:243
+msgid "CSV not in the correct format"
+msgstr "El archivo CSV no tiene el formato correcto"
+
+#: control/routes.py:280
+msgid "Successfully created user"
+msgstr "Usuario creado con éxito"
+
+#: control/routes.py:306
+msgid "Successfully edited user"
+msgstr "Usuario editado con éxito"
+
+#: control/routes.py:322
+msgid "Successfully deleted user"
+msgstr "Usuario eliminado con éxito"
+
+#: control/routes.py:484
+msgid "Weekly allocation ID"
+msgstr "ID de asignación semanal"
+
+#: control/routes.py:485 control/routes.py:541
+msgid "Created"
+msgstr "Creado"
+
+#: control/routes.py:486
+msgid "Week scheduled"
+msgstr "Semana agendada"
+
+#: control/routes.py:487
+msgid "Computation in progress"
+msgstr "Cálculo en progreso"
+
+#: control/routes.py:513
+msgid "Finished computing the allocation scheduled for"
+msgstr "Ha terminado el cálculo para la asignación programada para el"
+
+#: control/routes.py:526 control/routes.py:563
+msgid "Computation in progress. Please come back later to see samples requested."
+msgstr "Cálculo en curso. Vuelva más tarde para ver las muestras solicitadas."
+
+#: control/routes.py:539
+msgid "Daily allocation ID"
+msgstr "ID de asignación diaria"
+
+#: control/routes.py:540
+msgid "Scheduled for"
+msgstr "Agendado para el"
+
+#: control/routes.py:542
+msgid "Samples"
+msgstr "Muestras"
+
+#: control/routes.py:578 lab/routes.py:72 lab/routes.py:153
+msgid "Sample ID"
+msgstr "ID de la muestra"
+
+#: control/routes.py:579 lab/routes.py:73 lab/routes.py:155
+msgid "Participant ID"
+msgstr "ID del Participante"
+
+#: control/routes.py:582 lab/routes.py:76
+msgid "Participant email"
+msgstr "Email del participante"
+
+#: control/routes.py:583 lab/routes.py:77 lab/routes.py:156
+msgid "Time collected"
+msgstr "Tiempo de recolección"
+
+#: control/templates/control/access.html:8
+msgid "Access lists"
+msgstr "Listas de acceso"
+
+#: control/templates/control/access.html:10
+msgid "Select a date for which to generate the access lists."
+msgstr "Seleccione una fecha para la cuál quiera generar listas de acceso."
+
+#: control/templates/control/access.html:15
+msgid "You have not selected a date."
+msgstr "No ha seleccionado una fecha."
+
+#: control/templates/control/access.html:22
+#: control/templates/control/access.html:31
+msgid "Blacklist"
+msgstr "Lista negra"
+
+#: control/templates/control/access.html:25
+#: control/templates/control/access.html:47
+msgid "Whitelist"
+msgstr "Lista blanca"
+
+#: control/templates/control/access.html:33
+msgid ""
+"The following list contains all participants in the treatment group that "
+"are <strong>not</strong> allowed to enter IPICYT on {date}."
+msgstr ""
+"La siguiente lista contiene a todos los participantes del grupo de "
+"tratados que <strong> no </strong> tienen permitido acceder a las "
+"instalaciones del IPICYT el {date}"
+
+#: control/templates/control/access.html:34
+#: control/templates/control/access.html:50
+msgid "Download as CSV"
+msgstr "Decarga en formato CSV"
+
+#: control/templates/control/access.html:42
+#: control/templates/control/access.html:58
+msgid "The list is empty."
+msgstr "La lista está vacía"
+
+#: control/templates/control/access.html:49
+msgid ""
+"The following list contains all participants in the treatment group that "
+"<strong>are</strong> allowed to enter IPICYT on {date}."
+msgstr ""
+"La siguiente lista contiene a todos los participantes del grupo de "
+"tratados que <strong> sí </strong> tienen permitido acceder a las "
+"instalaciones del IPICYT el {date}"
+
+#: control/templates/control/add_datum.html:13
+#: control/templates/control/add_user.html:7
+#: control/templates/control/edit_user.html:9
+msgid "back to users"
+msgstr "regresar a usuarios"
+
+#: control/templates/control/add_datum.html:15
+#: control/templates/control/add_user.html:9
+msgid "Add user"
+msgstr "Agregar usuario"
+
+#: control/templates/control/add_datum.html:18
+#: control/templates/control/add_user.html:12
+msgid "On this page you can add a user to the system."
+msgstr "En esta página puedes agregar un usuario al sistema"
+
+#: control/templates/control/add_datum.html:19
+#: control/templates/control/add_user.html:13
+msgid "This can be an experiment participant, lab staff member or administrator."
+msgstr ""
+"Puede ser un participante del experimento, un miembro del personal de "
+"laboratorio o un administrador."
+
+#: control/templates/control/allocations.html:12
+#: control/templates/control/allocations.html:54
+msgid "Testing allocations"
+msgstr "Asignaciones de pruebas"
+
+#: control/templates/control/allocations.html:13
+msgid "On this page you can manage testing allocations."
+msgstr "En esta página puedes administrar las asignaciones de pruebas."
+
+#: control/templates/control/allocations.html:22
+msgid "Compute new allocation"
+msgstr "Calcular nueva asignación"
+
+#: control/templates/control/allocations.html:24
+msgid ""
+"In order to compute the new allocation, select a date for which to "
+"schedule the testing and click 'compute'."
+msgstr ""
+"Para calcular la nueva asignación, seleccione una fecha para agendar la "
+"prueba y haga clic en 'calcular'."
+
+#: control/templates/control/allocations.html:28
+msgid "Notes"
+msgstr "Notas"
+
+#: control/templates/control/allocations.html:30
+msgid ""
+"Any new computation will overwrite an existing allocation with the same "
+"date."
+msgstr ""
+"Cualquier cálculo nuevo sobrescribirá una asignación existente con la "
+"misma fecha."
+
+#: control/templates/control/allocations.html:31
+msgid ""
+"Please do not delete any weekly (or daily) allocations if the laboratory "
+"has already started collecting samples!"
+msgstr ""
+"¡Por favor no borre ninguna asignación semanal (o diaria) si el "
+"laboratorio ya ha empezado a recoger muestras!"
+
+#: control/templates/control/allocations.html:38
+#: lab/templates/lab/compute.html:46
+msgid ""
+"Computation ongoing! Refresh page to check whether computation has "
+"finished."
+msgstr ""
+"¡Cálculo en curso! Actualice la página para verificar si el cálculo ha "
+"finalizado."
+
+#: control/templates/control/allocations.html:61
+#: control/templates/control/participants.html:73
+#: control/templates/control/participants.html:87
+#: control/templates/control/view_weekly_allocation.html:32
+msgid "Actions"
+msgstr "Acciones"
+
+#: control/templates/control/communication.html:7
+msgid "Communication with participants"
+msgstr "Comunicación con participantes"
+
+#: control/templates/control/communication.html:8
+msgid "On this page you can send emails to participants."
+msgstr "En esta página puedes enviar emails a los participantes"
+
+#: control/templates/control/communication.html:11
+msgid "Select a scheduled testing week from the list."
+msgstr "Seleccione una fecha de prueba agendada (semanalmente) de la lista."
+
+#: control/templates/control/communication.html:16
+#: lab/templates/lab/select_allocation.html:13
+msgid "You have not selected a scheduled testing date."
+msgstr "No ha seleccionado una fecha agendada para su prueba."
+
+#: control/templates/control/communication.html:24
+msgid "Allocations in selected week"
+msgstr "Asignaciones en la semana seleccionada"
+
+#: control/templates/control/communication.html:25
+msgid "Information about the daily allocations in the week you've selected."
+msgstr ""
+"Información sobre las asignaciones diarias en la semana que ha "
+"seleccionado."
+
+#: control/templates/control/communication.html:29
+msgid "Invite participants to submit samples"
+msgstr "Invite a los participantes a enviar muestras"
+
+#: control/templates/control/communication.html:35
+msgid "Send test results to participants"
+msgstr "Enviar el resultado de la prueba a los participantes"
+
+#: control/templates/control/communication.html:43
+msgid "Past communications"
+msgstr "Comunicaciones pasadas"
+
+#: control/templates/control/communication.html:44
+msgid ""
+"This list shows all communications that have been sent out for the "
+"current week."
+msgstr ""
+"Esta lista muestra todas las comunicaciones que se han enviado durante la"
+" semana actual."
+
+#: control/templates/control/data.html:7
+msgid "Data management"
+msgstr "Administración de datos"
+
+#: control/templates/control/data.html:8
+msgid "On this page you can see existing data and upload new data as CSV."
+msgstr ""
+"En esta página puedes ver los datos existentes y cargar datos nuevos en "
+"formato CSV."
+
+#: control/templates/control/data.html:12
+msgid "Bulk add data"
+msgstr "Agregar datos en masa"
+
+#: control/templates/control/data.html:15
+msgid ""
+"This allows you to upload a CSV file to add data in bulk. Note that data "
+"points already in the system are ignored. In particular, if there exists "
+"a datum with the same user ID and timestamp, the new datum is not added."
+msgstr ""
+"Esto te permite cargar un archivo CSV para agregar datos en masa. Tenga "
+"en cuenta que los datos que ya están en el sistema se ignoran en este "
+"proceso. En particular, si existe un dato con el mismo ID de usuario y "
+"dato, no se agrega el nuevo dato."
+
+#: control/templates/control/data.html:21
+msgid "Current data"
+msgstr "Datos actuales"
+
+#: control/templates/control/edit_datum.html:8
+msgid "back to data"
+msgstr "regresar a datos"
+
+#: control/templates/control/edit_datum.html:10
+msgid "Edit datum"
+msgstr "Editar dato"
+
+#: control/templates/control/edit_datum.html:13
+msgid "On this page you can edit a single datum."
+msgstr "En esta página puedes editar un dato en particular."
+
+#: control/templates/control/edit_user.html:11
+msgid "Edit user"
+msgstr "Editar usuario"
+
+#: control/templates/control/edit_user.html:14
+msgid "On this page you can edit a user on the system."
+msgstr "En esta página puedes editar un usuario en el sistema."
+
+#: control/templates/control/index.html:7
+msgid "Welcome to the Data Management pages"
+msgstr "Bienvenido(a) a las páginas de Administración de Datos"
+
+#: control/templates/control/index.html:8
+msgid ""
+"On these pages you can manage C-SEF. Use the navbar at the top to access "
+"different functions."
+msgstr ""
+"En estas páginas puedes administrar C-SEF. Utiliza la barra de navegación"
+" en la parte superior de la página para acceder diferentes funciones."
+
+#: control/templates/control/navbar.html:7
+msgid "Data manager"
+msgstr "Administrador de datos"
+
+#: control/templates/control/navbar.html:13
+msgid "Users"
+msgstr "Usuarios"
+
+#: control/templates/control/navbar.html:14
+msgid "Allocations"
+msgstr "Asignaciones"
+
+#: control/templates/control/navbar.html:15
+msgid "Communication"
+msgstr "Comunicación"
+
+#: control/templates/control/navbar.html:16
+msgid "Access"
+msgstr "Acceso"
+
+#: control/templates/control/navbar.html:17 lab/templates/lab/navbar.html:15
+#: participant/templates/participant/navbar.html:17
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: control/templates/control/participants.html:9
+msgid "Manage users"
+msgstr "Administrar usuarios"
+
+#: control/templates/control/participants.html:12
+msgid ""
+"On this page you can manage all the users in the system. This includes "
+"experiment participants, lab staff and administrators."
+msgstr ""
+"En esta página puedes administrar a todos los usuarios en el sistema. "
+"Esto incluye a participantes del experimento, miembros del personal de "
+"laboratorio y administradores."
+
+#: control/templates/control/participants.html:17
+msgid "Statistics"
+msgstr "Estadísticas del proyecto"
+
+#: control/templates/control/participants.html:19
+msgid ""
+"Some statistics on the number of participants who have given consent, "
+"filled in the baseline survey and specified a schedule."
+msgstr ""
+"Algunos datos estadísticos sobre el número de participantes que han "
+"otorgado consentimiento, respondido a la encuesta inicial e indicado "
+"preferencias de agendado."
+
+#: control/templates/control/participants.html:24
+msgid "Group size"
+msgstr "Tamaño del grupo"
+
+#: control/templates/control/participants.html:26
+msgid "Baseline"
+msgstr "Base"
+
+#: control/templates/control/participants.html:27
+#: participant/templates/participant/navbar.html:15
+msgid "Schedule"
+msgstr "Agenda"
+
+#: control/templates/control/participants.html:37
+msgid "Control"
+msgstr "Control"
+
+#: control/templates/control/participants.html:44
+msgid "Combined"
+msgstr "Combinado"
+
+#: control/templates/control/participants.html:66
+msgid "List of current participants"
+msgstr "Lista de participantes actuales"
+
+#: control/templates/control/participants.html:80
+msgid "List of remaining users"
+msgstr "Lista de usuarios restantes"
+
+#: control/templates/control/participants.html:97
+msgid "Bulk add participants"
+msgstr "Agregar datos de participantes en masa"
+
+#: control/templates/control/participants.html:99
+msgid ""
+"This allows you to upload a CSV file to add participants in bulk. Note "
+"that participants already in the system are ignored. This is verified "
+"using the email address."
+msgstr ""
+"Esto le permite cargar un archivo CSV para agregar usuarios de forma "
+"masiva. Tenga en cuenta que los usuarios que ya están en el sistema son "
+"ignorados. Esto se verifica utilizando la dirección de correo "
+"electrónico."
+
+#: control/templates/control/statistics.html:8
+msgid "Project statistics"
+msgstr "Estadísticas del proyecto"
+
+#: control/templates/control/statistics.html:9
+msgid ""
+"This page will contain some interesting statistics about the current "
+"progress of the project."
+msgstr ""
+"Esta página contendrá algunas estadísticas interesantes sobre el progreso"
+" actual del proyecto."
+
+#: control/templates/control/statistics.html:10
+msgid "Suggests on the kinds of stats that would be interesting are very welcome!"
+msgstr ""
+"¡Sugerencias sobre los tipos de estadísticas que serían interesantes son "
+"muy bienvenidas!"
+
+#: control/templates/control/view_daily_allocation.html:8
+#: control/templates/control/view_weekly_allocation.html:8
+msgid "back"
+msgstr "regresar"
+
+#: control/templates/control/view_daily_allocation.html:10
+msgid "View daily allocation"
+msgstr "Ver asignación diaria"
+
+#: control/templates/control/view_daily_allocation.html:13
+msgid "You are viewing the preliminary testing allocation scheduled on"
+msgstr "Estás viendo la asignación de pruebas preliminares agendada para el"
+
+#: control/templates/control/view_daily_allocation.html:20
+msgid "Requested samples"
+msgstr "Muestras solicitadas"
+
+#: control/templates/control/view_daily_allocation.html:25
+msgid "participants have been asked to submit samples."
+msgstr "participantes se les ha silicitado enviar muestras."
+
+#: control/templates/control/view_weekly_allocation.html:10
+msgid "View weekly allocation"
+msgstr "Ver asignación semanal"
+
+#: control/templates/control/view_weekly_allocation.html:13
+msgid ""
+"You are viewing the preliminary testing allocations scheduled for the "
+"week of"
+msgstr ""
+"Estás viendo las asignaciones de pruebas preliminares programadas para la"
+" semana del"
+
+#: control/templates/control/view_weekly_allocation.html:21
+msgid "Daily allocations"
+msgstr "Asignaciones diarias"
+
+#: control/templates/control/emails/email_result_inconclusive.html:4
+#: control/templates/control/emails/email_result_negative.html:4
+#: control/templates/control/emails/email_result_not_submitted.html:5
+#: control/templates/control/emails/email_result_positive.html:4
+#: control/templates/control/emails/email_sample_requests.html:4
+msgid "Dear Participant,"
+msgstr "Estimado participante,"
+
+#: control/templates/control/emails/email_result_inconclusive.html:6
+#: control/templates/control/emails/email_result_negative.html:6
+#: control/templates/control/emails/email_result_positive.html:6
+msgid "You submitted a sample for a pooled test scheduled on"
+msgstr "Has entregado una muestra para una prueba conjunta agendada el"
+
+#: control/templates/control/emails/email_result_inconclusive.html:9
+msgid ""
+"Your test result was <strong>inconclusive</strong>. For the time being, "
+"you do not have access to the institute."
+msgstr ""
+"El resultado de tu prueba fue <strong>inconcluso</strong>. Por el "
+"momento, no se te permite el acceso al instituto."
+
+#: control/templates/control/emails/email_result_inconclusive.html:10
+msgid "LANBAMA will notify you about your individual result within 24 hours."
+msgstr ""
+"El equipo del laboratorio LANBAMA te notificará sobre tus resultados "
+"individuales en las siguientes 24 horas."
+
+#: control/templates/control/emails/email_result_inconclusive.html:13
+#: control/templates/control/emails/email_result_negative.html:13
+#: control/templates/control/emails/email_result_not_submitted.html:11
+#: control/templates/control/emails/email_result_positive.html:14
+msgid "You can check your test results and building access any time in the"
+msgstr ""
+"Puedes revisar los resultados de tus pruebas y tu estado de acceso a las "
+"instalaciones del IPICYT en cualquier momento en el"
+
+#: control/templates/control/emails/email_result_inconclusive.html:14
+#: control/templates/control/emails/email_result_negative.html:14
+#: control/templates/control/emails/email_result_not_submitted.html:12
+#: control/templates/control/emails/email_result_positive.html:15
+msgid "information centre."
+msgstr "Centro de Información."
+
+#: control/templates/control/emails/email_result_inconclusive.html:16
+#: control/templates/control/emails/email_result_negative.html:15
+#: control/templates/control/emails/email_result_not_submitted.html:13
+#: control/templates/control/emails/email_result_positive.html:16
+#: control/templates/control/emails/email_sample_requests.html:45
+#: templates/security/email/reset_instructions.html:12
+#: templates/security/email/reset_notice.html:9
+msgid "Have a nice day!"
+msgstr "¡Te deseamos un excelente día!"
+
+#: control/templates/control/emails/email_result_inconclusive.html:17
+#: control/templates/control/emails/email_result_negative.html:16
+#: control/templates/control/emails/email_result_not_submitted.html:14
+#: control/templates/control/emails/email_result_positive.html:17
+#: control/templates/control/emails/email_sample_requests.html:46
+#: templates/security/email/reset_instructions.html:13
+#: templates/security/email/reset_notice.html:10
+msgid "The C-SEF team"
+msgstr "El equipo C-SEF"
+
+#: control/templates/control/emails/email_result_negative.html:9
+msgid ""
+"Your test result was <strong>negative</strong>! You may access the "
+"department from"
+msgstr ""
+"¡El resultado de tu prueba es <strong>negativo</strong>! Puedes acceder "
+"al instituto del"
+
+#: control/templates/control/emails/email_result_negative.html:10
+msgid "to"
+msgstr "al"
+
+#: control/templates/control/emails/email_result_not_submitted.html:7
+msgid "You were invited to submit a sample for testing on"
+msgstr "Fuiste invitado a entregar una muestra de saliva el"
+
+#: control/templates/control/emails/email_result_not_submitted.html:7
+msgid ""
+"but we did not collect a sample from you.\n"
+"      You will be reconsidered for testing in the coming days."
+msgstr ""
+"pero no recibimos tu muestra. Serás reconsiderado para hacerte una prueba"
+" en los próximos días"
+
+#: control/templates/control/emails/email_result_positive.html:9
+msgid ""
+"Your test result was <strong>positive</strong>. For the time being, you "
+"do not have access to the institute."
+msgstr ""
+"El resultado de tu prueba fue <strong>positivo</strong>. Por el momento, "
+"no se te permite el acceso al instituto."
+
+#: control/templates/control/emails/email_result_positive.html:10
+msgid "The LANBAMA will notify you about your individual result within 24 hours."
+msgstr ""
+"El equipo del laboratorio LANBAMA te notificará sobre tus resultados "
+"individuales en las siguientes 24 horas."
+
+#: control/templates/control/emails/email_sample_requests.html:5
+msgid "You are invited to submit a saliva sample on"
+msgstr "Te invitamos a entregar una muestra de saliva el"
+
+#: control/templates/control/emails/email_sample_requests.html:9
+msgid "between 8am and 9am"
+msgstr "entre las 8:00 am y las 9:00 am"
+
+#: control/templates/control/emails/email_sample_requests.html:13
+msgid ""
+"at LANBAMA (at La Palapa, in IPICYT) with laboratory technician Édgar "
+"Daniel Páez. Dr. Páez will email you a preferred time slot for your "
+"arrival. A negative qPCR pooled test will grant you access to IPICYT for "
+"the two days following the test."
+msgstr "en LANBAMA (acudir a la palapa ubicada atrás del edificio Delta) con el técnico de laboratorio Dr. Édgar Daniel Páez. El Dr. Páez te hará llegar un correo en el que indique en qué horario deberás presentarte (dentro del intervalo de las 8:00 am y las 9:00 am). Una prueba conjunta qPCR negativa te otorgará acceso al IPICYT por dos días después de recbir el resultado de tu prueba."
+
+
+#: control/templates/control/emails/email_sample_requests.html:14
+msgid ""
+"If you are experiencing clear symptons, we ask that you do <strong> not "
+"</strong> come to the appointment to avoid infecting others."
+msgstr ""
+"Si muestras claros síntomas de COVID-19, te pedimos que <strong> NO "
+"</strong> te presentes a la cita, para evitar contagiar a otras personas."
+
+#: control/templates/control/emails/email_sample_requests.html:15
+msgid ""
+"If you are experiencing clear symptons, you can still pay for an "
+"individual test at LANBAMA at a different time."
+msgstr ""
+"Si muestras claros síntomas de COVID-19, el LANBAMA ofrece el servicio de"
+" pruebas individuales en sus horarios laborales normales."
+
+#: control/templates/control/emails/email_sample_requests.html:20
+msgid ""
+"LANBAMA has requested that you fill in the following information before "
+"your test:"
+msgstr ""
+"El laboratorio LANBAMA nos ha pedido que llenes la siguiente información "
+"antes de depositar tu muestra:"
+
+#: control/templates/control/emails/email_sample_requests.html:24
+msgid ""
+"Please note that for the saliva sample to be processed correctly, you "
+"must adhere to the following rules:"
+msgstr ""
+"Toma en cuenta que para que la muestra de saliva se procese "
+"correctamente, debes cumplir con las siguientes reglas:"
+
+#: control/templates/control/emails/email_sample_requests.html:27
+msgid ""
+"\n"
+"        <li>No mouthwash or spray medication the evening before.</li>\n"
+"        <li>Hydrate yourself well the evening before. </li>\n"
+"        <li>Do not brush your teeth, use mouthwash, or floss before "
+"submitting the sample. </li>\n"
+"        <li>3 hours before submitting the sample, please avoid eating or "
+"drinking, chewing gum, smoking, and using an atomizer.</li>\n"
+"        <li>Remove lipstick or lipcream, and avoid touching your lips "
+"before submitting the sample.</li>\n"
+"        <li>Bring a mask to the appointment and your ID!</li>\n"
+"        "
+msgstr ""
+"\n"
+"        <li>La noche anterior no deberás usar enjuague bucal, ni "
+"medicamentos en spray.</li>\n"
+"        <li>deberás hidratarte bien la noche previa.</li>\n"
+"        <li>No debes lavarte los dientes, ni utilizar enjuages bucales o "
+"hilo dental antes de la toma de muestra.</li>\n"
+"        <li>3 horas antes de la toma de la muestra no se eberá ingerir "
+"ningún alimento, ni fumar, ni tomar agua, ni masticar chicle, ni usar "
+"atomizadores.</li>\n"
+"        <li>Debes remover productos cosméticos, bálsamos o cremas "
+"labiales.</li>\n"
+"        <li>¡Por favor no olvides traer tu máscara e identificación (e.g."
+" INE)!</li>\n"
+"        "
+
+#: control/templates/control/emails/email_sample_requests.html:39
+msgid ""
+"Please note that if you skip the test you cannot enter the building until"
+" your next test results."
+msgstr ""
+"Si faltas a la prueba, no podrás ingresar al instituto hasta que te "
+"llegue la invitación para la siguiente toma de muestra."
+
+#: control/templates/control/emails/email_sample_requests.html:42
+msgid "For more information, please visit"
+msgstr "Para más información, por favor visita"
+
+#: lab/forms.py:21
+msgid "select"
+msgstr "seleccionar"
+
+#: lab/forms.py:25
+msgid "negative"
+msgstr "negativo"
+
+#: lab/forms.py:25
+msgid "positive"
+msgstr "positivo"
+
+#: lab/forms.py:25
+msgid "inconclusive"
+msgstr "inconcluso"
+
+#: lab/forms.py:27
+msgid "submit"
+msgstr "enviar"
+
+#: lab/forms.py:36 lab/forms.py:42
+msgid "Pool {n}"
+msgstr ""
+
+#: lab/forms.py:43
+msgid "Gene E Ct value"
+msgstr ""
+
+#: lab/forms.py:44
+msgid "Gene N Ct value"
+msgstr ""
+
+#: lab/forms.py:45
+msgid "Gene RdRP Ct value"
+msgstr ""
+
+#: lab/forms.py:46
+msgid "Gene IC Ct value"
+msgstr ""
+
+#: lab/routes.py:154
+msgid "Pool ID"
+msgstr "ID de Agrupación"
+
+#: lab/routes.py:176
+msgid "Started computing the allocation scheduled for"
+msgstr "Comenzó a computar la asignación programada para el"
+
+#: lab/routes.py:193
+msgid "Deleted the pooling for allocation scheduled for"
+msgstr "Se eliminó la agrupación para la asignación programada para el"
+
+#: lab/routes.py:258
+msgid "Results have been saved!"
+msgstr "¡Los resultados han sido guardados!"
+
+#: lab/templates/lab/collect.html:11
+msgid "Record incoming samples"
+msgstr "Registrar muestras entrantes"
+
+#: lab/templates/lab/collect.html:17
+msgid ""
+"The following participants at IPICYT have been asked to submit their "
+"samples on <strong>{date}</strong>."
+msgstr ""
+"Se ha solicitado a los siguientes participantes de IPICYT que envíen sus "
+"muestras el <strong>{date}</strong>."
+
+#: lab/templates/lab/collect.html:32
+msgid "Toggle collection"
+msgstr "Muestra entregada"
+
+#: lab/templates/lab/compute.html:14 lab/templates/lab/compute.html:24
+msgid "The pooling"
+msgstr "Agrupamiento (pooling)"
+
+#: lab/templates/lab/compute.html:17
+msgid ""
+"On this page you can compute and view the optimal test pooling, which "
+"takes into account the fact that some individuals may not have submitted "
+"samples."
+msgstr ""
+"En esta página puede calcular y ver la agrupación de pruebas óptima, que "
+"toma en cuenta el hecho de que algunas personas pueden no haber enviado "
+"muestras."
+
+#: lab/templates/lab/compute.html:26
+msgid ""
+"This pooling is scheduled for <strong>{date}</strong> and was computed on"
+" <strong>{time}</strong>."
+msgstr ""
+"Esta agrupación está programada para <strong>{date}</strong> y se calculó"
+" el <strong>{time}</strong>."
+
+#: lab/templates/lab/compute.html:44 lab/templates/lab/compute.html:49
+msgid "Compute pooling"
+msgstr "Calcular las agrupaciones"
+
+#: lab/templates/lab/compute.html:50
+msgid "You have not yet computed a pooling for this allocation."
+msgstr "Aún no ha calculado una agrupación para esta asignación."
+
+#: lab/templates/lab/compute.html:51
+msgid ""
+"In order to compute a pooling for this allocation, click on the button "
+"below."
+msgstr ""
+"Para calcular una agrupación para esta asignación, haga clic en el botón "
+"a continuación."
+
+#: lab/templates/lab/compute.html:52
+msgid "compute"
+msgstr "calcular"
+
+#: lab/templates/lab/compute.html:55
+msgid "Delete pooling"
+msgstr "Eliminar agrupamiento"
+
+#: lab/templates/lab/compute.html:56
+msgid ""
+"You have already computed a pooling for this allocation. To delete it, "
+"click on the button below."
+msgstr ""
+"Ya ha calculado una agrupación para esta asignación. Para eliminar la "
+"agrupación, haga clic en el botón de abajo."
+
+#: lab/templates/lab/compute.html:59
+msgid ""
+"<strong>Only do this if new participants have submitted samples and you "
+"have not yet run tests, or are willing to re-test all pools.</strong>"
+msgstr ""
+"<strong>Haga esto solo si los nuevos participantes han enviado muestras y"
+" aún no ha realizado las pruebas, o si está dispuesto a volver a hacer "
+"pruebas para todas las agrupaciones.</strong>"
+
+#: lab/templates/lab/compute.html:61
+msgid "delete"
+msgstr "eliminar"
+
+#: lab/templates/lab/navbar.html:5
+msgid "Laboratory"
+msgstr "Laboratorio"
+
+#: lab/templates/lab/navbar.html:6
+msgid "Logged in as"
+msgstr "Sesión iniciada por"
+
+#: lab/templates/lab/navbar.html:12
+msgid "Sample collection"
+msgstr "Recolección de muestras"
+
+#: lab/templates/lab/navbar.html:13
+msgid "Pooling"
+msgstr "Agrupamiento"
+
+#: lab/templates/lab/navbar.html:14 lab/templates/lab/results.html:10
+msgid "Results"
+msgstr "Resultados"
+
+#: lab/templates/lab/results.html:17 lab/templates/lab/results.html:21
+msgid "Enter test results"
+msgstr "Ingrese los resultados de la prueba"
+
+#: lab/templates/lab/results.html:18
+msgid "You have not yet computed a pooling for this testing date."
+msgstr "Aún no ha calculado una agrupación para esta fecha de prueba."
+
+#: lab/templates/lab/results.html:23
+msgid "Important note:"
+msgstr "Información Importante:"
+
+#: lab/templates/lab/results.html:24
+msgid "If a result is non-determined, please enter a Ct value of 40."
+msgstr ""
+
+#: lab/templates/lab/select_allocation.html:8
+msgid ""
+"Select a scheduled testing date from the list. If you cannot find the "
+"correct testing date, <a href='{{ url_for('contact_page') }}'>get in "
+"touch</a> with the data administrator."
+msgstr ""
+"Seleccione una fecha de prueba programada de la lista. Si no puede "
+"encontrar la fecha de prueba correcta, <a href='{{ "
+"url_for('contact_page') }}'>póngase en contacto</a> con el administrador "
+"de datos."
+
+#: participant/forms.py:22
+msgid "Please tick every box above to consent."
+msgstr "Marque cada casilla de arriba para dar su consentimiento."
+
+#: participant/forms.py:26
+msgid ""
+"I confirm that I have read and understand the information for the above "
+"study and have had the opportunity to properly consider the information "
+"provided."
+msgstr ""
+"Confirmo que he leído y entiendo la información del presente estudio y he"
+" tenido la oportunidad de considerar adecuadamente la información "
+"proporcionada."
+
+#: participant/forms.py:31
+msgid ""
+"I understand that my participation is voluntary and that I am free to "
+"withdraw at any time, without giving any reason and without any adverse "
+"consequences."
+msgstr ""
+"Entiendo que mi participación es voluntaria y que soy libre de retirarme "
+"en cualquier momento, sin dar ninguna razón y sin consecuencias adversas."
+
+#: participant/forms.py:36
+msgid ""
+"I understand the risks associated with participating in this study as "
+"explained in the information sheet."
+msgstr ""
+"Entiendo los riesgos asociados con la participación en este estudio como "
+"se explica en la página de información."
+
+#: participant/forms.py:41
+msgid ""
+"I understand that a saliva sample will be taken during the study and that"
+" this sample will be tested for COVID-19. I understand that the sample "
+"will be destroyed after completion of this test or if I withdraw my "
+"consent."
+msgstr ""
+"Entiendo que se tomará una muestra de saliva durante el estudio y que "
+"esta muestra se analizará para COVID-19. Entiendo que la muestra será "
+"destruida después de completar esta prueba o si retiro mi consentimiento."
+
+#: participant/forms.py:48
+msgid ""
+"I consider these samples a gift to the University of Oxford and the "
+"LANBAMA laboratory and I understand I will not gain any direct personal "
+"benefit from this."
+msgstr ""
+"Considero que estas muestras son un regalo para la Universidad de Oxford "
+"y el laboratorio LANBAMA y entiendo que no obtendré ningún beneficio "
+"personal directo de esto."
+
+#: participant/forms.py:54
+msgid ""
+"I understand that research data collected during the study may be looked "
+"at by designated individuals from the University of Oxford and IPICYT "
+"where it is relevant to my taking part in this study. I give permission "
+"for these individuals to access my data. I give permission for anonymised"
+" data to be made publicly available at the end of the research."
+msgstr ""
+" Entiendo que los datos de investigación recopilados durante el estudio "
+"pueden ser revisados por personas designadas de la Universidad de Oxford "
+"e IPICYT cuando sea relevante para mi participación en este estudio. Doy "
+"permiso para que estas personas accedan a mis datos. Doy permiso para que"
+" los datos anónimos estén disponibles públicamente al final de la "
+"investigación."
+
+#: participant/forms.py:63
+msgid ""
+"I understand that this project has been reviewed by, and received ethics "
+"clearance through, the Research Ethics Committee at IPICYT and the "
+"Central University Research Ethics Committee at Oxford University"
+msgstr ""
+"Entiendo que este proyecto ha sido revisado por el Comité de Ética de la "
+"Investigación del IPICYT y el Comité de Ética de la Investigación de la "
+"Universidad Central de la Universidad de Oxford, y recibió autorización "
+"de ética."
+
+#: participant/forms.py:70
+msgid ""
+"I understand who will have access to the personal data provided, how the "
+"data will be stored, and what will happen to the data at the end of the "
+"project."
+msgstr ""
+"Entiendo quién tendrá acceso a los datos personales proporcionados, cómo "
+"se almacenarán los datos y qué pasará con los datos al final del "
+"proyecto."
+
+#: participant/forms.py:76
+msgid "I understand how this research will be written up and published."
+msgstr "Entiendo cómo se redactará y publicará esta investigación."
+
+#: participant/forms.py:81
+msgid "I understand how to raise a concern or make a complaint."
+msgstr "Entiendo cómo plantear una inquietud o presentar una queja."
+
+#: participant/forms.py:86
+msgid "I agree to take part in this study."
+msgstr "Acepto participar en este estudio."
+
+#: participant/forms.py:90
+msgid ""
+"By selecting “Yes, I agree to participate” below you are signifying that "
+"you have read and understood the above information and are agreeing to "
+"have the data that you provide during the course of the study to be "
+"processed accordingly."
+msgstr ""
+"Al seleccionar 'Sí, acepto participar' a continuación, significa que ha "
+"leído y entendido la información anterior y acepta que los datos que "
+"proporcione durante el curso del estudio se procesen en consecuencia."
+
+#: participant/forms.py:95
+msgid "Yes, I agree to participate"
+msgstr "Sí, acepto participar"
+
+#: participant/forms.py:96
+msgid "No, I do not agree to participate"
+msgstr "No, no acepto participar"
+
+#: participant/forms.py:103
+msgid "What is your role at the university?"
+msgstr "¿Cuál es tu puesto en la universidad?"
+
+#: participant/forms.py:105
+msgid "Taught student"
+msgstr "Estudiante"
+
+#: participant/forms.py:106
+msgid "Research student"
+msgstr "Estudiante de investigación (posgrado)"
+
+#: participant/forms.py:107
+msgid "Researcher"
+msgstr "Investigador"
+
+#: participant/forms.py:108
+msgid "Staff (Administration, maintenance, other employees of IPICYT)"
+msgstr "Staff (Administración, limpieza, otras posiciones)"
+
+#: participant/forms.py:113
+msgid "Which department are you affiliated with?"
+msgstr "¿A cuál departamento estás afiliado(a)?"
+
+#: participant/forms.py:115
+msgid "Molecular Biology Division"
+msgstr "División de Biología Molecular"
+
+#: participant/forms.py:116
+msgid "Environmental Sciences Division"
+msgstr "División de Ciencias Ambientales"
+
+#: participant/forms.py:117
+msgid "Control and Dynamic Systems Divison"
+msgstr "División de Control y Sistemas Dinámicos"
+
+#: participant/forms.py:118
+msgid "Applied Geosciences Divison"
+msgstr "División de Geociencias Aplicadas"
+
+#: participant/forms.py:119
+msgid "Advanced Materials Divison"
+msgstr "División de Materiales Avanzados"
+
+#: participant/forms.py:120
+msgid "Computer Science and Engineering Group"
+msgstr "Grupo de Ciencia e Ingeniería Computacional"
+
+#: participant/forms.py:121
+msgid "N/A (Staff)"
+msgstr "No Aplica (staff)"
+
+#: participant/forms.py:126
+msgid "Which gender do you identify with?"
+msgstr "¿Con cuál género te identificas?"
+
+#: participant/forms.py:128
+msgid "Female"
+msgstr "Femenino"
+
+#: participant/forms.py:129
+msgid "Male"
+msgstr "Masculino"
+
+#: participant/forms.py:130 participant/forms.py:147
+msgid "Other"
+msgstr "Otro"
+
+#: participant/forms.py:131 participant/forms.py:168 participant/forms.py:187
+#: participant/forms.py:457
+msgid "Prefer not to say"
+msgstr "Prefiero no decir"
+
+#: participant/forms.py:136
+msgid "Please indicate your age in two digits"
+msgstr "Por favor indica tu edad en dos dígitos"
+
+#: participant/forms.py:141
+msgid "Which ethnic group do you identify most with?"
+msgstr "¿Con cuál grupo étnico te identificas más?"
+
+#: participant/forms.py:143
+msgid "White"
+msgstr "Blanco/Raíces Europeas"
+
+#: participant/forms.py:144
+msgid "Indigenous"
+msgstr "Indígena"
+
+#: participant/forms.py:145
+msgid "Mestizo"
+msgstr "Mestizo"
+
+#: participant/forms.py:146
+msgid "Afrolatino"
+msgstr "Afrolatino"
+
+#: participant/forms.py:151 participant/forms.py:192 participant/forms.py:238
+#: participant/forms.py:308 participant/forms.py:368 participant/forms.py:449
+#: participant/forms.py:462 participant/forms.py:519
+msgid "next"
+msgstr "siguiente"
+
+#: participant/forms.py:155
+msgid "What form of transport do you use in your work commute?"
+msgstr "¿Cuál método de transporte usas para ir a la universidad?"
+
+#: participant/forms.py:157
+msgid "Private automobile"
+msgstr "Carro personal"
+
+#: participant/forms.py:158
+msgid "Public transport (bus)"
+msgstr "Transporte público (autobús)"
+
+#: participant/forms.py:159
+msgid "Public transport (taxi, uber)"
+msgstr "Transporte público (taxi, uber)"
+
+#: participant/forms.py:164
+msgid "Have you been vaccinated against COVID-19?"
+msgstr "¿Has sido vacunado(a) contra el COVID-19?"
+
+#: participant/forms.py:166 participant/forms.py:185 participant/forms.py:455
+msgid "Yes"
+msgstr "Sí"
+
+#: participant/forms.py:167 participant/forms.py:186 participant/forms.py:456
+msgid "No"
+msgstr "No"
+
+#: participant/forms.py:173
+msgid "When did you last receive a COVID-19 vaccine shot?"
+msgstr "¿Cuándo recibiste la última dósis de la vacuna contra el COVID-19?"
+
+#: participant/forms.py:175
+msgid "In the past month"
+msgstr "El mes pasado"
+
+#: participant/forms.py:176
+msgid "In the past three months"
+msgstr "En los últimos tres meses"
+
+#: participant/forms.py:177
+msgid "In the past six months"
+msgstr "En los últimos seis meses"
+
+#: participant/forms.py:178
+msgid "Prefer not to say / Not applicable"
+msgstr "Prefiero no decir/ No aplica"
+
+#: participant/forms.py:183
+msgid "Have you recently recovered from COVID-19?"
+msgstr "¿Te has recuperado del virus COVID-19 recientemente?"
+
+#: participant/forms.py:191 participant/forms.py:237 participant/forms.py:307
+#: participant/forms.py:367 participant/forms.py:421 participant/forms.py:448
+#: participant/forms.py:461 participant/forms.py:518 participant/forms.py:572
+msgid "prev"
+msgstr "regresar"
+
+#: participant/forms.py:196
+msgid ""
+"How many dependants do you have? This could be children, children and "
+"partner, other relatives, etc."
+msgstr ""
+"¿Cuántas personas dependen de ti económicamente? Estas pueden ser hijos, "
+"padres, hermanos, tu pareja, etc."
+
+#: participant/forms.py:201
+msgid ""
+"How many people live in the same household as you? This could be "
+"children, children and partner, siblings, other relatives, housemates, "
+"etc."
+msgstr ""
+"¿Cuántas personas viven en la misma casa que tú? Estas pueden ser hijos, "
+"pareja e hijos, hermanos, otros familiares, compañeros de casa, etc."
+
+#: participant/forms.py:206
+msgid ""
+"Look at the image of the ladder below. Imagine this ladder pictures how "
+"Mexican society is set up:"
+msgstr ""
+"Observa la imagen de la escalera de abajo. Imagínate que esta escalera "
+"retrata cómo está conformada la sociedad mexicana:"
+
+#: participant/forms.py:214
+msgid ""
+"<ul><li>At the top of the ladder are the people that are best off - they "
+"have the most money, the highest amount of schooling, and the jobs that "
+"bring the most respect.</li><li>At the bottom are the people who are the "
+"worst off - they have the least money, little or no education, no job or "
+"jobs that no one wants or respects.</li></ul>"
+msgstr ""
+"<ul><li>En la parte superior de la escalera están las personas en la "
+"mejor situación: tienen la mayor cantidad de dinero, la mayor cantidad de"
+" educación y los trabajos que brindan el mayor respeto.</li><li>En la "
+"parte de abajo están las personas que están en la peor situación: tienen "
+"menos dinero, poca o ninguna educación, ningún trabajo o trabajos que "
+"nadie quiere o respeta.</li></ul>"
+
+#: participant/forms.py:221
+msgid ""
+"<p>Now think of your family. Tell us where you think your family would be"
+" on this ladder.</p>"
+msgstr ""
+"<p>Ahora piensa en tu familia. ¿Dónde crees que estaría tu familia en "
+"esta escalera?</p>"
+
+#: participant/forms.py:226
+msgid ""
+"People sometimes describe themselves as belonging to the working class, "
+"the middle class, or the upper or lower class. Would you describe "
+"yourself as belonging to the"
+msgstr ""
+"Las personas a veces se describen a sí mismas como pertenecientes a la "
+"clase trabajadora, la clase media o la clase alta o baja. Te describirías"
+" a ti mismo como perteneciente a la..."
+
+#: participant/forms.py:228
+msgid "Upper class"
+msgstr "Clase alta"
+
+#: participant/forms.py:229
+msgid "Upper middle class"
+msgstr "Clase media alta"
+
+#: participant/forms.py:230
+msgid "Lower middle class"
+msgstr "Clase media baja"
+
+#: participant/forms.py:231
+msgid "Working class"
+msgstr "Clase trabajadora"
+
+#: participant/forms.py:232
+msgid "Lower class"
+msgstr "Clase baja"
+
+#: participant/forms.py:233
+msgid "Prefer not to answer"
+msgstr "Prefiero no responder"
+
+#: participant/forms.py:242
+msgid ""
+"How much of your time during a normal work day do you spend working on a "
+"computer?"
+msgstr ""
+"¿Cuánto de tu tiempo durante un día normal de trabajo pasas trabajando "
+"frente una computadora?"
+
+#: participant/forms.py:253 participant/forms.py:427
+msgid ""
+"How much of your time during a normal work day do you spend on "
+"communication with colleagues?"
+msgstr ""
+"¿Cuánto de tu tiempo durante un día normal de trabajo dedicas a la "
+"comunicación con tus colegas?"
+
+#: participant/forms.py:264 participant/forms.py:438
+msgid ""
+"How much of your time during a normal work day do you spend working in a "
+"team?"
+msgstr ""
+"¿Cuánto de tu tiempo durante un día normal de trabajo dedicas a trabajar "
+"en equipo?"
+
+#: participant/forms.py:275
+msgid "How much of your work time do you spend using the internet?"
+msgstr "¿Cuánto de tu tiempo de trabajo dedicas al uso de Internet?"
+
+#: participant/forms.py:286
+msgid "How much of your leisure time do you spend using the internet?"
+msgstr "¿Cuánto de tu tiempo de ocio dedicas al uso de Internet?"
+
+#: participant/forms.py:297
+msgid "How do you usually access the internet from home?"
+msgstr "¿Cómo accedes a internet en casa de manera habitual?"
+
+#: participant/forms.py:299
+msgid "Through laptop + wifi"
+msgstr "Con una computadora + wifi"
+
+#: participant/forms.py:300
+msgid "Through laptop + mobile connection"
+msgstr "Con una computadora + datos móviles"
+
+#: participant/forms.py:301
+msgid "Through phone + wifi"
+msgstr "Con un teléfono móvil + wifi"
+
+#: participant/forms.py:302
+msgid "Through phone + mobile connection"
+msgstr "Con un teléfono móvil + dátos móviles"
+
+#: participant/forms.py:303
+msgid "N/A"
+msgstr "N/A"
+
+#: participant/forms.py:312 participant/forms.py:466
+msgid ""
+"Please write down the percentage of individuals (in your social circle) "
+"who would agree with the following statement about yourself: 'I spend a "
+"lot of time visiting friends'"
+msgstr ""
+"Anota el porcentaje de personas (en tu círculo social) que estarían de "
+"acuerdo con la siguiente afirmación sobre ti: `Paso mucho tiempo "
+"visitando amigos'."
+
+#: participant/forms.py:317 participant/forms.py:471
+msgid ""
+"Please rate the extent to which you experience the following feelings at "
+"this moment: Fear because of the COVID-19 disease/ the SARS COV-2 virus."
+msgstr ""
+"Califica en qué medida tienes los siguientes sentimientos en este "
+"momento: Miedo por la enfermedad COVID-19/el virus SARS COV-2."
+
+#: participant/forms.py:319 participant/forms.py:473
+msgid "Not at all"
+msgstr "Para nada"
+
+#: participant/forms.py:320 participant/forms.py:474
+msgid "Not really"
+msgstr "No mucho"
+
+#: participant/forms.py:321 participant/forms.py:475
+msgid "Neutral"
+msgstr "Neutral"
+
+#: participant/forms.py:322 participant/forms.py:476
+msgid "Somewhat"
+msgstr "Un poco"
+
+#: participant/forms.py:323 participant/forms.py:477
+msgid "Very much"
+msgstr "Mucho"
+
+#: participant/forms.py:332
+msgid ""
+"Based on the scale above, where 1 indicates never experiencing that "
+"situation and 5 indicates experiencing that situation very often, please "
+"rate the following statements:"
+msgstr ""
+"Basado en la escala anterior, donde 1 indica que nunca has vivido esa "
+"situación y 5 indica que has vivido esa situación con mucha frecuencia, "
+"por favor califica las siguientes afirmaciones:"
+
+#: participant/forms.py:338 participant/forms.py:489
+msgid ""
+"In the last month, how often have you felt that you were unable to "
+"control the important things in your life?"
+msgstr ""
+"En el último mes, ¿con qué frecuencia has sentido que no podías controlar"
+" las cosas importantes de tu vida?"
+
+#: participant/forms.py:343 participant/forms.py:494
+msgid ""
+"In the last month, how often have you felt confident about your ability "
+"to handle your personal problems?"
+msgstr ""
+"En el último mes, ¿con qué frecuencia te has sentido seguro de tu "
+"capacidad para manejar tus problemas personales?"
+
+#: participant/forms.py:348 participant/forms.py:499
+msgid ""
+"In the last month, how often have you felt that things were going your "
+"way?"
+msgstr "En el último mes, ¿con qué frecuencia has sentido que las cosas iban bien?"
+
+#: participant/forms.py:353 participant/forms.py:504
+msgid ""
+"In the last month, how often have you felt difficulties were piling up so"
+" high that you could not overcome them?"
+msgstr ""
+"En el último mes, ¿con qué frecuencia sentiste que las dificultades se "
+"acumulaban tanto que no podías superarlas?"
+
+#: participant/forms.py:358 participant/forms.py:509
+msgid ""
+"All things considered, how satisfied would you say you are with your life"
+" these days? Please tell me on a scale of 1 to 10, where 1 means very "
+"dissatisfied and 10 means very satisfied:"
+msgstr ""
+"¿Qué tan satisfecho dirías que estás con tu vida en estos días? En una "
+"escala del 1 al 10, donde 1 significa muy insatisfecho y 10 muy "
+"satisfecho, escribe tu respuesta:"
+
+#: participant/forms.py:363 participant/forms.py:514
+msgid ""
+"Taking all things together on a scale of 1 to 10, how satisfied are you "
+"about IPICYT's efforts to keep you safe in the institute throughout the "
+"pandemic?"
+msgstr ""
+"Considerando todos los aspectos, en una escala del 1 al 10, ¿qué tan "
+"satisfecho estás con los esfuerzos del IPICYT para mantenerte seguro en "
+"el instituto durante la pandemia?"
+
+#: participant/forms.py:372 participant/forms.py:523
+msgid ""
+"How would you rate your overall performance for your job or degree in the"
+" past 4 weeks?"
+msgstr ""
+"¿Cómo calificarías tu desempeño general en tu trabajo o grado en las "
+"últimas 4 semanas?"
+
+#: participant/forms.py:374 participant/forms.py:391 participant/forms.py:525
+#: participant/forms.py:542
+msgid "Poor"
+msgstr "Pobre"
+
+#: participant/forms.py:375 participant/forms.py:392 participant/forms.py:526
+#: participant/forms.py:543
+msgid "Below average"
+msgstr "Por abajo del promedio"
+
+#: participant/forms.py:376 participant/forms.py:393 participant/forms.py:527
+#: participant/forms.py:544
+msgid "Average"
+msgstr "Promedio"
+
+#: participant/forms.py:377 participant/forms.py:394 participant/forms.py:528
+#: participant/forms.py:545
+msgid "Above average"
+msgstr "Por arriba del promedio"
+
+#: participant/forms.py:378 participant/forms.py:395 participant/forms.py:529
+#: participant/forms.py:546
+msgid "High"
+msgstr "Alto"
+
+#: participant/forms.py:383 participant/forms.py:534
+msgid ""
+"After the COVID-19 pandemic began, the way we learn and interact with our"
+" peers drastically changed. How would you say your learning experience "
+"has been in the past 4 weeks? Please rate your learning process and "
+"experience between 1 and 10, where 1 is poor and 10 is excellent:"
+msgstr ""
+"Después de que comenzó la pandemia de COVID-19, la forma en que "
+"aprendemos e interactuamos con nuestros(as) compañeros(as) cambió "
+"radicalmente. ¿Cómo dirías que ha sido tu experiencia de aprendizaje en "
+"las últimas 4 semanas? Califica tu proceso de aprendizaje y experiencia "
+"entre 1 y 10, donde 1 es pobre y 10 es excelente:"
+
+#: participant/forms.py:389 participant/forms.py:540
+msgid ""
+"How would you rate your day-to-day productivity in your work in the past "
+"4 weeks?"
+msgstr ""
+"¿Cómo calificarías tu productividad diaria en tu trabajo en las últimas 4"
+" semanas?"
+
+#: participant/forms.py:400 participant/forms.py:411 participant/forms.py:551
+#: participant/forms.py:562
+msgid ""
+"Considering again the work for your job or degree during the past 4 "
+"weeks, please select the statement that fits your situation best."
+msgstr ""
+"Considerando nuevamente el trabajo que has hecho para tu puesto laboral o"
+" grado académico durante las últimas 4 semanas, selecciona la declaración"
+" que mejor se adapte a tu situación."
+
+#: participant/forms.py:402 participant/forms.py:553
+msgid ""
+"I have struggled to achieve the goals set by my "
+"supervisor/employer/course teachers"
+msgstr ""
+"Me ha costado lograr las metas establecidas por mi "
+"supervisor(a)/empleador(a)/maestros(as) de curso"
+
+#: participant/forms.py:403 participant/forms.py:554
+msgid ""
+"I have managed to achieve some of the goals set by my "
+"supervisor/employer/course teachers"
+msgstr ""
+"He logrado alcanzar algunas de las metas establecidas por mi "
+"supervisor(a)/empleador(a)/profesores(as) de curso"
+
+#: participant/forms.py:404 participant/forms.py:555
+msgid ""
+"I have achieved many of the goals set by my supervisor/employer/course "
+"teachers"
+msgstr ""
+"He logrado muchas de las metas establecidas por mi "
+"supervisor(a)/empleador(a)/maestros(as) de curso"
+
+#: participant/forms.py:405 participant/forms.py:556
+msgid ""
+"I have achieved most of the goals set by my supervisor/employer/course "
+"teachers"
+msgstr ""
+"He logrado la mayoría de las metas establecidas por mi "
+"supervisor(a)/empleador(a)/profesores(as) de curso"
+
+#: participant/forms.py:406 participant/forms.py:557
+msgid ""
+"I have achieved all or exceeded the goals set by my "
+"supervisor/employer/course teachers"
+msgstr ""
+"He logrado todas o excedido las metas establecidas por mi "
+"supervisor(a)/empleador(a)/maestros(as) de curso"
+
+#: participant/forms.py:413 participant/forms.py:564
+msgid "I have struggled to achieve the goals I set for myself"
+msgstr "He batallado para lograr las metas que me propuse"
+
+#: participant/forms.py:414 participant/forms.py:565
+msgid "I have managed to achieve some of the goals I set for myself"
+msgstr "He logrado alcanzar algunas de las metas que me propuse"
+
+#: participant/forms.py:415 participant/forms.py:566
+msgid "I have achieved many of the goals I set for myself"
+msgstr "He logrado muchas de las metas que me propuse"
+
+#: participant/forms.py:416 participant/forms.py:567
+msgid "I have achieved most of the goals I set for myself"
+msgstr "He logrado la mayoría de las metas que me propuse"
+
+#: participant/forms.py:417 participant/forms.py:568
+msgid "I have achieved all or exceeded the goals I set for myself"
+msgstr "He logrado todas o excedido las metas que me propuse"
+
+#: participant/forms.py:422 participant/forms.py:573
+msgid "finish"
+msgstr "terminar"
+
+#: participant/forms.py:453
+msgid "Were you diagnosed with COVID-19 in the past month?"
+msgstr "¿Le diagnosticaron COVID-19 en el último mes?"
+
+#: participant/forms.py:482
+msgid ""
+"<div class='my-2'><img src='/static/scale.png' class='mx-auto d-block' "
+"style='width: 65%'></img></div>Based on the scale above, where 1 "
+"indicates never experiencing that situation and 5 indicates experiencing "
+"that situation very often, please rate the following statements:"
+msgstr ""
+"<div class='my-2'><img src='/static/scale.png' class='mx-auto d-block' "
+"style='width: 65%'></img></div>Basado en la escala anterior, donde 1 "
+"indica que nunca has vivido esa situación y 5 indica que has vivido esa "
+"situación con mucha frecuencia, califica las siguientes afirmaciones:"
+
+#: participant/routes.py:88 participant/routes.py:117
+msgid "Baseline Survey"
+msgstr "Encuesta Inicial"
+
+#: participant/routes.py:138 participant/routes.py:159
+msgid "Endline Survey"
+msgstr "Encuesta Final"
+
+#: participant/routes.py:183
+msgid "Test date (scheduled)"
+msgstr "Fecha de la prueba (programada)"
+
+#: participant/routes.py:184
+msgid "Sample submitted"
+msgstr "Muestra enviada"
+
+#: participant/routes.py:185
+msgid "Test outcome"
+msgstr "Resultado de la prueba"
+
+#: participant/routes.py:264
+msgid "Your token preferences have been saved!"
+msgstr "¡Tu asignación de fichas ha sido guardada!"
+
+#: participant/routes.py:268
+msgid "Your token preferences have not been saved."
+msgstr "Tu asignación de fichas NO ha sido guardada"
+
+#: participant/routes.py:273
+msgid "Date submitted"
+msgstr "Fecha de envío"
+
+#: participant/routes.py:275
+msgid "Monday"
+msgstr "Lunes"
+
+#: participant/routes.py:275
+msgid "Tuesday"
+msgstr "Martes"
+
+#: participant/routes.py:275
+msgid "Wednesday"
+msgstr "Miércoles"
+
+#: participant/routes.py:275
+msgid "Thursday"
+msgstr "Jueves"
+
+#: participant/routes.py:275
+msgid "Friday"
+msgstr "Viernes"
+
+#: participant/routes.py:275
+msgid "Saturday"
+msgstr "Sábado"
+
+#: participant/routes.py:275
+msgid "Sunday"
+msgstr "Domingo"
+
+#: participant/routes.py:276
+msgid "Mon"
+msgstr "Lun"
+
+#: participant/routes.py:276
+msgid "Tues"
+msgstr "Mar"
+
+#: participant/routes.py:276
+msgid "Wed"
+msgstr "Mie"
+
+#: participant/routes.py:276
+msgid "Thu"
+msgstr "Jue"
+
+#: participant/routes.py:276
+msgid "Fri"
+msgstr "Vier"
+
+#: participant/routes.py:276
+msgid "Sat"
+msgstr "Sáb"
+
+#: participant/routes.py:276
+msgid "Sun"
+msgstr "Dom"
+
+#: participant/utils.py:25
+msgid "You must give consent to access participant pages."
+msgstr ""
+"Debes dar tu consentimiento para acceder a las páginas de los "
+"participantes."
+
+#: participant/utils.py:28
+msgid "You have refused consent, and cannot access any participant pages."
+msgstr ""
+"Has denegado el consentimiento y no puedes acceder a ninguna página de "
+"participantes."
+
+#: participant/templates/participant/baseline_survey_closed.html:8
+#: participant/templates/participant/encuesta.html:13
+#: participant/templates/participant/navbar.html:13
+msgid "Survey"
+msgstr "Encuesta"
+
+#: participant/templates/participant/baseline_survey_closed.html:10
+msgid ""
+"Thank you for visiting this page. The deadline for the baseline survey "
+"has passed. Once the trial concludes, we will ask you to fill in the "
+"endline survey."
+msgstr ""
+"Gracias por visitar esta página. La fecha límite para la encuesta inicial"
+" ha pasado. Una vez que concluya el ensayo, te pediremos que completes la"
+" encuesta final."
+
+#: participant/templates/participant/consent_form.html:10
+#: participant/templates/participant/consent_info.html:11
+msgid ""
+"Before you can participate in the C-SEF trial, you must give informed "
+"consent."
+msgstr ""
+"Antes de formar parte del ensayo C-SEF, tienes que otorgar tu "
+"consentimiento informado."
+
+#: participant/templates/participant/consent_form.html:10
+msgid "Click here</a> for detailed information about the trial."
+msgstr "Haz clic aquí </a> para obtener información más detallada del ensayo."
+
+#: participant/templates/participant/consent_form.html:11
+msgid ""
+"Please confirm the following by marking each of the boxes next to the "
+"statements."
+msgstr ""
+"Por favor confirma lo siguiente marcando cada una de las casillas al lado"
+" de las declaraciones."
+
+#: participant/templates/participant/consent_form.html:36
+msgid ""
+"This project has received ethical approval from the Research Ethics "
+"Committee at IPICYT and The Central University Research Ethics Committee "
+"at Oxford University, ethics reference R81719/RE001.\n"
+"                    Please visit the <a "
+"href='https://ipicyt.edu.mx/avisos_privacidad/' class='link-"
+"success'>IPICYT Privacy Notice website</a> for more information regarding"
+" your rights as a participant according to them."
+msgstr ""
+"Este proyecto ha recibido la aprobación ética del Comité de Ética en "
+"Investigación del IPICYT y del Comité de Ética en Investigación de la "
+"Universidad Central de la Universidad de Oxford, con referencia ética "
+"R81719/RE001.\n"
+"Por favor visita el sitio web del <a "
+"href='https://ipicyt.edu.mx/avisos_privacidad/' class='link-"
+"success'>Aviso de Privacidad del IPICYT</a> para mayor información "
+"respecto a tus derechos como participante conforme a los mismos."
+
+#: participant/templates/participant/consent_info.html:12
+msgid ""
+"We ask that you read this page carefully. If you decide you <strong> do "
+"not want to participate</strong>, you may leave at any time "
+"<strong>without providing a reason and without penalty.</strong>"
+msgstr ""
+"Te pedimos leer esta página con detenimiento. Si decides que <strong> no "
+"quieres participar, puedes abandonar tu participación en cualquier "
+"momento, sin dar razón y sin repercusiones.</strong>"
+
+#: participant/templates/participant/consent_info.html:22
+msgid "Consent given"
+msgstr "Consentimiento otorgado"
+
+#: participant/templates/participant/consent_info.html:30
+msgid ""
+"Thank you for giving consent. Consent can be withdrawn at any time by <a "
+"href='{url}' class='link-success'>contacting us.</a>"
+msgstr ""
+"Gracias por otorgar consentimiento. Puedes retirar tu consentimiento en "
+"cualquier momento <a href='{url}' class='link-success'>comunicándote con "
+"nosotros.</a>"
+
+#: participant/templates/participant/consent_info.html:40
+msgid "Consent missing"
+msgstr "Falta consentimiento"
+
+#: participant/templates/participant/consent_info.html:48
+msgid ""
+"Please provide consent by reading the instructions below and completing "
+"the "
+msgstr ""
+"Por favor otorga consentimiento leyendo las instrucciones a continuación "
+"y completando el"
+
+#: participant/templates/participant/consent_info.html:48
+msgid "consent form."
+msgstr "formulario de consentimiento."
+
+#: participant/templates/participant/consent_info.html:48
+msgid "Consent can be withdrawn at any time."
+msgstr "El consentimiento se puede retirar en cualquier momento."
+
+#: participant/templates/participant/consent_info.html:58
+msgid "Consent withheld"
+msgstr "Consentimiento retenido"
+
+#: participant/templates/participant/consent_info.html:66
+msgid ""
+"You have denied consent. This decision cannot be reverted. Consent is "
+"required to interact with this website. If you believe this is incorrect,"
+" please <a href='{url}' class='link-success'>contact us.</a>"
+msgstr ""
+"Haz denegado tu consentimiento. Esta decisión no puede revertirse. Tu "
+"consentimiento es necesario para poder interactuar con este sitio web. Si"
+" crees que tu decisión es incorrecta, por favor <a href='{url}' class"
+"='link-success'>contáctanos.</a>"
+
+#: participant/templates/participant/consent_info.html:76
+msgid "Background"
+msgstr "Antecedentes"
+
+#: participant/templates/participant/consent_info.html:78
+msgid ""
+" You have been invited to take part in a research project conducted by "
+"researchers from the University of Oxford, Harvard University, and the "
+"United Nations University in Maastricht in conjunction with IPICYT. This "
+"project is funded by IPICYT team members' research budget and overseas "
+"team members' research budget. In accordance with international standards"
+" in the practice of randomised studies, this project has received ethical"
+" approval from the Research Ethics Committee at IPICYT and The Central "
+"University Research Ethics Committee at Oxford University, ethics "
+"reference R81719/RE001.\n"
+"        Please visit the <a "
+"href='https://ipicyt.edu.mx/avisos_privacidad/' class='link-"
+"success'>IPICYT Privacy Notice website</a> for more information regarding"
+" your rights as a participant according to them."
+msgstr ""
+"Has sido invitado a participar en un proyecto de investigación realizado "
+"por investigadores(as) de la Universidad de Oxford, la Universidad de "
+"Harvard y la Universidad de las Naciones Unidas en Maastricht en conjunto"
+" con IPICYT. Este proyecto está financiado por el presupuesto de "
+"investigación de los miembros del equipo de IPICYT y el presupuesto de "
+"investigación de los miembros del equipo en el extranjero. De acuerdo con"
+" los estándares internacionales en la práctica de estudios aleatorizados,"
+" este proyecto ha recibido la aprobación ética del Comité de Ética en "
+"Investigación del IPICYT y el Comité de Ética en Investigación de la "
+"Universidad Central de la Universidad de Oxford, con referencia ética "
+"R81719/RE001.\n"
+"Por favor visita el <a href='https://ipicyt.edu.mx/avisos_privacidad/' "
+"class='link-success'> sitio web del Aviso de Privacidad del IPICYT</a> "
+"para obtener más información sobre tus derechos como participante según "
+"los mismos."
+
+#: participant/templates/participant/consent_info.html:82
+msgid ""
+"If anything is unclear, or you want to know more, feel free to  <a "
+"href='{url}' class='link-success'>contact us.</a>"
+msgstr ""
+"Si algo no está claro, o quieres más información, siéntete libre de <a "
+"href='{url}' class='link-success'> contactarnos.</a> "
+
+#: participant/templates/participant/consent_info.html:85
+#: participant/templates/participant/consent_info.html:132
+msgid "Proceed to consent form"
+msgstr "Prosigue al formulario de consentimiento"
+
+#: participant/templates/participant/consent_info.html:90
+msgid "Important Information"
+msgstr "Información Importante"
+
+#: participant/templates/participant/consent_info.html:93
+msgid ""
+" <strong> Purpose: </strong> The purpose of this study is to understand "
+"how the implementation of an algorithmic-base safe education protocol "
+"influences students and staff well-being and productivity during a "
+"pandemic. "
+msgstr ""
+"<strong> Propósito:</strong> El propósito de este estudio es comprender "
+"cómo la implementación de un protocolo de educación segura basado en "
+"algoritmos influye en el bienestar y la productividad de los estudiantes "
+"y el personal durante una pandemia."
+
+#: participant/templates/participant/consent_info.html:95
+msgid ""
+" <strong> What happens during the study: </strong>  This study requires "
+"you to follow one of two protocols. If you are selected to be part of the"
+" <i style='color:MediumSeaGreen;'>treatment group</i>, you will "
+"participate in COVID-19 pooled testing. Throughout the course of the "
+"study, you may receive emails inviting you to submit a saliva sample, "
+"which will be pooled with other samples and tested at the LANBAMA "
+"laboratory at IPICYT. If your test is negative, then everyone in your "
+"pool is healthy and permitted to enter the institute for 48 hours. If "
+"your test is positive, then at least one person in your pool is infected,"
+" and you (as well as all other individuals in your pool) are not "
+"permitted to enter the institute until you are selected for re-testing "
+"and the next test result is negative. At no point are you obliged to "
+"submit a saliva sample, or to enter the building. If you are selected to "
+"be part of the <i style='color:MediumSeaGreen;'>control group</i>, you "
+"will be asked to follow the same remote working policy that is currently "
+"in place at IPICYT. If you would like to access the institute, you must "
+"contact the head of your department for permission. \n"
+"            We also ask all participants to respond to a short survey at "
+"the beginning and at the end of the trial - within a month's time - where"
+" you will be asked sociodemographic questions, alongside a set of "
+"psychological questions. You are not required to answer any questions "
+"that you may find uncomfortable. Furthermore, for the purpose of COVID-19"
+" testing, you may be asked to give a saliva sample to the technicians at "
+"LANBAMA if you are selected for pooled testing. \n"
+"            The sample will be used directly on the day of reception and "
+"will be destroyed after being processed for a qPCR test. The sample(s) "
+"will not be stored. You will be informed about the result of all pooled "
+"tests that contain your sample. "
+msgstr ""
+"<strong> ¿Qué sucede durante el estudio?: </strong> este estudio requiere"
+" que sigas uno de dos protocolos:\n"
+"Si eres seleccionado para formar parte del <i "
+"style='color:MediumSeaGreen;'>grupo de tratamiento</i>, participarás en "
+"las pruebas conjuntas de COVID-19. A lo largo del estudio, es posible que"
+" recibas correos electrónicos invitándote a proporcionar una muestra de "
+"saliva, que se combinará con otras muestras y se analizará en el "
+"laboratorio LANBAMA en IPICYT, como una sola prueba conjunta. Si el "
+"resultado de tu prueba es negativo, entonces todas las personas en tu "
+"grupo están sanas y pueden ingresar al instituto durante 48 horas. Si el "
+"resultado de tu prueba es positivo, entonces al menos una persona en tu "
+"grupo está infectada, con lo cual tú, así como todas las demás personas "
+"en tu grupo, no podrás ingresar al instituto hasta que seas seleccionado "
+"nuevamente para volver a realizar la prueba y el próximo resultado de la "
+"prueba sea negativo En ningún momento estás obligado a entregar una "
+"muestra de saliva, ni a ingresar al edificio si no lo deseas"
+
+#: participant/templates/participant/consent_info.html:99
+msgid ""
+" <strong> Participation: </strong> The trial is expected to run for a "
+"month, throughout August 2022, during which participants in the treatment"
+" group will receive free COVID-19 testing. Throughout the course of the "
+"month, the principal investigators will link health data (i.e. COVID-19 "
+"test results) to survey data (collected at the beginning and end of the "
+"trial). However, at the end of the trial all gathered data will be "
+"anonymised. If you wish to withdraw consent on the use of your data at "
+"any point during the study, please contact <a "
+"href=\"mailto:csef@ipicyt.edu.mx\" class=\"link-"
+"success\">csef@ipicyt.edu.mx</a>.\n"
+"\n"
+"            You always have the option of stopping your participation in "
+"the study and you may leave at any time during the study (4 weeks from "
+"the start of the trial) without providing a reason and without penalty. "
+"If you decide to leave, the data you have provided up to this point will "
+"be anonymised immediately and deleted after attrition analysis. "
+msgstr ""
+"<strong> Participación: </strong> Se espera que el ensayo dure un mes, "
+"entre agosto y septiembre de 2022, durante el cual los participantes en "
+"el grupo de tratamiento recibirán pruebas gratuitas de COVID-19. A lo "
+"largo del mes, los investigadores principales vincularán los datos de "
+"salud (es decir, los resultados de las pruebas de COVID-19) con los datos"
+" de la encuesta (recopilados al principio y al final del ensayo). Sin "
+"embargo, al final de la prueba, todos los datos recopilados serán "
+"anonimizados. Si deseas retirar el consentimiento sobre el uso de tus "
+"datos en cualquier momento durante el estudio, comunícate con <a "
+"href=\"mailto:csef@ipicyt.edu.mx\" class=\"link-success\"> "
+"csef@ipicyt.edu.mx </a>.\n"
+"\n"
+"Si así lo deseas, tienes la opción de terminar tu participación en el "
+"estudio y puedes retirarte en cualquier momento durante el estudio (4 "
+"semanas desde el inicio del ensayo) sin proporcionar una razón y sin "
+"penalización. Si decides irte, los datos que has proporcionado hasta este"
+" punto se anonimizarán inmediatamente y se eliminarán después del "
+"análisis de desgaste."
+
+#: participant/templates/participant/consent_info.html:103
+msgid ""
+" <strong style='color:tomato;'> Potential Risks: </strong> If you choose "
+"not to participate in the study, or you participate and are selected into"
+" the control group, you will not be exposed to any additional risk. If "
+"you choose to participate and are selected into the treatment group, "
+"there is a risk that you will be infected if you are permitted to enter "
+"the institute and decide to do so. This risk is small, as all individuals"
+" must test negative in order to enter the institute. In particular, the "
+"C-SEF protocols are much safer than reopening without monitoring for "
+"infections. While the probability of infection can be minimised and "
+"contained, it is not guaranteed to be zero. There is always a very small "
+"chance to get infected when participating in social activities, and "
+"COVID-19 comes with small and major consequences; among which, fever, "
+"cough, loss of taste and smell, respiratory problems and, in some cases, "
+"death.\n"
+"            Your survey responses are strictly confidential and will only"
+" be accessible to the researchers. Below, we describe the steps we are "
+"taking to protect your privacy. In addition, your decision on whether to "
+"participate will not adversely affect your relationship with IPICYT or "
+"any other institution to which the researchers are affiliated."
+msgstr ""
+"<strong style='color:tomato;'> Riesgos potenciales: </strong>Si decides "
+"no participar en el estudio, o participas y eres seleccionado en el grupo"
+" de control, no estarás expuesto a ningún riesgo adicional. Si decides "
+"participar y eres seleccionado en el grupo de tratamiento, existe el "
+"riesgo de que te infectes si se te permite ingresar al instituto y "
+"decides hacerlo. Este riesgo es pequeño, ya que las personas deben dar "
+"negativo para ingresar al instituto. En particular, los protocolos de "
+"C-SEF son mucho más seguros que reabrir sin un mecanismo de monitoreo de "
+"contagios COVID-19. Aunque la probabilidad de infección se puede "
+"minimizar y contener, no se garantiza que sea cero. Siempre existe una "
+"posibilidad muy pequeña de infectarse cuando se participa en actividades "
+"sociales, y el COVID-19 tiene consecuencias pequeñas y grandes; entre los"
+" cuales, fiebre, tos, pérdida del gusto y el olfato, problemas "
+"respiratorios y, en casos extremos, la muerte"
+
+#: participant/templates/participant/consent_info.html:106
+msgid ""
+" <strong> Benefits: </strong> Participating in this study means that you "
+"are aiding further development of science. Additionally, a successful "
+"trial would allow IPICYT to reformulate the institutional policy "
+"regarding work and study during the current and future waves of the "
+"pandemic into one that gives you more social interactions and flexibility"
+" with a minimised risk of contagion. "
+msgstr ""
+"<strong> Beneficios: </strong> Participar en este estudio significa que "
+"estás ayudando al desarrollo de la ciencia y tecnología "
+"interdisciplinaria. Además, un estudio exitoso le permitiría al IPICYT "
+"reformular la política institucional sobre trabajo y estudio durante las "
+"posibles olas futuras de la pandemia en una que brinde más interacciones "
+"sociales y flexibilidad con un riesgo de contagio minimizado"
+
+#: participant/templates/participant/consent_info.html:108
+msgid ""
+" <strong> Data protection and privacy: </strong> The information "
+"collected during the study will be kept private. In concordance with the "
+"UK General Data Protection Regulation and Data Protection Act of 2018, "
+"the University of Oxford is the data controller with respect to your "
+"personal data, and as such will determine how your personal data is used "
+"in the research. The University will process your personal data for the "
+"purpose of the research outlined above. Research is a task that is "
+"performed in the public interest. Further information about your rights "
+"with respect to your personal data is available at <a "
+"href=\"https://compliance.admin.ox.ac.uk/individual-rights\" class"
+"=\"link-success\">https://compliance.admin.ox.ac.uk/individual-"
+"rights</a>. \n"
+"            Responsible members of the University of Oxford and IPICYT "
+"may be given access to data for monitoring and or audit of the study to "
+"ensure we are complying with the guidelines or as otherwise required by "
+"law. Moreover, in concordance with the signed Memorandum of "
+"Understanding, the Potosinian Institute of Scientific Research and "
+"Technology (IPICYT) will store and anonymise the original data in a "
+"secure server. During the trial, no one other than the head of the IPICYT"
+" Supercomputing Centre and responsible members of the University of "
+"Oxford and the United Nations University (Maastricht) will have access to"
+" any records of this trial. The data will be stored in electronic form, "
+"encrypted and password protected. At the conclusion of the trial, all "
+"data will be anonymised, and none of the records will identify you. A "
+"copy of the anonymised data will be provided to the primary investigators"
+" of the trial. The data that we collect from you may be transferred to, "
+"and stored or processed at a destination outside Mexico. <strong>The data"
+" will be used primarily for the publication of a scientific article "
+"</strong>. Archived/stored data, once anonymised, is available for "
+"research purposes upon request (primarily for peer-review replication "
+"processes). By submitting your personal data, you agree to this transfer,"
+" storing, or processing. After completion of the study, you cannot "
+"withdraw your personal information. Your individual privacy will be "
+"maintained in all publications or presentations resulting from this "
+"study. No information about you provided by you during this research will"
+" be disclosed to others without your written permission, except:"
+msgstr ""
+"<strong> Protección de datos y privacidad: </strong> La información "
+"recopilada durante el estudio se mantendrá privada. De acuerdo con el "
+"Reglamento General de Protección de Datos del Reino Unido y la Ley de "
+"Protección de Datos de 2018, la Universidad de Oxford es el controlador "
+"de datos con respecto a tus datos personales y, como tal, determinará "
+"cómo se utilizan tus datos personales en la investigación. La Universidad"
+" procesará tus datos personales con el propósito de la investigación "
+"descrita anteriormente. La investigación es una tarea de interés público."
+" Puedes encontrar más información sobre tus derechos con respecto a sus "
+"datos personales en <a href=\"https://compliance.admin.ox.ac.uk"
+"/individual-rights\" class=\"link-"
+"success\">https://compliance.admin.ox.ac.uk/individual-rights</a>. \n"
+"Además, miembros responsables de la Universidad de Oxford, Naciones "
+"Unidas (Maastricht) y del IPICYT podrán tener acceso a los datos para "
+"monitorear o auditar el estudio y garantizar que cumplimos con las pautas"
+" legales y de seguridad previamente establecidas o según lo exija la ley."
+" Además, de conformidad con el Memorándum de Entendimiento firmado, el "
+"Instituto Potosino de Investigación Científica y Tecnológica (IPICYT) "
+"almacenará y anonimizará los datos originales en un servidor seguro. "
+"Nadie más que el director del Centro de Supercómputo del IPICYT y los "
+"miembros responsables de la Universidad de Oxford y Naciones Unidas "
+"(Maastricht) tendrán acceso a los registros de este ensayo.Al finalizar "
+"el período de este estudio, todos los datos se anonimizarán y ninguno de "
+"los registros te podrá identificar. Los datos se almacenarán en formato "
+"electrónico, y serán encriptados y protegidos con contraseña. Se "
+"proporcionará una copia de los datos anónimos a los investigadores "
+"principales que figuran en la parte superior de este formulario. Los "
+"datos anónimos que recopilamos tuyos pueden transferirse, almacenarse o "
+"procesarse en un destino fuera de México. Los datos archivados, una vez "
+"anonimizados, estarán disponibles para fines de investigación, previa "
+"solicitud (principalmente para fines de réplica y evaluación en un "
+"proceso de revisión por pares). Al enviar tus datos personales, aceptas "
+"esta transferencia, almacenamiento o procesamiento. Después de completar "
+"el estudio, no puedse retirar tu información personal. Tu privacidad "
+"individual se mantendrá en todas las publicaciones o presentaciones que "
+"resulten de este estudio. Ninguna información tuya proporcionada por ti "
+"durante esta investigación se divulgará a otros sin tu permiso por "
+"escrito, excepto:"
+
+#: participant/templates/participant/consent_info.html:112
+msgid ""
+"if necessary to protect your rights or welfare (for example, if you are "
+"injured and need emergency care); or "
+msgstr ""
+"Si es necesario para proteger tus derechos o tu bienestar (por ejemplo, "
+"si estás lesionado y necesitas cuidados de emergencia); o"
+
+#: participant/templates/participant/consent_info.html:113
+msgid "if required by law."
+msgstr "Si lo requiere la ley."
+
+#: participant/templates/participant/consent_info.html:117
+msgid ""
+" <strong> Additional information: </strong> If you are interested in "
+"receiving additional information about the results of the study, please "
+"contact the study authors. "
+msgstr ""
+"<strong> Información adicional: Si estás interesado en recibir "
+"información adicional sobre los resultados del ensayo, comunícate con los"
+" autores del estudio. </strong>"
+
+#: participant/templates/participant/consent_info.html:119
+msgid ""
+" <strong> Concerns: </strong>  If you have any questions or concerns "
+"about any aspect of this project, you can contact the study authors at "
+"csef@ipicyt.edu.mx, who will do their best to answer your query. The "
+"researcher(s) should acknowledge reception of your concern within 10 "
+"working days and give you an indication of how they intend to address it."
+" If you fail to receive a response, are dissatisfied with the response "
+"you receive, or desire to report an aspect of how the study is being "
+"conducted, please contact the relevant Chair of Research Ethics Committee"
+" at the University of Oxford:"
+msgstr ""
+"<strong> Inquietudes:</strong> si tienes alguna pregunta o inquietud "
+"sobre cualquier aspecto de este proyecto, puedes comunicarte con los "
+"autores del estudio a través del correo csef@ipicyt.edu.mx, quienes harán"
+" su mejor esfuerzo para responder a tu consulta. Los investigadores deben"
+" acusar recibo de tu pregunta dentro de 10 días hábiles y darte una "
+"indicación de cómo pretenden abordarla. Si no recibes una respuesta, no "
+"está satisfecho con la respuesta que recibes o deseas informar un aspecto"
+" de cómo se está realizando el estudio, comunícate con el Presidente del "
+"Comité de Ética de la Investigación correspondiente de la Universidad de "
+"Oxford:"
+
+#: participant/templates/participant/consent_info.html:122
+msgid "Chair"
+msgstr "Presidente,"
+
+#: participant/templates/participant/consent_info.html:122
+msgid ", Social Sciences & Humanities Inter-Divisional Research Ethics Committee;"
+msgstr ""
+" Comité de Ética de Investigación Interdivisional de Ciencias Sociales y "
+"Humanidades;"
+
+#: participant/templates/participant/consent_info.html:123
+msgid "Email:"
+msgstr "Email:"
+
+#: participant/templates/participant/consent_info.html:124
+msgid "Address:"
+msgstr "Dirección:"
+
+#: participant/templates/participant/consent_info.html:124
+msgid "Research Services, University of Oxford, Wellington Square, Oxford OX1 2JD"
+msgstr ""
+"Servicios de Investigación, Universidad de Oxford, Wellington Square, "
+"Oxford OX1 2JD"
+
+#: participant/templates/participant/consent_info.html:127
+msgid ""
+"The Chair will seek to resolve the matter in a reasonably expeditious "
+"manner.\n"
+"            "
+msgstr ""
+"El Presidente buscará resolver el asunto de una manera razonablemente "
+"expedita.\n"
+
+#: participant/templates/participant/encuesta.html:8
+msgid "General Information"
+msgstr "Información General"
+
+#: participant/templates/participant/encuesta.html:9
+msgid ""
+"This project requires you to follow one of two protocols: a group-testing"
+" protocol wherein you are required to participate in COVID-19 group-"
+"testing activities (provided by the LANBAMA laboratory at IPICYT) as "
+"instructed by the research team, or a remote-work protocol, otherwise "
+"known as the current institutional work policy. We also ask all "
+"participants to respond to a short <strong>survey</strong> at the "
+"beginning and at the end of the trial, within a month's time. You will be"
+" asked demographic, socioeconomic, and a set of psychological questions. "
+"While you may feel uncomfortable with some of the questions asked, you do"
+" not need to answer questions that you do not want to answer. Throughout "
+"the course of the month the principal investigators will link health data"
+" to survey data. However, at the end of the trial all gathered will be "
+"anonymised. If you wish to withdraw consent on the use of your data, "
+"please <a href='{url}'>contact us!</a>"
+msgstr ""
+"Este proyecto requiere que sigas uno de dos protocolos: un protocolo de "
+"prueba grupal en el que debes participar en actividades de pruebas "
+"grupales COVID-19 (proporcionadas por el laboratorio LANBAMA en IPICYT) "
+"según las instrucciones del equipo de investigación, o un protocolo de "
+"trabajo remoto, también conocido como la política de trabajo "
+"institucional vigente. También solicitamos a todos los participantes que "
+"respondan una breve <strong>encuesta</strong> al inicio y al final del "
+"proyecto, en el plazo de un mes. Se harán preguntas demográficas, "
+"socioeconómicas y psicológicas. Si bien puedes sentirse incómodo con "
+"algunas de las preguntas formuladas, no es necesario que respondas las "
+"preguntas que no deseas responder. A lo largo del mes, los investigadores"
+" principales vincularán datos de salud a datos de encuestas. Sin embargo,"
+" al final del proyecto, todos los datos recogidos serán anónimos. Si "
+"deseas retirar el consentimiento sobre el uso de tus datos, <a "
+"href='{url}'>¡ponte en contacto con nosotros!</a >"
+
+#: participant/templates/participant/encuesta.html:14
+msgid ""
+"Please <a href='{url}'><strong>click here</strong></a> to access the "
+"survey. We truly hope you can contribute to this project! "
+msgstr ""
+"Por favor, <a href='{url}'><strong>haz clic aquí</strong></a> para "
+"acceder a la encuesta. ¡Realmente esperamos que puedas contribuir a este "
+"proyecto!"
+
+#: participant/templates/participant/landing.html:7
+msgid "Welcome to the IPICYT/C-SEF trial!"
+msgstr "¡Bienvenido(a) al proyecto IPICYT/C-SEF!"
+
+#: participant/templates/participant/landing.html:10
+msgid ""
+"On this page you'll find all information about your informed "
+"participation in the C-SEF trial. Please read the following paragraphs "
+"carefully."
+msgstr ""
+"En esta página encontrarás toda la información acerca de tu participación"
+" en el ensayo C-SEF. Por favor lee los siguientes párrafos con "
+"detenimiento."
+
+#: participant/templates/participant/landing.html:12
+msgid ""
+"You are part of the treatment group in the trial. Every day, the "
+"algorithm underlying C-SEF selects participants in the treatment group "
+"for pooled testing (<a href='{url}''>more information</a>). Participants "
+"in negative pooled tests are given access to IPICYT buildings for two "
+"full days. You will receive an email invitation to submit a saliva sample"
+" at <a href='https://www.ipicyt.edu.mx/Lanbama/lanbama.php'>LANBAMA</a> "
+"if you're selected for testing. On this page, you can also check your "
+"building access status at any time, and see the results of any pooled "
+"tests of which you have been part. "
+msgstr ""
+"Eres parte del grupo de tratamiento en el ensayo. Todos los días, el "
+"algoritmo subyacente de C-SEF selecciona a los participantes del grupo de"
+" tratamiento para las pruebas conjuntas (<a href='{url}'>más "
+"información</a>). Los participantes en pruebas conjuntas negativas tienen"
+" acceso a los edificios del IPICYT durante dos días completos. Recibirás "
+"una invitación por correo electrónico para enviar una muestra de saliva a"
+" <a href='https://www.ipicyt.edu.mx/Lanbama/lanbama.php'>LANBAMA</a> si "
+"eres seleccionado para la prueba. En esta página, también puedes "
+"verificar tu estado de acceso a tu edificio en cualquier momento y ver "
+"los resultados de las pruebas conjuntas de las que has sido parte."
+
+#: participant/templates/participant/landing.html:20
+msgid ""
+"In order to be considered for testing, you are required to "
+"<strong>provide consent</strong> and fill in the <strong>baseline "
+"survey</strong> by {baseline_deadline}. In addition, you are encouraged "
+"to share your <strong>scheduling preferences</strong>. Telling us on "
+"which days you would prefer to access the building increases your chance "
+"of getting into IPICYT when you want it most. Moreover, letting us know "
+"any days on which you <i>don't</i> want to come can help LANBAMA not "
+"waste any tests. You can update your schedule throughout the trial, as "
+"often as you want."
+msgstr ""
+"Para ser considerado(a) para una prueba, debes <strong>otorgar tu "
+"consentimiento</strong> y completar la <strong>encuesta inicial</strong> "
+"antes del {baseline_deadline}. Además, te recomendamos que es importarte "
+"que nos compartas tus <strong>preferencias de agenda</strong>. Indicarnos"
+" en qué días prefieres acceder al edificio aumenta tus posibilidades de "
+"ingresar al IPICYT cuando más lo deseas. Además, informarnos los días en "
+"los que <i>no</i> quieres venir puede ayudar a LANBAMA a no desperdiciar "
+"ninguna prueba. Puedes actualizar tu agenda a lo largo del ensayo (4 "
+"semanas), con la frecuencia que desees."
+
+#: participant/templates/participant/landing.html:28
+msgid ""
+"At the end of the trial, we also ask you to fill in the <strong>endline "
+"survey</strong>. This will allow us to assess the impact of the trial on "
+"the members of IPICYT."
+msgstr ""
+"Al final de la prueba, también te pedimos que completes la "
+"<strong>encuesta final</strong>. Esto nos permitirá evaluar el impacto "
+"del ensayo en los miembros de la comunidad IPICYT."
+
+#: participant/templates/participant/landing.html:30
+#: participant/templates/participant/landing.html:37
+msgid ""
+"If you have any questions or issues with this website, please <a "
+"href='{url}'>get in touch</a>!"
+msgstr ""
+"Si tienes preguntas o algún problema con este sitio web, ¡por favor <a "
+"href='{url}'>comunícate con nosotros(as)!</a>"
+
+#: participant/templates/participant/landing.html:33
+msgid ""
+"On this page you'll find all information about your informed "
+"participation in the C-SEF trial. Please read the following paragraph "
+"carefully."
+msgstr ""
+"En esta página encontrarás información relevante acerca de tu "
+"participación en el proyecto C-SEF. Por favor lee los siguientes párrafos"
+" con detenimiento."
+
+#: participant/templates/participant/landing.html:35
+msgid ""
+"In order to take part in this trial, we first ask you to provide consent."
+" As a member of the control group, you will continue to follow the "
+"established IPICYT protocols for accessing buildings. We kindly ask you "
+"to fill in the baseline survey by {baseline_deadline}. At the end of the "
+"trial we also ask you to complete the endline survey. This will allow us "
+"to assess the impact of the trial on the members of IPICYT."
+msgstr ""
+"Para participar en este ensayo, primero te pedimos que otorgues tu "
+"consentimiento. Como miembro del grupo de control, seguirás los "
+"protocolos establecidos por el IPICYT para acceder a los edificios. Te "
+"pedimos amablemente que completes la encuesta inicial antes del "
+"{baseline_deadline}. Al final del ensayo (en 4 semanas), también te "
+"pedimos que completes la encuesta final. Esto nos permitirá evaluar el "
+"impacto del ensayo en los miembros de la comunidad IPICYT."
+
+#: participant/templates/participant/landing.html:44
+msgid "Your action items"
+msgstr "Tus elementos de acción"
+
+#: participant/templates/participant/landing.html:46
+msgid ""
+"As a participant, we will ask you to complete a few action items as the "
+"trial progresses. <strong>Click on each item to complete it.</strong>"
+msgstr ""
+"Si participas en este ensayo, te pedimos que realices los siguientes "
+"elementos de acción. <strong>Haz clic en cada elemento para "
+"completarlo.</strong>"
+
+#: participant/templates/participant/landing.html:53
+msgid "Participant action items <i class=\"bi bi-card-checklist\"></i>"
+msgstr ""
+"Elementos de acción del participante <i class=\"bi bi-card-"
+"checklist\"></i>"
+
+#: participant/templates/participant/landing.html:61
+msgid "You've given consent!"
+msgstr "¡Has otorgado tu consentimiento!"
+
+#: participant/templates/participant/landing.html:64
+msgid "Give consent"
+msgstr "Otorgar consentimiento"
+
+#: participant/templates/participant/landing.html:72
+msgid "The baseline survey has closed."
+msgstr "La encuesta inicial ha finalizado."
+
+#: participant/templates/participant/landing.html:77
+msgid "You've completed the baseline survey! (edit until {baseline_deadline})"
+msgstr ""
+"¡Has completado la encuesta inicial!(puedes modificar tus respuestas "
+"hasta el {baseline_deadline})"
+
+#: participant/templates/participant/landing.html:82
+msgid "Fill in baseline survey by "
+msgstr "Responde la encuesta inicial antes del"
+
+#: participant/templates/participant/landing.html:90
+msgid "You've submitted your schedule! (<strong>click to update</strong>)"
+msgstr "¡Has enviado tu agenda! (<strong>haz clic para actualizar</strong>) "
+
+#: participant/templates/participant/landing.html:93
+msgid "Provide personal scheduling preferences (recommended)"
+msgstr "Actualiza tus preferencias de agendado (recomendado)"
+
+#: participant/templates/participant/landing.html:101
+msgid " Endline survey opens on "
+msgstr "Ecuesta final disponible el"
+
+#: participant/templates/participant/landing.html:106
+msgid "You have completed the endline survey! (click to edit)"
+msgstr "¡Has completado la encuesta final! (haz clic para editar)"
+
+#: participant/templates/participant/landing.html:111
+msgid "Fill in endline survey"
+msgstr "Respnder encuesta final"
+
+#: participant/templates/participant/landing.html:122
+#: participant/templates/participant/landing.html:133
+msgid "Your access status"
+msgstr "Tu estatus de acceso"
+
+#: participant/templates/participant/landing.html:123
+msgid "Testing will begin on {testing_start}!"
+msgstr "Las pruebas comenzarán el {testing_start}"
+
+#: participant/templates/participant/landing.html:124
+msgid "You will receive an email as soon as you are invited for testing."
+msgstr ""
+"Recibirás un correo electrónico tan pronto como seas invitado a una "
+"prueba."
+
+#: participant/templates/participant/landing.html:134
+msgid ""
+"Here we show your current building access status. You are only allowed to"
+" enter the building if you have recently been in a negative pooled test. "
+"A negative pooled test gives you access for {window_size} from providing "
+"the sample."
+msgstr ""
+"Aquí te mostramos tu estado actual de acceso al edificio. Solo se te "
+"permite ingresar al edificio si has tenido una prueba conjunta negativa "
+"recientemente. Una prueba conjunta negativa te da acceso a {window_size} "
+"desde que proporcionas la muestra."
+
+#: participant/templates/participant/landing.html:147
+#: participant/templates/participant/status.html:20
+msgid ""
+"Your pooled test on <strong>{scheduled}</strong> was "
+"<strong>positive</strong>. You're currently not permitted to enter the "
+"building."
+msgstr ""
+"Tu prueba grupal el<strong>{scheduled}</strong> fue "
+"<strong>positiva</strong>. Actualmente no tienes permiso para ingresar al"
+" edificio."
+
+#: participant/templates/participant/landing.html:149
+#: participant/templates/participant/status.html:22
+msgid ""
+"Your pooled test on <strong>{scheduled}</strong> was "
+"<strong>inconclusive</strong>. We're sorry that you're currently not "
+"permitted to enter the building."
+msgstr ""
+"Tu prueba grupal el <strong>{scheduled}</strong> fue "
+"<strong>inconclusa</strong>. Lamentamos que actualmente no tengas "
+"permitido ingresar al edificio."
+
+#: participant/templates/participant/landing.html:151
+#: participant/templates/participant/status.html:24
+msgid ""
+"You were asked to submit a sample on <strong>{scheduled}</strong> but "
+"failed to do so. You're currently not permitted to enter the building."
+msgstr ""
+"Se te pidió que enviaras una muestra el <strong>{scheduled}</strong> pero"
+" no pudiste hacerlo. Actualmente no tienes permitido ingresar al "
+"edificio."
+
+#: participant/templates/participant/landing.html:158
+#: participant/templates/participant/status.html:31
+msgid ""
+"We're still waiting for your test result that was scheduled on "
+"{scheduled}. Thanks for being patient!"
+msgstr ""
+"Todavía estamos esperando el resultado de tu prueba que se programó el "
+"{scheduled}. ¡Gracias por tu paciencia!"
+
+#: participant/templates/participant/landing.html:160
+msgid "In the last {window_size} you have not been included in any tests."
+msgstr "En los últimos {window_size} no has sido incluido en ninguna prueba. "
+
+#: participant/templates/participant/landing.html:168
+#: participant/templates/participant/status.html:41
+msgid ""
+"Your pooled test on <strong>{scheduled}</strong> was negative! <br>You "
+"may enter the building immediately, from <strong>{window_start}</strong> "
+"until <strong>{window_end}</strong>."
+msgstr ""
+"¡Tu prueba grupal el <strong>{scheduled}</strong> fue negativa! "
+"<br>Puedes ingresar al edificio inmediatamente, a partir del "
+"<strong><strong>{window_start}</strong> y hasta "
+"el<strong>{window_end}</strong>."
+
+#: participant/templates/participant/landing.html:181
+msgid "Your testing history"
+msgstr "Tu historial de pruebas"
+
+#: participant/templates/participant/landing.html:183
+msgid ""
+"Here we list the results of all tests for which you were invited. This "
+"includes tests for which you did not submit a sample."
+msgstr ""
+"Aquí enumeramos los resultados de todas las pruebas a las que fuiste "
+"invitado(a). Esto incluye pruebas para las que no enviaste una muestra."
+
+#: participant/templates/participant/landing.html:197
+msgid "Your access"
+msgstr "Tu acceso"
+
+#: participant/templates/participant/landing.html:198
+msgid ""
+"You are in the control group. This allows you to follow the standard "
+"IPICYT access protocols."
+msgstr ""
+"Estás en el grupo de control. Esto te permite seguir los protocolos de "
+"acceso estándar de IPICYT."
+
+#: participant/templates/participant/navbar.html:5
+msgid "Participant"
+msgstr "Participante"
+
+#: participant/templates/participant/navbar.html:11
+msgid "Information Centre"
+msgstr "Centro de Información"
+
+#: participant/templates/participant/schedule.html:15
+msgid "Scheduling"
+msgstr "Agendado"
+
+#: participant/templates/participant/schedule.html:18
+msgid ""
+"On this page you can tell us which days of the coming week you would "
+"prefer to access your workplace at IPICYT in person. For that purpose, "
+"you get"
+msgstr ""
+"En esta página puedes indicarnos qué días de la próxima semana "
+"preferirías acceder personalmente a tu lugar de trabajo en el IPICYT. "
+"Para ello, tienes"
+
+#: participant/templates/participant/schedule.html:18
+msgid "tokens that you can distribute between"
+msgstr "fichas que puedes distribuir entre"
+
+#: participant/templates/participant/schedule.html:18
+msgid "-day slots:"
+msgstr "-días que conforman un intervalo:"
+
+#: participant/templates/participant/schedule.html:21
+msgid "Increase or decrease the number of tokens for a given"
+msgstr "Aumenta o disminuye el número de fichas en cualquier intervalo de"
+
+#: participant/templates/participant/schedule.html:21
+msgid ""
+"-day slot by clicking on the (+) and (-) buttons. If you've used up all "
+"the spare tokens, you'll need to remove tokens from one slot in order to "
+"add tokens to another slot."
+msgstr ""
+" días haciendo clic en los botones (+) y (-). Si has usado todas tus "
+"fichas, deberás eliminar fichas de un intervalo para agregar fichas a "
+"otro espacio."
+
+#: participant/templates/participant/schedule.html:24
+msgid ""
+"Don't forget to save your preference by clicking the 'Save' "
+"button!</strong> Your saved preference will then appear at the bottom of "
+"the page."
+msgstr ""
+"¡No olvides guardar tus preferencias haciendo clic en el botón "
+"'Guardar'!</strong> Tu preferencia aparecerá en la parte inferior de la "
+"página."
+
+#: participant/templates/participant/schedule.html:26
+msgid ""
+"You can increase your tokens allocated to a given 2-day slot by clicking "
+"on the (+) button, and you can decrease your tokens by clicking on the "
+"(-) button. Once you have allocated all your tokens, you would have "
+"decrease your tokens on some slot before you can add more tokens to "
+"another slot. "
+msgstr ""
+"Puedes agregar una ficha a un intervalo de 2 díashaciendo clic en el "
+"botón (+) a la derecha de dicho espacio, y puedes retirar fichas a un "
+"intervalo de 2 días haciendo clic en el botón (-) igualmente a la derecha"
+" del espacio seleccionado. Una vez que hayas asignado todas tus fichas, "
+"deberás retirar tus fichas de algún espacio antes de poder agregar más "
+"fichas a otro espacio."
+
+#: participant/templates/participant/schedule.html:28
+msgid "Tips"
+msgstr "Consejos"
+
+#: participant/templates/participant/schedule.html:29
+msgid ""
+"If you're not interested in entering IPICYT on specific days, don't "
+"allocate any tokens to the corresponding slots."
+msgstr ""
+"Si no estás interesado en ingresar al IPICYT en días específicos, no "
+"asignes ninguna ficha a los espacios de los intervalos correspondientes."
+
+#: participant/templates/participant/schedule.html:30
+msgid ""
+"If you don't allocate any tokens to some slot, our algorithm will not "
+"consider you for testing the previous day."
+msgstr ""
+"Si no asignas ninguna ficha a algún espacio, nuestro algoritmo no lo "
+"considerará para la prueba del día anterior."
+
+#: participant/templates/participant/schedule.html:32
+msgid ""
+"The more tokens you add to a slot, the stronger your preference to access"
+" IPICYT on those days.\n"
+"            Our scheduling alogrithm takes this into account when "
+"scheduling you for testing.\n"
+"            For example, if you place many tokens on Tuesday-Wednesday, "
+"you are more likely to get invited for testing on Monday.\n"
+"            (Note that many other factors also play a role, so we cannot "
+"guarantee that you're invited for testing on your preferred days.)"
+msgstr ""
+"Cuantas más fichas agregues a un espacio, mayor será tu preferencia para "
+"acceder al IPICYT en esos días.\n"
+" Por ejemplo, si colocas muchas fichas en el intervalo de martes a "
+"miércoles, es más probable que te inviten a una prueba el lunes, que de "
+"ser negativa te permitirá acceder el martes y miércoles al instituto.\n"
+" (Además de tu preferencia, hay muchos otros factores que juegan un rol "
+"en la asignación de pruebas, por lo que no podemos garantizar que te "
+"inviten a una prueba el día de tu elección"
+
+#: participant/templates/participant/schedule.html:37
+msgid ""
+"You can come back and edit the tokens at any point during the trial if "
+"your schedule changes. Any changes take effect the following week."
+msgstr ""
+"Puedes regresar y editar las fichas en cualquier momento durante el mes "
+"de ensayo si tu horario cambia. Cualquier cambio entrará en vigor la "
+"semana siguiente."
+
+#: participant/templates/participant/schedule.html:39
+msgid ""
+"NB: If you do not submit a scheduling preference, we assume an even "
+"allocation of"
+msgstr ""
+"NB: Si no has enviado tu preferencia para tu agenda semanal, asignaremos "
+"2 fichas por intervalo de manera automática."
+
+#: participant/templates/participant/schedule.html:39
+msgid "tokens per slot."
+msgstr "fichas por intervalo."
+
+#: participant/templates/participant/schedule.html:48
+msgid "Days"
+msgstr "Días"
+
+#: participant/templates/participant/schedule.html:49
+msgid "Allocated tokens"
+msgstr "Fichas asignadas"
+
+#: participant/templates/participant/schedule.html:50
+msgid "Change"
+msgstr "Cambio"
+
+#: participant/templates/participant/schedule.html:138
+msgid "Unallocated"
+msgstr "Fichas no asignadas"
+
+#: participant/templates/participant/schedule.html:154
+msgid "Save"
+msgstr "Guardar"
+
+#: participant/templates/participant/schedule.html:155
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: participant/templates/participant/schedule.html:161
+msgid "Current saved token selection"
+msgstr "Selección de fichas guardadas actualmente"
+
+#: participant/templates/participant/schedule.html:162
+msgid "Here you can see how you have allocated tokens in the past."
+msgstr "Aquí puedes ver cómo has asignado fichas en el pasado."
+
+#: participant/templates/participant/status.html:7
+msgid "Your status"
+msgstr "Tu estatus"
+
+#: participant/templates/participant/status.html:8
+msgid ""
+"This page shows your current status, and any test results that you've "
+"been part of. Any issues or questions? <a href='{url}'>Contact us!</a> "
+msgstr ""
+"Esta página muestra tu estatus actual y los resultados de las pruebas de "
+"las que ha sido parte. ¿Algún problema o pregunta? <a "
+"href='{url}'>¡Contáctanos!</a>"
+
+#: participant/templates/participant/status.html:33
+msgid ""
+"In the last {window_size} days you have not been included in any tests. "
+"Watch out for an email that invites you to submit a saliva sample for "
+"testing!"
+msgstr ""
+"En los últimos {window_size} días no has sido incluido en ninguna prueba."
+" ¡Debes estar atento a un correo electrónico que te invite a enviar una "
+"muestra de saliva para su análisis!"
+
+#: participant/templates/participant/status.html:54
+msgid "Your (past) scheduled tests"
+msgstr "Tus pruebas programadas (pasadas)"
+
+#: participant/templates/participant/survey.html:10
+msgid ""
+"In this survey, you are asked a variety of answers in multiple "
+"categories. Please answer as accurately as possible. <strong>All data "
+"will be treated confidentially.</strong></p>"
+msgstr ""
+"En esta encuesta, se te pide una variedad de respuestas en múltiples "
+"categorías. Por favor responde con la mayor precisión posible. "
+"<strong>Todos los datos serán tratados de forma "
+"confidencial.</strong></p>"
+
+#: participant/templates/participant/survey.html:17
+msgid "Questions"
+msgstr "Preguntas"
+
+#: participant/templates/participant/survey_thanks.html:10
+msgid ""
+"Thank you for filling in the survey, your results have been saved. We "
+"very much appreciate your participation!"
+msgstr ""
+"Gracias por completar la encuesta, tus resultados se han guardado. "
+"¡Agradecemos mucho tu participación!"
+
+#: templates/contacto.html:12
+msgid "Get in touch"
+msgstr "Contáctanos"
+
+#: templates/contacto.html:15
+msgid ""
+"Do you have any questions? We would love to hear from you and answer any "
+"questions you may have."
+msgstr ""
+"¿Tienes alguna pregunta? Nos encantaría escucharte y responder cualquier "
+"duda que puedas tener."
+
+#: templates/index.html:5
+msgid "Welcome!"
+msgstr "¡Bienvenidos!"
+
+#: templates/index.html:7
+msgid "COVID-19 Safe Education Framework"
+msgstr "Marco de Educación Segura COVID-19"
+
+#: templates/index.html:9
+msgid "A collaboration with researchers from"
+msgstr "Una colaboración con investigadores de"
+
+#: templates/index.html:14
+msgid ""
+"The <strong>COVID-19 Safe Education Framework</strong> (C-SEF) is an "
+"interdisciplinary and multi-institutional collaboration project, whose "
+"objective is to develop a systematic and automated protocol - based on "
+"the combination of knowledge of mechanism design, experimental causal "
+"inference and artificial intelligence - that allows Educational "
+"Institutions to use their facilities in a safe, efficient, and equitable "
+"manner."
+msgstr ""
+"El <strong>Marco de Educación Segura COVID-19</strong> o C-SEF (COVID-19 "
+"Safe Education Framework) por sus siglas en inglés, es un proyecto de "
+"colaboración interdisciplinaria y multiinstitucional, cuyo objetivo es "
+"desarrollar un protocolo sistemático y automatizado --basado en la "
+"combinación de conocimientos de diseño de mecanismos, inferencia causal "
+"experimental e inteligencia artificial-- que permita a las Instituciones "
+"de Educación usar sus instalaciones de manera segura, eficiente, y "
+"equitativa."
+
+#: templates/index.html:32
+msgid "<strong>Collaborating departments at IPICYT</strong>"
+msgstr "<strong>Departamentos que participan en IPICYT</strong>"
+
+#: templates/index.html:41
+msgid "About the project"
+msgstr "Sobre el proyecto"
+
+#: templates/navbar.html:11
+msgid "Home"
+msgstr "Casa"
+
+#: templates/navbar.html:12
+msgid "Challenge"
+msgstr "Problema"
+
+#: templates/navbar.html:13
+msgid "Solution"
+msgstr "Solución"
+
+#: templates/navbar.html:14
+msgid "About Us"
+msgstr "Conócenos"
+
+#: templates/navbar.html:15
+msgid "Contact"
+msgstr "Escríbenos"
+
+#: templates/personas.html:7
+msgid "Team"
+msgstr "Equipo"
+
+#: templates/personas.html:120
+msgid "Advisors"
+msgstr "Asesores"
+
+#: templates/personas.html:167
+msgid "Collaborators"
+msgstr "Colaboradores"
+
+#: templates/personas.html:185
+msgid "Get in touch!"
+msgstr "¡Contáctanos!"
+
+#: templates/problema.html:6
+msgid "The challenge"
+msgstr "El problema"
+
+#: templates/problema.html:8
+msgid ""
+"Testing resources for viral infections are often scarce due to several "
+"factors, including limited access to reagents, shortages in trained lab "
+"technicians, and challenging logistics. At the same time, testing is an "
+"essential tool for individuals reintegrating into normalcy during or "
+"after a wave of a pandemic. Indeed, a negative test can serve as proof of"
+" the individual's ability to resume work, return to studies, or "
+"participate in normal everyday activity. Ultimately, novel strategies are"
+" required to maximise the benefit from each available test, to allow "
+"maximum number of people to resume their normal lives, while also "
+"balancing the different needs of different individuals in the population."
+msgstr ""
+"Los recursos necesarios para llevar a cabo las pruebas de laboratorio "
+"necesarias para el diagnóstico de las infecciones por SARS-CoV-2 y otros "
+"virus suelen ser escasos debido a factores tales como el acceso limitado "
+"a reactivos, la escasez de técnicos de laboratorio capacitados y una "
+"logística desafiante. Al mismo tiempo, dichas pruebas son esenciales para"
+" que los estudiantes y el personal académico, administrativo y de apoyo "
+"se reintegren a la normalidad durante o después de un brote o una ola de "
+"la pandemia. Una prueba de laboratorio negativa puede servir como "
+"comprobante para que un individuo regrese a clases, al laboratorio, o "
+"participe en otras actividades cotidianas. Se requieren estrategias "
+"novedosas para maximizar el beneficio de cada prueba disponible y "
+"permitir que el máximo número de personas reanude sus actividades, "
+"tomando en cuenta que entre los estudiantes y el personal académico hay "
+"individuos con diferentes prioridades para llevar a cabo actividades "
+"presenciales."
+
+#: templates/problema.html:14 templates/solucion.html:6
+msgid "Our solution"
+msgstr "Solución"
+
+#: templates/solucion.html:9
+msgid "Group testing"
+msgstr "Pruebas grupales"
+
+#: templates/solucion.html:11
+msgid ""
+"Our methodology is based on the principle of group testing. In group "
+"testing, multiple samples are pooled into a single test. The result "
+"indicates whether any given person in the pool is infected, or conversely"
+" – and more informatively – if none are infected."
+msgstr ""
+"Nuestra metodología está basada en el principio de pruebas grupales. En "
+"las pruebas grupales, varias muestras se agrupan en una sola prueba. El "
+"resultado indica si una persona dentro del grupo está infectada o, por el"
+" contrario, si todos dentro del grupo están sanos."
+
+#: templates/solucion.html:16
+msgid ""
+"Illustration of group tests of size 6. Red dots represent infected "
+"individuals. In the above scenario, a single group test on Group A will "
+"return negative, since no individual is infected. The test for Group B "
+"will return positive, since some individuals are infected."
+msgstr ""
+"Ilustración de pruebas grupales de tamaño 6. Los puntos rojos representan"
+" individuos infectados. En el primer escenario, una sola prueba de grupo "
+"en el Grupo A dará resultado negativo, ya que ningún individuo está "
+"infectado. La prueba para el Grupo B dará resultado positivo, ya que "
+"algunas personas están infectadas."
+
+#: templates/solucion.html:20
+msgid ""
+"Under the supervision of Prof. Ángel Alpuche Solís, The National "
+"Laboratory of Agricultural, Medical and Environmental Biotechnology "
+"(LANBAMA) has led efforts to implement the group testing solution via a "
+"key concentration step, as per <a "
+"href='https://academic.oup.com/clinchem/article/67/5/797/6211384?login=true'"
+" target='_blank'>research</a> from the Oxford University Pharmacology "
+"Department."
+msgstr ""
+"Bajo la supervisión del Prof. Ángel Alpuche Solís, el Laboratorio "
+"Nacional de Biotecnología Agrícola, Médica y Ambiental (LANBAMA) ha "
+"liderado los esfuerzos para implementar nuevas metodologías de pruebas "
+"grupales de COVID-19 a través de un paso de concentración clave, según <a"
+" "
+"href='https://academic.oup.com/clinchem/article/67/5/797/6211384?login=true'"
+" target='_blank'>investigación</a> del Departamento de Farmacología de la"
+" Universidad de Oxford."
+
+#: templates/solucion.html:23
+msgid "Proven benefits"
+msgstr "Beneficios establecidos"
+
+#: templates/solucion.html:25
+msgid ""
+"Not only is there a substantial literature regarding group testing in the"
+" Computational Learning Theory community, but the underlying method has "
+"been successfully used in practice to fight HIV. The most compelling "
+"benefit of group testing is its ability to amplify the reach of a limited"
+" number of tests to larger population segments by allocating tests to "
+"disjoint groups of individuals."
+msgstr ""
+"No sólo existe un corpus de trabajo substancial sobre las pruebas "
+"grupales dentro del área de la teoría del aprendizaje computacional, sino"
+" también se han utilizado pruebas grupales con éxito en la práctica para "
+"combatir el VIH. El beneficio más destacado de las pruebas grupales es su"
+" capacidad para ampliar el alcance de un número limitado de pruebas a "
+"segmentos más grandes de una población mediante la asignación de pruebas "
+"a grupos separados de personas."
+
+#: templates/solucion.html:28
+msgid "The proposed solution"
+msgstr "Nuestra propuesta"
+
+#: templates/solucion.html:30
+msgid ""
+"Instead of determining the number of tests required for a given testing "
+"regime, we turn the problem on its head and formulate the problem of "
+"maximising the use of limited testing resources as a resource allocation "
+"problem. Our approach is designed for settings with severely limited "
+"testing capacities."
+msgstr ""
+"El trabajo previo sobre protocolos de pruebas grupales se enfoca en "
+"empezar por el objetivo de establecer quién está infectado dentro de una "
+"población, e intentar alcanzar este objetivo con la cantidad mínima de "
+"pruebas. Nuestra metodología le da la vuelta al problema y formula el "
+"problema de maximizar el uso de recursos de pruebas limitadas como un "
+"problema de asignación de recursos. Nuestro enfoque está diseñado para "
+"entornos con capacidades de prueba severamente limitadas."
+
+#: templates/solucion.html:36
+msgid "Compute individuals' utility and infection risk"
+msgstr ""
+"Calcular por individuo la utilidad del retorno a actividad presencial y "
+"el riesgo de infección"
+
+#: templates/solucion.html:38
+msgid ""
+"Our testing strategy requires computing each individual's utility of "
+"normal activity over lockdown as well as their probability of infection."
+msgstr ""
+"Nuestra estrategia de prueba requiere calcular por individuo una medida "
+"de utilidad de actividad presencial, así como su probabilidad de "
+"infección."
+
+#: templates/solucion.html:44
+msgid "Compute Optimal Testing Strategy"
+msgstr "Establecer estrategias de prueba óptimas"
+
+#: templates/solucion.html:46
+msgid ""
+"Based on these population characteristics, we provide an optimal "
+"allocation of group tests to the population, under the containment "
+"assumption that only those in negative tests will return to in-person "
+"activities."
+msgstr ""
+"Asumimos protocolos de contención en donde a los individuos dentro de "
+"pruebas negativas se les permite participar en actividades presenciales. "
+"Tomando en cuenta la utilidad de actividad presencial y probabilidad de "
+"infección de cada individuo, podemos encontrar una asignación de pruebas "
+"óptima vía metodología algorítmica."
+
+#: templates/solucion.html:52
+msgid "Implement Tests and Communicate Results"
+msgstr "Implementar pruebas y comunicar resultados"
+
+#: templates/solucion.html:54
+msgid ""
+"We help the LANBAMA coordinate the group tests required, and communicate "
+"the results to relevant individuals."
+msgstr ""
+"Le ayudamos al LANBAMA a coordinar las pruebas grupales requeridas y a "
+"comunicar los resultados a individuos relevantes."
+
+#: templates/solucion.html:60
+msgid "Practical Implementation"
+msgstr "Implementación práctica"
+
+#: templates/solucion.html:62
+msgid ""
+"In order to efficiently implement our proposed solution, the C-SEF team "
+"has spent months mobilising labour and economic resources to bring the "
+"algorithmic, experimental design to IPICYT, in San Luis Potosí, Mexico. "
+"The final product is the web application which hosts this text, wherein "
+"users submit data and preferences, and in return receive an invitation to"
+" get tested in a way that optimises their needs and the institute's use "
+"of resources. At the same time, labortory technicians use the platform to"
+" indicate which unique ID (i.e. user) has shown up for a test, and "
+"subsequently pool the group of users who submited a saliva sample for "
+"testing on a given day using our novel optimisation algorithm."
+msgstr ""
+"Para implementar de manera eficiente la solución propuesta, el equipo de "
+"C-SEF ha pasado meses invirtiendo y movilizando mano de obra y recursos "
+"económicos para llevar el diseño experimental algorítmico a IPICYT, en "
+"San Luis Potosí, México. El producto final es la aplicación web que "
+"alberga este texto, en la que los usuarios pueden enviar datos y "
+"preferencias de programación y, a cambio, reciben una invitación para "
+"hacerse una prueba conjunta COVID-19. Las invitaciones se generan a "
+"través de un algoritmo que optimiza las necesidades de los usuarios y el "
+"uso de los recursos del instituto. Al mismo tiempo, los técnicos de "
+"laboratorio de LANBAMA pueden usar la plataforma para indicar qué "
+"Identificación Única (es decir, usuario) se ha presentado para una prueba"
+" y, posteriormente, agrupar al grupo de usuarios que se presentaron para "
+"otorgar una muestra de saliva utilizando nuestro algoritmo de "
+"optimización."
+
+#: templates/solucion.html:66
+msgid "Meet the team"
+msgstr "Conoce al equipo"
+
+#: templates/emails/base_email.html:28
+msgid "Any questions or comments? Contact us at"
+msgstr "¿Tienes preguntas o comentarios? Contáctanos en"
+
+#: templates/security/email/reset_instructions.html:4
+#: templates/security/email/reset_notice.html:4
+msgid "Hi"
+msgstr "Hola"
+
+#: templates/security/email/reset_instructions.html:5
+msgid "Have you requested a password reset?"
+msgstr "¿Has pedido restablecer tu contraseña?"
+
+#: templates/security/email/reset_instructions.html:8
+msgid "Reset now!"
+msgstr "¡Restablecer ahora!"
+
+#: templates/security/email/reset_instructions.html:11
+msgid "If you haven't, please ignore this email."
+msgstr "Si no lo has hecho, por favor ignora este correo."
+
+#: templates/security/email/reset_notice.html:5
+msgid "Your password has been successfully reset."
+msgstr "Tu contraseña ha sido restablecida exitosamente."
+
+#: templates/security/email/reset_notice.html:7
+msgid "If you did not change your password,"
+msgstr "Si no cambiaste tu contraseña,"
+
+#: templates/security/email/reset_notice.html:7
+msgid "click here to reset it"
+msgstr "haz clic aquí para restablecerla"
+
+#~ msgid ""
+#~ "You can check your test results "
+#~ "and building access any time in "
+#~ "the <a href='{url}'>information centre</a>."
+#~ msgstr ""
+#~ "Puedes revisar los resultados de tus "
+#~ "pruebas y tu estado de acceso a"
+#~ " las instalaciones del IPICYT en "
+#~ "cualquier momento en el <a "
+#~ "href='{url}'>Centro de Información</a>."
+
+#~ msgid ""
+#~ "\n"
+#~ "        <li>No mouthwash or spray medication the evening before.</li>\n"
+#~ "        <li>Hydrate yourself well the evening before. </li>\n"
+#~ "        <li>Do not brush your teeth, "
+#~ "use mouthwash, or floss before "
+#~ "submitting the sample. </li>\n"
+#~ "        <li>3 hours before submitting "
+#~ "the sample, please avoid eating or "
+#~ "drinking, chewing gum, smoking, and "
+#~ "using an atomizer.</li>\n"
+#~ "        <li>Remove lipstick or lipcream, "
+#~ "and avoid touching your lips before "
+#~ "submitting the sample.</li>\n"
+#~ "        "
+#~ msgstr ""
+#~ "\n"
+#~ "        <li>La noche anterior no deberás"
+#~ " usar enjuague bucal, ni medicamentos "
+#~ "en spray.</li>\n"
+#~ "        <li>Deberás hidratarte muy bien la noche anterior. </li>\n"
+#~ "        <li>No debes lavarte los "
+#~ "dientes, ni utilizar enjuagues bucales o"
+#~ " hilo dental antes de la toma "
+#~ "de muestra. </li>\n"
+#~ "        <li>3 horas antes de la "
+#~ "toma de la muestra no se deberá"
+#~ " ingerir ningún alimento, ni fumar, "
+#~ "ni tomar agua, ni masticar chicle, "
+#~ "ni usar atomizadores.</li>\n"
+#~ "        <li>Debes remover productos "
+#~ "cosméticos, bálsamos o cremas labiales</li>"
+#~ "\n"
+#~ "        "
+
+#~ msgid "Result for Pool {n}"
+#~ msgstr "Resultado de la Agrupación {n}"
+
+#~ msgid "Ct value for Pool {n}"
+#~ msgstr "Valor Ct para la Agrupación {n}"
+
+#~ msgid ""
+#~ "at LANBAMA (at La Palapa, in "
+#~ "IPICYT) with laboratory technician Édgar "
+#~ "Daniel Páez. A negative qPCR pooled "
+#~ "test will grant you access to "
+#~ "IPICYT for the two days following "
+#~ "the test."
+#~ msgstr ""
+#~ "en LANBAMA (acudir a la palapa "
+#~ "ubicada atrás del edificio Delta) con"
+#~ " el técnico de laboratorio Dr. Édgar"
+#~ " Daniel Páez. Una prueba conjunta "
+#~ "qPCR negativa te otorgará acceso al "
+#~ "IPICYT por dos días después de "
+#~ "recbir el resultado de tu prueba."
+

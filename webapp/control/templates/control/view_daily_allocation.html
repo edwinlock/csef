@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block messages %}{% endblock %}
+{% block content%}
+<div class="mt-5">
+    <a href="{{ url_for('control.view_weekly_allocation_page', id=allocation.allocations_id) }}">{{ _('back') }}</a>
+    <h1 class="mt-3">
+        {{ _('View daily allocation') }}
+    </h1>
+    <p>
+        {{ _('You are viewing the preliminary testing allocation scheduled on') }}
+        <strong>{{ allocation.scheduled.date() | format_date('full') }}</strong>.
+        
+    </p>
+</div>
+
+<div class="mt-5">
+    <h3 class="border-bottom">{{ _('Requested samples') }}</h3>
+    {% if allocation.computation_in_progress %}
+        {{ render_messages() }}
+    {% else %}
+    <p>
+        {{ table.count() }} {{ _('participants have been asked to submit samples.') }}
+    </p>
+    {{
+        render_table(
+            table,
+            titles=titles,
+            show_actions=False)
+    }}
+    {% endif %}
+</div>
+
+{% endblock %}

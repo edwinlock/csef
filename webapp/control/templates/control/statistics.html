@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block content %}
+
+<div class="mt-3">
+    <h1>{{ _('Project statistics') }}</h1>
+    <p>{{ _('This page will contain some interesting statistics about the current progress of the project.') }}</p>
+    <p>{{ _('Suggests on the kinds of stats that would be interesting are very welcome!') }}</p>
+    <!-- TODO Placeholder image, please remove -->
+    <img src="https://www.nautilusint.org/globalassets/news-by-topic/welfare/stella_maris_pandemic_survey_graphic_may_2020-2.jpg" alt="Bar chart" height="600">
+</div>
+
+{% endblock %}

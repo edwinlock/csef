@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="mt-3" style='text-align: center'>
+    <h3>{{ _('Welcome!') }}</h3>
+    <h1 class=".display-1"><strong>C-SEF</strong></h1>
+    <h2 class=".display-2">{{ _('COVID-19 Safe Education Framework') }}</h2>
+    </br>
+    <h4 style="color:grey">{{ _('A collaboration with researchers from') }}</h4>
+    <img src={{ url_for('static', filename='intro5.png') }} class="img-fluid">
+</div>
+<div style='text-align: justify'>
+    <p>
+        {{ _('The <strong>COVID-19 Safe Education Framework</strong> (C-SEF) is an interdisciplinary and multi-institutional collaboration project, whose objective is to develop a systematic and automated protocol - based on the combination of knowledge of mechanism design, experimental causal inference and artificial intelligence - that allows Educational Institutions to use their facilities in a safe, efficient, and equitable manner.') }}
+    </p>
+</div>
+
+{#
+<div class="mt-3 border">
+    <p style='text-align: left'>{{ _('For demonstration purposes, you can use the following logins.') }} </p>
+    <ul style='text-align: left'>
+        <li>admin@c-sef.com and 'password'</li>
+        <li>participant@c-sef.com and 'password'</li>
+        <li>lab@c-sef.com and 'password'</li>
+    </ul>
+</div>
+#}
+
+</br>
+<div style='text-align: center'>
+    <p>
+        {{ _('<strong>Collaborating departments at IPICYT</strong>') }}
+    </p>
+</div>
+</br>
+<img src={{ url_for('static', filename='departmentlogos2.png') }} / width="1100" height="900"/ class="img-fluid">
+</br>
+</br>
+</br>
+<center>
+	<a href="{{ url_for('problema_page')}}" class="btn btn-primary">{{ _('About the project') }}</a>
+</center>
+{% endblock %}

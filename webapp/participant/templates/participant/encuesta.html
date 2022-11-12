@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block content %}
+<div style='text-align: justify'>
+<div class="mt-3">
+    <h2>{{ _('General Information') }}</h2>
+    {{ _("This project requires you to follow one of two protocols: a group-testing protocol wherein you are required to participate in COVID-19 group-testing activities (provided by the LANBAMA laboratory at IPICYT) as instructed by the research team, or a remote-work protocol, otherwise known as the current institutional work policy. We also ask all participants to respond to a short <strong>survey</strong> at the beginning and at the end of the trial, within a month's time. You will be asked demographic, socioeconomic, and a set of psychological questions. While you may feel uncomfortable with some of the questions asked, you do not need to answer questions that you do not want to answer. Throughout the course of the month the principal investigators will link health data to survey data. However, at the end of the trial all gathered will be anonymised. If you wish to withdraw consent on the use of your data, please <a href='{url}'>contact us!</a>").format(url=url_for('contact_page')) }}
+</div>
+  
+<div class="mt-3">
+    <h1>{{ _('Survey') }}</h1>
+    {{ _("Please <a href='{url}'><strong>click here</strong></a> to access the survey. We truly hope you can contribute to this project! ").format(url=surveylink) }}    
+</div>
+</div>
+</div>
+{% endblock %}
+

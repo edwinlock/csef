@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form, render_form_row, render_field %}
+{% from 'bootstrap5/table.html' import render_table %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-table.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="mt-3">
+    <h1>{{ _('Testing allocations') }}</h1>
+    <p>{{ _('On this page you can manage testing allocations.') }}</p>
+{#
+    {% if last_allocation is not none %}
+    <p>{{ _('The most recent allocation is scheduled for') }} <strong>{{ last_allocation.scheduled.date() | format_date("full") }}</strong>.</p>
+    {% endif %}
+#}
+</div>
+
+<div class="rounded-lg bg-light p-3 mt-5">
+    <h3 class="border-bottom">{{ _('Compute new allocation') }}</h3>
+    <p>
+        {{ _("In order to compute the new allocation, select a date for which to schedule the testing and click 'compute'.") }}
+        
+    </p>
+    <p>
+        <strong>{{ _('Notes') }}</strong>
+        <ul>
+            <li>{{ _('Any new computation will overwrite an existing allocation with the same date.') }}</li>
+            <li>{{ _('Please do not delete any weekly (or daily) allocations if the laboratory has already started collecting samples!') }}</li>
+        </ul>
+
+    </p>
+
+    {% if allocation is not none and last_allocation.computation_in_progress %}
+        <div class="alert alert-primary" role="alert">
+            {{ _('Computation ongoing! Refresh page to check whether computation has finished.') }}
+        </div>
+    {% else %}
+        <div class="mt-2 border-top pt-3 ">
+            <form method="post">
+                {{ weeklyForm.csrf_token() }}
+                {{ render_field(weeklyForm.scheduled, form_type='horizontal', horizontal_columns=('md', 2, 4)) }}
+                {# <button class="btn btn-primary btn-md" id="submit_weekly" name="submit_weekly" onclick="addSpinner(this)" type="submit">{{ _('Compute weekly allocation') }}</button> #}
+                {{ render_field(weeklyForm.submit_weekly) }}
+            </form>
+        {% endif %}
+    </div>
+</div>
+
+{% if last_allocation is not none %}
+<div class="mt-5">
+    <h3 class="border-bottom">{{ _('Testing allocations') }}</h3>
+    {{
+        render_table(
+            allocations,
+            titles=titles,
+            show_actions=True,
+            model=Allocations,
+            actions_title=_('Actions'),
+            view_url=('control.view_weekly_allocation_page', [('id', ':id')]),
+            delete_url=('control.delete_allocation_page', [('id', ':id')])
+        )
+
+    }}
+</div>
+{% endif %}
+
+<script>
+    function addSpinner(el) {
+        var btn = document.getElementById("submit_weekly");
+        delete btn.value;
+        btn.innerHTML = "<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> Computing...";
+        console.log("Added spinner to button.");
+}
+</script>
+{% endblock %}

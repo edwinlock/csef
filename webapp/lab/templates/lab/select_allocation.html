@@ -1,0 +1,16 @@
+{% from 'bootstrap5/form.html' import render_form, render_field %}
+{% from 'bootstrap5/table.html' import render_table %}
+{% from 'bootstrap5/utils.html' import render_icon %}
+
+
+<div class="mt-3 mb-5 p-3 bg-light rounded">
+    <p>
+        {{ _("Select a scheduled testing date from the list. If you cannot find the correct testing date, <a href='{{ url_for('contact_page') }}'>get in touch</a> with the data administrator.") }}
+    </p>
+    {{ render_form(select_alloc_form, form_type="inline") }}
+    {% if allocation is none %}
+    <div class="alert alert-primary mt-3" role="alert">
+        {{ _("You have not selected a scheduled testing date.") }}
+    </div>
+    {% endif %}
+</div>
