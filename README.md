@@ -57,7 +57,7 @@ These instructions work for MacOS only. Windows users may not find this issue. M
 
 Please note that if you are working with MacOS with an M1 chip or above, you must download the BETA version (10.0), due to Darwin ARM incompatibility.
      
-3. After installing Mosek, you must re-install requirments
+3. After installing Mosek, you must re-install requirements
 ```console
 $ pip install -r requirements.txt
 ```
