@@ -48,23 +48,3 @@ $ pybabel compile -d webapp/translations
 ```console
 $ flask run
 ```
-
-## Installing Mosek 
-These instructions work for MacOS only. Windows users may not find this issue. Mosek is necessary to perform some operations within the pooling algorithm
-
-1. Install Mosek
-2. You can follow the manual instructions [here](https://docs.mosek.com/latest/pythonapi/install-interface.html).
-
-Please note that if you are working with MacOS with an M1 chip or above, you must download the BETA version (10.0), due to Darwin ARM incompatibility.
-     
-3. After installing Mosek, you must re-install requirements
-```console
-$ pip install -r requirements.txt
-```
-
-4. Also specific for MacOS users, you will be required to quarantine the following file: libtbb.12.dylib
-
-For a discussion as to why, please follow this [thread](https://discuss.kotlinlang.org/t/macos-library-load-disallowed-by-system-policy/17567).
-```console
-$ sudo xattr -d com.apple.quarantine /Users/YourUserName/Documents/yourPath/csef/venv/lib/python3.10/site-packages/mosek/libtbb.12.dylib
-```
