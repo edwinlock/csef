@@ -11,4 +11,14 @@
     {{ render_form_row([login_user_form.remember]) }}
     {{ render_form_row([login_user_form.submit]) }}
     </form>
+
+    <div class="mt-3 p-3 border bg-light rounded">
+        <h4 style='text-align: left'>{{ _('Demonstration accounts') }} </h4>
+        <ul style='text-align: left'>
+            <li>Admin account: 'admin@example.com'</li>
+            <li>Participant account: 'participant@example.com'</li>
+            <li>Laboratory account: 'lab@example.com'</li>
+        </ul>
+        <p>The password is 'password' for all three accounts.</p>
+    </div>
 {% endblock %}

@@ -78,29 +78,29 @@ def create_roles():
 @app.before_first_request
 def create_users():
     #  Create participant
-    if not user_datastore.find_user(email="participant@c-sef.com"):
+    if not user_datastore.find_user(email="participant@example.com"):
         participantrole = user_datastore.find_role("participant")
         user_datastore.create_user(forenames="John",
                                    surnames="Doe",
-                                   email="participant@c-sef.com",
+                                   email="participant@example.com",
                                    password=hash_password("password"),
                                    treatment=True,
                                    roles=[participantrole])
 
     # Create admin
-    if not user_datastore.find_user(email="admin@c-sef.com"):
+    if not user_datastore.find_user(email="admin@example.com"):
         adminrole = user_datastore.find_role("admin")
-        user_datastore.create_user(forenames="Viridiana",
-                                   surnames="Robledo",
-                                   email="admin@c-sef.com",
+        user_datastore.create_user(forenames="Jane",
+                                   surnames="Doe",
+                                   email="admin@example.com",
                                    password=hash_password("password"),
                                    roles = [adminrole])
     # Create lab tech
-    if not user_datastore.find_user(email="lab@c-sef.com"):
+    if not user_datastore.find_user(email="lab@example.com"):
         labrole = user_datastore.find_role("lab")
-        user_datastore.create_user(forenames="Edgar",
-                                   surnames="Páez",
-                                   email="lab@c-sef.com",
+        user_datastore.create_user(forenames="John",
+                                   surnames="Smith",
+                                   email="lab@example.com",
                                    password=hash_password("password"),
                                    roles = [labrole])
     db.session.commit()

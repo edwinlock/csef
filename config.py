@@ -41,13 +41,13 @@ class BaseConfig(object):
     MAIL_ADMIN_EMAIL = os.environ.get('MAIL_ADMIN_EMAIL') or 'admin@c-sef.com'
     MAIL_CONTACT_EMAIL = os.environ.get('MAIL_CONTACT_EMAIL') or 'csef@ipicyt.edu.mx'
 
-    # C-SEF CONFIGURATION
+    # APP CONFIGURATION
     WINDOW_SIZE = 72  # number of hours from submitting sample that people are given access to department
     # Set important dates
-    TESTING_START = "1 January 2022"
-    TESTING_END = "1 February 2022"
-    BASELINE_SURVEY_DEADLINE = "7 January 2022"
-    ENDLINE_SURVEY_OPENS = "1 February 2022"
+    TESTING_START = "1 January 2023"
+    TESTING_END = "1 June 2023"
+    BASELINE_SURVEY_DEADLINE = "30 May 2023"
+    ENDLINE_SURVEY_OPENS = "1 June 2023"
     # Testing variables
     POOL_SIZE = 5
     MIN_DAILY_TESTS = 0
