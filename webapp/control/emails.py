@@ -21,10 +21,10 @@ def email_sample_requests(allocation_id):
         for recipients in chunks:
             print(f'Sending email to {recipients}')
             msg = Message(bcc=recipients, extra_headers={'Disposition-Notification-To': sender})
-            msg.subject = lazy_gettext('[C-SEF IPICYT] You are invited to submit a test sample')
+            msg.subject = lazy_gettext('[Welfare-maximizing pooled testing] You are invited to submit a test sample')
             msg.body = render_template('control/emails/email_sample_requests.txt', scheduled=scheduled)
             msg.html = render_template('control/emails/email_sample_requests.html', scheduled=scheduled)
-            msg.sender = ('CSEF Webapp', sender)
+            msg.sender = ('EC23 Demo', sender)
             conn.send(msg)
     return True
 
@@ -52,10 +52,10 @@ def email_results(allocation_id):
         if missing_emails:  # python evaluates this to false if a list is empty
             msg = Message(
                 bcc=missing_emails,
-                subject=lazy_gettext('[C-SEF IPICYT] Sample not submitted'),
+                subject=lazy_gettext('[Welfare-maximizing pooled testing] Sample not submitted'),
                 body=render_template('control/emails/email_result_not_submitted.txt', scheduled=scheduled, window_size=window_size),
                 html=render_template('control/emails/email_result_not_submitted.html', scheduled=scheduled, window_size=window_size, frame_colour="yellow"),
-                sender = ('CSEF Webapp', sender),
+                sender = ('EC23 Demo', sender),
                 extra_headers={'Disposition-Notification-To': sender}
                 )
             conn.send(msg)
@@ -63,10 +63,10 @@ def email_results(allocation_id):
             # Send out emails to negative samples
             msg = Message(
                 bcc=negative_emails,
-                subject = lazy_gettext('[C-SEF IPICYT] Test result'),
+                subject = lazy_gettext('[Welfare-maximizing pooled testing] Test result'),
                 body=render_template('control/emails/email_result_negative.txt', window_start=scheduled, window_end=window_end),
                 html=render_template('control/emails/email_result_negative.html', window_start=scheduled, window_end=window_end),
-                sender = ('CSEF Webapp', sender),
+                sender = ('EC23 Demo', sender),
                 extra_headers={'Disposition-Notification-To': sender}
             )
             conn.send(msg)
@@ -74,10 +74,10 @@ def email_results(allocation_id):
             # Send out emails to positive samples
             msg = Message(
                 bcc=positive_emails,
-                subject = lazy_gettext('[C-SEF IPICYT] Test result'),
+                subject = lazy_gettext('[Welfare-maximizing pooled testing] Test result'),
                 body=render_template('control/emails/email_result_positive.txt', scheduled=scheduled),
                 html=render_template('control/emails/email_result_positive.html', scheduled=scheduled, frame_colour="red"),
-                sender = ('CSEF Webapp', sender),
+                sender = ('EC23 Demo', sender),
                 extra_headers={'Disposition-Notification-To': sender}
             )
             conn.send(msg)
@@ -85,10 +85,10 @@ def email_results(allocation_id):
             # Send out emails about inconclusive tests
             msg = Message(
                 bcc=inconclusive_emails,
-                subject = lazy_gettext('[C-SEF IPICYT] Test result'),
+                subject = lazy_gettext('[Welfare-maximizing pooled testing] Test result'),
                 body=render_template('control/emails/email_result_inconclusive.txt', scheduled=scheduled),
                 html=render_template('control/emails/email_result_inconclusive.html', scheduled=scheduled, frame_colour="blue"),
-                sender = ('CSEF Webapp', sender),
+                sender = ('EC23 Demo', sender),
                 extra_headers={'Disposition-Notification-To': sender}
             )
             conn.send(msg)

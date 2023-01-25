@@ -3,5 +3,5 @@
 {% block content %}
 {% endblock %}
 {% block footer %}
-{{ _('Any questions or comments? Contact us at') }} csef@ipicyt.edu.mx.
+{{ _('Any questions or comments? Contact us at') }} ec23demo@gmail.com.
 {% endblock %}
