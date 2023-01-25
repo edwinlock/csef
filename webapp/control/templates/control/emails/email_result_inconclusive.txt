@@ -6,13 +6,13 @@
     {{ _('You submitted a sample for a pooled test scheduled on') }} {{scheduled | format_date("long")}}.
 
     {{_('Your test result was inconclusive. For the time being, you do not have access to the institute.') }}
-    {{_('LANBAMA will notify you about your individual result within 24 hours.') }}
+    {{_('The testing lab will notify you about your individual result within 24 hours.') }}
 
 
     {{ _("You can check your test results and building access any time in the information centre at {url}.").format(url=url_for('participant.landing_page', _external=True)) }}
 
     {{_('Have a nice day!') }}
-    {{_('The C-SEF team') }}
+    {{_('The testing team') }}
 {% endblock %}
 
 

@@ -3,14 +3,13 @@
 {% block content %}
     {{ _('Dear Participant,') }}
     
-    {{ _("You are invited to submit a saliva sample on") }} {{scheduled | format_date("long")}}, {{_("between 8:00 am and 9:00 am at LANBAMA (at La Palapa, in IPICYT) with laboratory technician Édgar Daniel Páez. A negative qPCR pooled test will grand you access to IPICYT for the two days following the test.") }}
+    {{ _("You are invited to submit a saliva sample on") }} {{scheduled | format_date("long")}}, {{_("between 8:00 am and 9:00 am at the testing center. A negative qPCR pooled test will grand you access to IPICYT for the two days following the test.") }}
     {{ _("If you are experiencing clear symptons, we ask that you do not come to the appointment to avoid infecting others.") }}
-    {{ _("LANBAMA has requested that you fill in the following information before your test:")}} <a href='https://docs.google.com/forms/d/18myZ_HsNg0rsBxkVRdx-Aoma1m90xOJvMqEitUh_wTo/edit'>LANBAMA Google Form</a>
-    {{ _("If you are experiencing clear symptons, you can still pay for an individual test at LANBAMA at a different time.") }}
+    {{ _("If you are experiencing clear symptons, you can still pay for an individual test at the testing center at a different time.") }}
 
     {{_("Please note that for the salive sample to be processed, you mustadhere to the following rules: 
     – No mouthwash or spray medication the evening before. 
-    - Hydrate yourself well the evening before. Do not brush your teeth, use mouthwas, or floss before submitting the sample. 
+    - Hydrate yourself well the evening before. Do not brush your teeth, use mouthwash, or floss before submitting the sample. 
     - 3 hours before submitting the sample, please avoid eating or drinking, chewing gum, smoking, and using an atomizer. 
     - Remove lipstick or lipcream, and avoid touching your lips before submitting the sample.
     - Bring a mask to the appointment and your ID! ") }}
@@ -20,8 +19,8 @@
     </p>
 
     
-    {{ _("For more information, please visit") }} <a href='https://c-sef.com'>https://c-sef.com</a>.
+    {{ _("For more information, please visit") }} https://ec23demo.pythonanywhere.com.
 
     {{_('Have a nice day!') }}
-    {{_('The C-SEF team') }}
+    {{_('The testing team') }}
 {% endblock %}

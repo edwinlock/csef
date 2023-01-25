@@ -10,5 +10,5 @@
  {{ _("You can check your test results and building access any time in the")}}
     <a href='{{url_for('participant.landing_page', _external=True)}}'>{{_('information centre.') }}</a>
 {{ _('Have a nice day!') }}
-{{ _('The C-SEF team') }}
+{{ _('The testing team') }}
 {% endblock %}
