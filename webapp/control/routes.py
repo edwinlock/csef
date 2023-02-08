@@ -39,9 +39,9 @@ def communicate_page(id):
     weekly_allocation = Allocations.query.get(id) if id is not None else None
     # Prepare the allocation selection form
     select_allocation_form = SelectAllocationForm(allocation_id = id)
-    allocation_options = Allocations.query.order_by(Allocations.scheduled.desc()).limit(2).all()
+    allocation_options = Allocations.query.order_by(Allocations.scheduled.desc()).all()
     select_allocation_form.allocation_id.choices = [
-        (a.id, f"Semana del {format_date(a.scheduled.date(), 'full')}")
+        (a.id, f"Week of {format_date(a.scheduled.date(), 'full')}")
         for a in allocation_options]
     select_allocation_form.allocation_id.default = id
     # Retrieve the allocation that was selected and redirect to right page

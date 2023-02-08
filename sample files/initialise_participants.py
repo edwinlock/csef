@@ -30,3 +30,32 @@ for p in participants:
         p.health_probability = compute_health_probability(surveydata)
         db.session.add(p)
         db.session.commit()
+
+from dateutil import parser
+
+participantrole = user_datastore.find_role("participant")
+participants = User.query.filter(User.treatment==True, User.roles.contains(participantrole)).all()
+
+timestamp = parser.parse(app.config['TESTING_START']).date()
+for p in participants:
+    # Allocate tokens randomly
+    days = [0,0,0,0,0,0,0]
+    tokens = 10
+    while tokens > 0:
+        tokens -= 1
+        i = random.randint(0,6)
+        days[i] += 1
+    # Create a ScheduleData object
+    scheduledata = ScheduleData(
+        user = p,
+        day_0 = days[0],
+        day_1 = days[1],
+        day_2 = days[2],
+        day_3 = days[3],
+        day_4 = days[4],
+        day_5 = days[5],
+        day_6 = days[6],
+        timestamp = timestamp
+    )
+    db.session.add(scheduledata)
+    db.session.commit()
