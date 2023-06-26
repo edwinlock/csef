@@ -319,9 +319,11 @@ def edit_user_page(id):
         msg_email = lazy_gettext("Successfully edited user")
         flash(f'{msg_email} {u.email}.')
         return redirect(url_for('control.users_page'))
-    return render_template('control/edit_user.html',
-                           form=form,
-                           User=User)
+    return render_template(
+        'control/edit_user.html',
+        form=form,
+        User=User
+    )
 
 
 @bp.route('/delete_user/<id>', methods=['POST'])
