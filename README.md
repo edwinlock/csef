@@ -26,7 +26,6 @@ $ git clone https://github.com/edwinlock/csef.git
     $ sudo xattr -d com.apple.quarantine /Users/YourUserName/Documents/yourPath/csef/venv/lib/python3.10/site-packages/mosek/libtbb.12.dylib
     ```
 
-
 4. Go to the project directory and set up a virtual environment (venv)
 ```console
 $ cd csef
